@@ -1,0 +1,20 @@
+/*
+*
+*
+Theme Name: Master-Hosting
+Author: Imran Hossain
+url:https://github.com/gdimran/master-host
+version:1.0.0
+*
+*
+*/
+
+@import "abstract/variables";
+@import "abstract/mixins";
+@import "base/base";
+@import "base/normalize";
+@import "base/typography";
+@import "components/button";
+@import "layout/header";
+@import "layout/footer";
+@import "pages/homepage";
