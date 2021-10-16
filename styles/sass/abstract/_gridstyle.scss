@@ -1,0 +1,106 @@
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.container {
+    width: 70%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+$grid-columns: 12;
+.grid {
+    --grid-cols: #{$grid-columns};
+    display: grid;
+    grid-gap: var(--grid-gap, 0); // default value is 0.
+    grid-template-columns: repeat(var(--grid-cols), 1fr); // grid has 12 flexible columns by default.
+    &>* {
+        grid-column-end: span var(--grid-cols); // each grid item will take full width by default.
+    }
+}
+
+@for $i from 1 through $grid-columns {
+    .col-#{$i} {
+        grid-column-end: span #{$i};
+    }
+    .col-start-#{$i} {
+        grid-column-start: #{$i};
+    }
+    .col-end-#{$i+1} {
+        grid-column-end: #{$i+1};
+    }
+}
+
+// Responsive grid
+.grid-auto-xs,
+.grid-auto-sm,
+.grid-auto-md,
+.grid-auto-lg,
+.grid-auto-xl {
+    display: grid;
+    grid-gap: var(--grid-gap, 0);
+    grid-template-columns: repeat(auto-fit, minmax(var(--col-min-width), 1fr));
+}
+
+.grid-auto-xs {
+    --col-min-width: 8rem
+} // 80px
+.grid-auto-sm {
+    --col-min-width: 10rem
+} // 100px
+.grid-auto-md {
+    --col-min-width: 15rem
+} // 150px
+.grid-auto-lg {
+    --col-min-width: 20rem
+} // 200px
+.grid-auto-xl {
+    --col-min-width: 25rem
+} // 250px
+.grid-gap-xs {
+    --grid-gap: var(--space-xs, 0.5rem);
+}
+
+.grid-gap-sm {
+    --grid-gap: var(--space-sm, 0.75rem);
+}
+
+.grid-gap-md {
+    --grid-gap: var(--space-md, 1.25rem);
+}
+
+.grid-gap-lg {
+    --grid-gap: var(--space-lg, 2rem);
+}
+
+.grid-gap-xl {
+    --grid-gap: var(--space-xl, 3.25rem);
+}
