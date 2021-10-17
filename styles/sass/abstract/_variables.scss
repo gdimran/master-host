@@ -13,9 +13,25 @@ sans-serif,
 "Segoe UI Emoji",
 "Segoe UI Symbol" !default;
 $base-line-height: 1.15 !default;
+//master colors
+$blue:#0069FF;
+$dark-navyblue:#2D4059;
+$royal-blue:#13387E;
+$skyblue:#04C2F3;
+$spring-green:#00D7D2;
+$blue-ash:#677694;
+$green:#127c43;
+$light-green:#1FCE51;
+$orange:#EB6607;
+$grey1:#333333;
+$grey2:#4F4F4F;
+$grey3:#828282;
+$grey4:#BDBDBD;
+$grey5:#E0E0E0;
+$grey6:#F2F2F2;
 // Colors
-$base-font-color: #222 !default;
-$base-border-color: #c0c0c0 !default;
+$base-font-color: $dark-navyblue !default;
+$base-border-color: $dark-navyblue !default;
 $base-input-border-color: #c0c0c0 !default;
 $base-disabled-color: #ebebeb !default;
 // Typography
@@ -35,7 +51,7 @@ $h6-margin: 1.561rem !default;
 // Selected text
 $selection-background: #b3d4fc !default;
 // Focused objects
-$selection-focus-color: #3b99fc !default;
+$selection-focus-color: $blue !default;
 //==
 // Grid System
 //##
@@ -101,7 +117,7 @@ $form-input-group-color: inherit !default;
 $form-actions-margin: 1rem !default;
 $form-actions-padding: 1rem !default;
 // Buttons
-$button-background: #dadada !default;
+$button-background: $blue !default;
 $button-font-color: inherit !default;
 $button-hover-background: darken($button-background,
 5) !default;

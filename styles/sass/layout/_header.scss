@@ -1,0 +1,32 @@
+// Dashboard header start
+#content {
+    width: 100vw;
+}
+
+.dasboard-header {
+    width: 100%;
+    height: 60px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.searchTerm {
+    width: 40vw;
+    height: 40px;
+    margin-top: 10px;
+    border: none;
+    padding-left: 25px;
+    color: $grey3;
+    font-size: 1.2rem;
+}
+
+.searchButton {
+    background: transparent;
+    border: none;
+    position: relative;
+    left: 25px;
+    color: grey;
+}

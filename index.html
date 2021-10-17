@@ -7,89 +7,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/css/main.css">
     <link rel="stylesheet" href="icons-fonts/css/imran_iconfont.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Dashboard</title>
 </head>
 
 <body>
     <div class="wrapper">
+        <!-- Side bar start -->
         <nav id="sidebar" class="active">
             <div class="sidebar-header">
-                <h3>Bootstrap Sidebar</h3>
-                <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
-                    <i class="demo-icon icon-menu"></i>
-                <span>Toggle Sidebar</span>
-                </button>
-                <strong>BS</strong>
+                <i id="sidebarCollapse" class="demo-icon icon-menu"></i>
+                <a class="logo-section" href="/"><img class="logo-icon" src="images/logo-b 1.svg" alt=""><img class="logo-text" src="images/binaryHost.svg" alt=""></a>
             </div>
 
             <ul class="list-unstyled components">
-                <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
-                        <i class="fa fa-home"></i> Home
-                    </a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li><a href="#">Home 1</a></li>
-                        <li><a href="#">Home 2</a></li>
-                        <li><a href="#">Home 3</a></li>
+                <li class="nav-section-title"><a class="section-dev" href="">Projects <i class="demo-icon  icon-up-open-mini"></i></a>
+                    <ul class="submenue list-unstyled" id="projectSub">
+                        <li><a href="#"><i class="menu-icon icon-user circle-icon highlight-user"></i> <span class="menu-text">Kristopher</span></a></li>
+                        <li><a href="#"><i class="menu-icon icon-user circle-icon highlight-user"></i> <span class="menu-text">Abu Rayhan</span></a></li>
+                        <li><a class="focuse" href="#"><i class="menu-icon icon-plus"></i><span class="menu-text">New Project</span></a></li>
+
                     </ul>
                 </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-briefcase"></i> About
-                    </a>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
-                        <i class="fa fa-file"></i> Pages
-                    </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li><a href="#">Page 1</a></li>
-                        <li><a href="#">Page 2</a></li>
-                        <li><a href="#">Page 3</a></li>
+                <li class="nav-section-title"> <a href="">  Manage<i class="demo-icon  icon-up-open-mini"></i></a>
+                    <ul class="submenue list-unstyled" id="mangeSub">
+                        <li><a class="active" href="#"><i class="menu-icon  icon-app-launch"></i> <span class="menu-text">Apps</span></a></li>
+                        <li><a href="#"><i class="menu-icon   icon-domain"></i> <span class="menu-text">Domain</span></a></li>
+                        <li><a href="#"><i class="menu-icon  icon-email"></i> <span class="menu-text">Emais</span></a></li>
+                        <li><a href="#"><i class="menu-icon  icon-database"></i> <span class="menu-text">Databases</span></a></li>
+                        <li><a href="#"><i class="menu-icon  icon-file-manager"></i> <span class="menu-text">File Manager</span></a></li>
+                        <li><a href="#"><i class="menu-icon  icon-networking"></i> <span class="menu-text">Networking</span></a></li>
+                        <li><a href="#"><i class="menu-icon   icon-monitoring"></i> <span class="menu-text">Monitoring</span></a></li>
+
                     </ul>
                 </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-link"></i> Portfolio
-                    </a>
+
+                <li class="nav-section-title">
+                    <ul class="submenue list-unstyled">
+                        <li><a href="#"><i class="menu-icon  icon-settings"></i> <span class="menu-text">Settings</span></a></li>
+                        <li><a href="#"><i class="menu-icon icon-bill"></i> <span class="menu-text">Billing</span></a></li>
+                        <li><a href="#"><i class="menu-icon icon-api"></i> <span class="menu-text">API</span></a></li>
+
+                    </ul>
                 </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-paperclip"></i> FAQ
-                    </a>
+                <li class="nav-section-title">
+                    <ul class="submenue list-unstyled">
+                        <li><a href="#"><i class="menu-icon icon-documents"></i> <span class="menu-text">Documentation</span></a></li>
+                        <li><a href="#"><i class="menu-icon icon-live-support"></i> <span class="menu-text">Support</span></a></li>
+
+                    </ul>
                 </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-send"></i> Contact
-                    </a>
-                </li>
+
             </ul>
         </nav>
-        <div class="dasboard-header"></div>
+        <!-- Side bar end -->
+
         <div id="content">
-
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-
-                    <div class="navbar-header">
-                        <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
-            <i class="fa fa-bars"></i>
-            <span>Toggle Sidebar</span>
-            </button>
-                    </div>
-
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">Page</a></li>
-                            <li><a href="#">Page</a></li>
-                            <li><a href="#">Page</a></li>
-                            <li><a href="#">Page</a></li>
-                        </ul>
-                    </div>
+            <div class="dasboard-header">
+                <div class="search-sec left">
+                    <button type="submit" class="searchButton">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <input type="text" class="searchTerm" placeholder="What are you looking for?">
                 </div>
-            </nav>
+
+                <div class="navbar right">
+                    <div class="dropdown">
+                        <button class="dropbtn">Create
+                        <i class="fa fa-angle-down"></i>
+                      </button>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
+                    <a href="#home"><i class="fa icon-bell"></i></a>
+                    <a href="#news"><i class="fa fa-line-chart"></i></a>
+                    <a href="#home">Home</a>
+                    <a href="#news">News</a>
+                </div>
+
+
+            </div>
         </div>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

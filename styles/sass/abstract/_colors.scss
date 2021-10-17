@@ -1,0 +1,42 @@
+//master colors
+
+/*
+$blue:#0069FF;
+$dark-navyblue:#2D4059;
+$royal-blue:#13387E;
+$skyblue:#04C2F3;
+$spring-green:#00D7D2;
+$blue-ash:#677694;
+$green:#127c43;
+$light-green:#1FCE51;
+$orange:#EB6607;
+$grey1:#333333;
+$grey2:#4F4F4F;
+$grey3:#828282;
+$grey4:#BDBDBD;
+$grey5:#E0E0E0;
+$grey6:#F2F2F2;
+*/
+
+a {
+    color: $dark-navyblue;
+    list-style: none;
+    text-decoration: none;
+}
+
+a.active {
+    color: $blue;
+}
+
+a.highlight {
+    color: $blue;
+}
+
+.focuse {
+    color: $skyblue;
+}
+
+.active {
+    color: $dark-navyblue;
+    background: #fff;
+}

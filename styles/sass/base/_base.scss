@@ -86,9 +86,6 @@ hr {
     align-items: stretch;
 }
 
-.child {
-    background-color: rgb(70, 113, 255);
-    padding: 10px;
-    border-radius: 3px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+ul li {
+    list-style: none;
 }
