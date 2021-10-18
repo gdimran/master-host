@@ -21,6 +21,7 @@ $skyblue:#04C2F3;
 $spring-green:#00D7D2;
 $blue-ash:#677694;
 $green:#127c43;
+$success-green:#41A639;
 $light-green:#1FCE51;
 $orange:#EB6607;
 $grey1:#333333;
@@ -225,3 +226,7 @@ $dropdown-accordion-padding: 0.5rem !default;
 $dropdown-accordion-border-width: 1px !default;
 $dropdown-accordion-border-style: solid !default;
 $dropdown-accordion-border-color: $base-border-color !default;
+// padding
+.pt-10 {
+    padding: 100px 0;
+}

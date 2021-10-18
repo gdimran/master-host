@@ -53,6 +53,14 @@
     display: block;
 }
 
+.menu-text {
+    font-size: 1.2rem !important;
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+}
+
 li ul {
     padding: 0;
 }
@@ -148,11 +156,10 @@ a[aria-expanded="true"]::before {
     content: '\f077';
 }
 
-ul ul a {
-    font-size: 1.5rem !important;
-    // padding-left: 30px !important;
-}
-
+// ul ul a {
+//     font-size: 1.5rem;
+//     // padding-left: 30px !important;
+// }
 ul.CTAs {
     padding: 20px;
 }
