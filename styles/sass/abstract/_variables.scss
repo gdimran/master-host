@@ -2,34 +2,28 @@
 $base-font-size: 1rem !default; // Normalized default
 // https://booking.design/implementing-system-fonts-on-booking-com-a-lesson-learned-bdc984df627f
 // Default system fonts, web fallbacks, emoji defaults
-$base-font-family: -apple-system,
-BlinkMacSystemFont,
-"Segoe UI",
-Roboto,
-Helvetica,
-Arial,
-sans-serif,
-"Apple Color Emoji",
-"Segoe UI Emoji",
-"Segoe UI Symbol" !default;
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol" !default;
 $base-line-height: 1.15 !default;
 //master colors
-$blue:#0069FF;
-$dark-navyblue:#2D4059;
-$royal-blue:#13387E;
-$skyblue:#04C2F3;
-$spring-green:#00D7D2;
-$blue-ash:#677694;
-$green:#127c43;
-$success-green:#41A639;
-$light-green:#1FCE51;
-$orange:#EB6607;
-$grey1:#333333;
-$grey2:#4F4F4F;
-$grey3:#828282;
-$grey4:#BDBDBD;
-$grey5:#E0E0E0;
-$grey6:#F2F2F2;
+$blue: #0069ff;
+$dark-navyblue: #2d4059;
+$royal-blue: #13387e;
+$skyblue: #04c2f3;
+$spring-green: #00d7d2;
+$blue-ash: #677694;
+$green: #127c43;
+$success-green: #41a639;
+$light-green: #1fce51;
+$orange: #eb6607;
+$grey1: #333333;
+$grey2: #4f4f4f;
+$grey3: #828282;
+$grey4: #bdbdbd;
+$grey5: #e0e0e0;
+$grey6: #f2f2f2;
+$hover-bg-lightblue: #004cff26;
 // Colors
 $base-font-color: $dark-navyblue !default;
 $base-border-color: $dark-navyblue !default;
@@ -120,16 +114,11 @@ $form-actions-padding: 1rem !default;
 // Buttons
 $button-background: $blue !default;
 $button-font-color: inherit !default;
-$button-hover-background: darken($button-background,
-5) !default;
-$button-active-background: lighten($button-background,
-5) !default;
-$button-disabled-background: lighten($button-background,
-5) !default;
-$button-border: 1px solid darken($button-background,
-10) !default;
-$button-color-disabled: lighten($base-font-color,
-10) !default;
+$button-hover-background: darken($button-background, 5) !default;
+$button-active-background: lighten($button-background, 5) !default;
+$button-disabled-background: lighten($button-background, 5) !default;
+$button-border: 1px solid darken($button-background, 10) !default;
+$button-color-disabled: lighten($base-font-color, 10) !default;
 $button-height: $form-input-height !default;
 $button-padding: 0 1rem !default;
 // Lists
@@ -149,8 +138,7 @@ $alert-border-style: solid !default;
 $alert-border-color: #ff6f00 !default;
 $alert-button-font-size: $h3-font-size !default;
 // Code
-$code-font-family: monospace,
-monospace !default;
+$code-font-family: monospace, monospace !default;
 $code-background-color: #f7f7f9 !default;
 $code-color: #950b2f !default;
 $code-scrollable-max-height: 20rem !default;
@@ -166,10 +154,7 @@ $navigation-color: #fff !default;
 // ######################
 // ######## Modal #######
 // ######################
-$modal-overlay-background-color: rgba(0,
-0,
-0,
-0.7) !default;
+$modal-overlay-background-color: rgba(0, 0, 0, 0.7) !default;
 $modal-max-width: $grid-container-max-width !default;
 $modal-titles-color: #fff !default;
 $modal-content-background-color: #fff !default;
@@ -182,20 +167,21 @@ $modal-footer-height: 100px !default;
 // ###### Carousel ######
 // ######################
 $carousel-transition-function: 0.7s ease-in-out !default;
-$carousel-caption-background-color: rgba(34,
-34,
-34,
-0.4) !default;
+$carousel-caption-background-color: rgba(34, 34, 34, 0.4) !default;
 $carousel-caption-color: #fff !default;
 // Controls
 $carousel-control-color: #fff !default;
 $carousel-control-background-color: transparent !default;
-$carousel-control-background-prev: str-replace( url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 4.933 8'><path d='M4.933.933L4 0 0 4l4 4 .933-.933L1.867 4'/></svg>"),
-"#",
-"%23") !default;
-$carousel-control-background-next: str-replace( url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 4.933 8'><path d='M0 7l3.067-3L0 .933.933 0l4 4-4 4'/></svg>"),
-"#",
-"%23") !default;
+$carousel-control-background-prev: str-replace(
+  url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 4.933 8'><path d='M4.933.933L4 0 0 4l4 4 .933-.933L1.867 4'/></svg>"),
+  "#",
+  "%23"
+) !default;
+$carousel-control-background-next: str-replace(
+  url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 4.933 8'><path d='M0 7l3.067-3L0 .933.933 0l4 4-4 4'/></svg>"),
+  "#",
+  "%23"
+) !default;
 $carousel-control-background-size: 50% 50% !default;
 $carousel-control-opacity: 0.5 !default;
 $carousel-control-opacity-active: 1 !default;
@@ -228,5 +214,8 @@ $dropdown-accordion-border-style: solid !default;
 $dropdown-accordion-border-color: $base-border-color !default;
 // padding
 .pt-10 {
-    padding: 100px 0;
+  padding: 100px 0;
+}
+.pt-5 {
+  padding: 50px 0;
 }
