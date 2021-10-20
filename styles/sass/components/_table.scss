@@ -1,11 +1,20 @@
 //table components styles
-
-
-.table-row {
-	display: flex;
-	flex-flow: row;
-	width: 100%;
-	border: 1px solid #e0e0e0;
-	padding: 8px 15px;
-	justify-content: space-between;
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
+tr{
+	border: 1px solid var(--clr-dark-200);
+	height:45px;
+}
+td, th {
+  
+  text-align: left;
+  padding: 8px;
+}
+/*
+tr:nth-child(even) {
+  background-color: #dddddd;
+}*/
+

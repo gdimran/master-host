@@ -28,7 +28,7 @@
   border: none;
   position: relative;
   left: 25px;
-  color: grey;
+  color: var(--clr-dark-500);
 }
 
 .navbar {
@@ -46,7 +46,7 @@
   cursor: pointer;
   .dropbtn {
     padding: 8px 10px;
-    background: $success-green;
+    background: var(--clr-success-500);
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -61,7 +61,7 @@
   width: 270px;
   position: absolute;
   background: white;
-  border: 1px solid $grey5;
+  border: 1px solid var(--clr-dark-200);
   padding: 20px 10px;
   top: 50px;
   left: -125px;
@@ -76,7 +76,7 @@
 .dropdown-content:before {
   content: "";
   position: absolute;
-  border-color: $grey5;
+  border-color:var(--clr-dark-200);
   border: solid transparent;
   border-bottom-color: white;
   border-width: 11px;
@@ -95,7 +95,7 @@
   height: 0;
   border: solid transparent;
   border-width: 10px;
-  border-bottom-color: $grey5;
+  border-bottom-color:var(--clr-dark-200);
   z-index: 0;
 }
 
@@ -103,7 +103,7 @@
   position: absolute;
   right: 20px;
   font-size: 0.9rem;
-  background: $blue;
+  background: var(--clr-primary-400);
   padding: 3px 8px;
   color: #fff;
   border-radius: 2px;
@@ -116,7 +116,7 @@
   padding: 10px 0;
   .menu-icon {
     font-size: 1.5rem;
-    color: $blue;
+    color: var(--clr-primary-400);
     margin-right: 5px;
   }
 }
@@ -131,9 +131,9 @@
   display: flex;
   font-size: 1rem;
   font-weight: 300;
-  color: $grey3;
+  color: var(--clr-dark-400);
 }
 
 .single-icon-menu a:hover {
-  background: $hover-bg-lightblue;
+  background: var(--clr-primary-100);
 }

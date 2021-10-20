@@ -1,7 +1,7 @@
 // 1. Use the iOS devices hardware accelerator to provide native scrolling.
 html {
   -webkit-overflow-scrolling: touch; // 1
-  color: $base-font-color;
+  color: var(--clr-secondary-500);
   font-size: $base-font-size;
   box-sizing: border-box;
 }

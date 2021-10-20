@@ -1,0 +1,52 @@
+
+
+
+$spaceamounts:(1,2,3,4,5,6,7,8,9,10);
+
+@each $space in $spaceamounts {
+    .m-#{$space}{
+        margin: #{$space}rem;
+    }
+    .mr-#{$space}{
+        margin-right: #{$space}rem;
+    }
+    .ml-#{$space}{
+        margin-left: #{$space}rem;
+    }
+    .mt-#{$space}{
+        margin-top: #{$space}rem;
+    }
+    .mb-#{$space}{
+        margin-bottom: #{$space}rem;
+    }
+    .my-#{$space}{
+        margin: #{$space}rem 0;
+    }
+    .mx-#{$space}{
+        margin: 0 #{$space}rem;
+    }
+    .p-#{$space}{
+        padding: #{$space}rem;
+    }
+    .pr-#{$space}{
+        padding-right: #{$space}rem;
+    }
+    .pt-#{$space}{
+        padding-top: #{$space}rem;
+    }
+    .pb-#{$space}{
+        padding-bottom: #{$space}rem;
+    }
+    .pl-#{$space}{
+        padding-left: #{$space}rem;
+    }
+    .py-#{$space}{
+        padding: #{$space}rem 0;
+    }
+    .px-#{$space}{
+        padding: 0 #{$space}rem;
+    }
+}
+.text-upper{
+    text-transform: uppercase;
+}

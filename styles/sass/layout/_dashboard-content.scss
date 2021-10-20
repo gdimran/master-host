@@ -19,27 +19,25 @@
 .tab-navigation {
 	width: 100%;
 	margin-top: 50px;
-    border-bottom: 1px solid $grey4;
+    border-bottom: 1px solid var(--clr-dark-300);
 }
 .tab-nav {
 	width: 100%;
 	display: flex;
 	gap: 60px;
 	font-weight: 600;
-	color: $grey3;
+	color: var(--clr-dark-400);
 }
+.tab-nav-item:hover,
 .tab-nav-item.active-tab{
     padding-bottom:10px;
     color:$dark-navyblue;
-    border-bottom: 2px solid $blue;
+    border-bottom: 2px solid var(--clr-primary-400);
 }
 .tab-content {
 	width: 100%;
 }
-.child,
-.single-feature-menu{
-    background:$light-green;
-}
+
 .single-feature-menu a {
 	display: flex;
     //justify-content: flex-end;
