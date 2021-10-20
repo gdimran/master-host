@@ -48,7 +48,7 @@
                                 <span class="menu-text">Apps</span></a>
                         </li>
                         <li>
-                            <a href="domains.html"><i class="menu-icon icon-domain"></i>
+                            <a href="#"><i class="menu-icon icon-domain"></i>
                                 <span class="menu-text">Domain</span></a>
                         </li>
                         <li>
@@ -203,24 +203,41 @@
             </div>
             <!-- dashboard header End -->
             <div class="container mt-5 mb-3">
-                <div class="project-title">
-                    <i class="menu-icon icon-user circle-icon highlight-user"></i>
-                    <div class="single-icon-menu">
-                        <div class="menu-text-content">
-                            <span class="menu-title-text">Kristopher</span>
-                            <span class="menu-desc-text">A simple web application for marketing</span>
-                        </div>
-                    </div>
+                <div class="page-title mb-2">
+                    Domains
                 </div>
+
                 <div class="tab-wrapper">
-                    <div class="tab-navigation  mt-5">
+                    <div class="tab-navigation">
                         <ul class="tab-nav">
-                            <li class="tab-nav-item active-tab" data-id="resources">Resources</li>
-                            <li class="tab-nav-item" data-id="activity">Activity</li>
-                            <li class="tab-nav-item" data-id="settings">Settings</li>
+                            <li class="tab-nav-item active-tab" data-id="domains">Domains</li>
+                            <li class="tab-nav-item" data-id="ip">Floating IPs</li>
+                            <li class="tab-nav-item" data-id="load">Load Balancers</li>
+                            <li class="tab-nav-item" data-id="vpc">VPC</li>
+                            <li class="tab-nav-item" data-id="firewall">Firewall</li>
+                            <li class="tab-nav-item" data-id="prt">PRT records</li>
+
                         </ul>
                     </div>
-                    <div class="tab-content active-content" id="resources">
+
+                    <div class="form-container my-1">
+                        <div class="form-title">Add a domain</div>
+                        <div class="desc-text text-dark-400">Can only contain lowercase alphanumerich characters and
+                            dashes.</div>
+                        <form class="inline-form" action="">
+                            <input type="text" name="domain" id="domain" class="text-field required" required
+                                placeholder="Enter domain name">
+                            <select class="select-field" name="project" data-rule="required" data-default="3">
+                                <option value="0">--No select--</option>
+                                <option value="1"><a class="highlight" href="http://">Kristopher</a></option>
+                                <option value="2"><a class="highlight" href="http://">Cris Leion</a></option>
+                                <option value="3"><a class="highlight" href="http://">Maksym</a></option>
+                            </select>
+                            <button class="btn-inactive" type="submit">Add Domain</button>
+                        </form>
+                    </div>
+
+                    <div class="tab-content active-content" id="domains">
                         <div class="table-title">
                             <h4>Domains(7)</h4>
                         </div>
@@ -257,9 +274,9 @@
 
                         </div>
                     </div>
-                    <div class="tab-content" id="activity">
+                    <div class="tab-content" id="ip">
                         <div class="table-title">
-                            <h4>Activity</h4>
+                            <h4>Floation Ip</h4>
                         </div>
                         <div class="table-content">
                             <table class="list-table">
@@ -294,9 +311,120 @@
 
                         </div>
                     </div>
-                    <div class="tab-content" id="settings">
+                    <div class="tab-content" id="load">
                         <div class="table-title">
-                            <h4>Settings</h4>
+                            <h4>Load blancers</h4>
+                        </div>
+                        <div class="table-content">
+                            <table class="list-table">
+                                <tbody>
+                                    <tr>
+                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
+                                        <td>14400/CNAME/example.com</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="mateors.com">mateors.com</a></td>
+                                        <td>14400/CNAME/example.com</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
+                                        <td>3600/A/103.48.119.50</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="binaryhosting.com">binaryhosting.com</a></td>
+                                        <td>3600/A/103.48.119.50</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td> <a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
+                                        <td>14400/CNAME/example.com</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class="tab-content" id="vpc">
+                        <div class="table-title">
+                            <h4>VPC</h4>
+                        </div>
+                        <div class="table-content">
+                            <table class="list-table">
+                                <tbody>
+                                    <tr>
+                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
+                                        <td>14400/CNAME/example.com</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="mateors.com">mateors.com</a></td>
+                                        <td>14400/CNAME/example.com</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
+                                        <td>3600/A/103.48.119.50</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="binaryhosting.com">binaryhosting.com</a></td>
+                                        <td>3600/A/103.48.119.50</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td> <a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
+                                        <td>14400/CNAME/example.com</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class="tab-content" id="firewall">
+                        <div class="table-title">
+                            <h4>Firewall</h4>
+                        </div>
+                        <div class="table-content">
+                            <table class="list-table">
+                                <tbody>
+                                    <tr>
+                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
+                                        <td>14400/CNAME/example.com</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="mateors.com">mateors.com</a></td>
+                                        <td>14400/CNAME/example.com</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
+                                        <td>3600/A/103.48.119.50</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="binaryhosting.com">binaryhosting.com</a></td>
+                                        <td>3600/A/103.48.119.50</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td> <a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
+                                        <td>14400/CNAME/example.com</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class="tab-content" id="prt">
+                        <div class="table-title">
+                            <h4>PRT Records</h4>
                         </div>
                         <div class="table-content">
                             <table class="list-table">
@@ -335,100 +463,8 @@
 
             </div>
 
-            <div class="features-options">
-                <div class="container">
-                    <div class="section-title">
-                        <h4>Create something new</h4>
-                    </div>
-                    <div class="row">
-                        <div class="single-feature-menu col-xs-12 col-sm-6 col-md-3 col-lg-3 my-2">
-                            <a href="#">
-                                <i class="menu-icon icon-lunching-app"></i>
-                                <div class="menu-text-content">
-                                    <span class="menu-title-text">Launch an application</span>
-                                    <span class="menu-desc-text">Create and launch an application now</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="single-feature-menu col-xs-12 col-sm-6 col-md-3 col-lg-3 my-2">
-                            <a href="#">
-                                <i class="menu-icon icon-add-database"></i>
-                                <div class="menu-text-content">
-                                    <span class="menu-title-text">Create Database</span>
-                                    <span class="menu-desc-text">Create a database for your application</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="single-feature-menu col-xs-12 col-sm-6 col-md-3 col-lg-3 my-2">
-                            <a href="#">
-                                <i class="menu-icon icon-add-new-email"></i>
-                                <div class="menu-text-content">
-                                    <span class="menu-title-text">Create Email</span>
-                                    <span class="menu-desc-text">Create new emails for you</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="single-feature-menu col-xs-12 col-sm-6 col-md-3 col-lg-3 my-2">
-                            <a href="#">
-                                <i class="menu-icon icon-dns"></i>
-                                <div class="menu-text-content">
-                                    <span class="menu-title-text">DNS</span>
-                                    <span class="menu-desc-text">Manage your DNS</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
-            </div>
-
-            <div class="features-options">
-                <div class="container">
-                    <div class="section-title">
-                        <h4>Learn more</h4>
-                    </div>
-                    <div class="row">
-                        <div class="single-feature-menu col-xs-12 col-sm-6 col-md-3 col-lg-3 my-2">
-                            <a href="#">
-                                <i class="menu-icon icon-documents"></i>
-                                <div class="menu-text-content">
-                                    <span class="menu-title-text">Product Docs</span>
-                                    <span class="menu-desc-text">Technical overview, how to use,<br>
-                                        release notes and supporting materials</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="single-feature-menu col-xs-12 col-sm-6 col-md-3 col-lg-3 my-2">
-                            <a href="#">
-                                <i class="menu-icon icon-video-tutorial"></i>
-                                <div class="menu-text-content">
-                                    <span class="menu-title-text">Tutorials</span>
-                                    <span class="menu-desc-text">Learn how to launch and deploy your apps</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="single-feature-menu col-xs-12 col-sm-6 col-md-3 col-lg-3 my-2">
-                            <a href="#">
-                                <i class="menu-icon icon-api"></i>
-                                <div class="menu-text-content">
-                                    <span class="menu-title-text">API</span>
-                                    <span class="menu-desc-text">Run your resources programmatically</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="single-feature-menu col-xs-12 col-sm-6 col-md-3 col-lg-3 my-2">
-                            <a href="#">
-                                <i class="menu-icon icon-faq-i"></i>
-                                <div class="menu-text-content">
-                                    <span class="menu-title-text">Ask a question</span>
-                                    <span class="menu-desc-text">Connect, share and learn</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            <!-- Dashboard footer start -->
             <div class="dashboard-footer">
                 <div class="container">
                     <ul class="footer-nav">
@@ -456,7 +492,7 @@
                     </ul>
                 </div>
             </div>
-
+            <!-- Dashboard footer END -->
 
         </div>
     </div>

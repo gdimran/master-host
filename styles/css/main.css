@@ -1191,7 +1191,20 @@ ul li {
 .section-title {
   width: 100%;
   margin-top: 50px;
-  margin-bottom: 15px;
+}
+
+.page-title {
+  width: 100%;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.form-title {
+  font-size: 1.3rem;
+}
+
+.desc-text {
+  font-size: 1rem;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -2098,7 +2111,91 @@ template {
   text-transform: uppercase;
 }
 
-/* Created on 27/04/2020 */
+/*all button */
+/*
+.btn{
+    font-size:1.3rem;
+    font-weight:400;
+    padding:15px 20px;
+    border:none;
+    border-radius: 3px;
+}
+.btn-inactive{
+    background:var(--clr-dark-300);
+    color:var(--clr-dark-400);
+}
+.btn-active{
+    background:var(--clr-primary-400);
+    color:var(--clr-light-100);
+}
+
+*/
+.btn-primary, .btn-inactive, .btn-active, .btn-outline, .btn-action {
+  display: inline-flex;
+  border-radius: 3px;
+  padding: 6px 15px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:focus, .btn-inactive:focus, .btn-active:focus, .btn-outline:focus, .btn-action:focus, .btn-primary:hover, .btn-inactive:hover, .btn-active:hover, .btn-outline:hover, .btn-action:hover {
+  background: var(--clr-primary-400);
+  color: var(--clr-light-100);
+}
+
+.btn-primary {
+  background: var(--clr-primary-400);
+  color: var(--clr-light-100);
+}
+
+.btn-inactive {
+  background: var(--clr-dark-300);
+  color: var(--clr-dark-400);
+  border: none;
+}
+
+.btn-active {
+  background: var(--clr-primary-400);
+  color: var(--clr-light-100);
+  border: none;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--clr-primary-400);
+  border: 1px solid var(--clr-primary-400);
+}
+
+.btn-action {
+  border: none;
+  background: var(--clr-warning-500);
+  color: var(--clr-light-100);
+}
+
+.inline-form {
+  display: inline-flex;
+  width: 100%;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.select-field,
+.text-field {
+  width: 40%;
+  border: 1px solid var(--clr-secondary-500);
+  min-height: 54px;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.select-field :after {
+  color: var(--clr-secondary-500);
+}
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -2119,6 +2216,43 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }*/
+.tab-wrapper {
+  width: 100%;
+}
+
+.tab-navigation {
+  width: 100%;
+  border-bottom: 1px solid var(--clr-dark-300);
+}
+
+.tab-nav {
+  width: 100%;
+  display: flex;
+  gap: 60px;
+  font-weight: 600;
+  color: var(--clr-dark-400);
+}
+
+.tab-nav-item:hover,
+.tab-nav-item.active-tab {
+  padding-bottom: 10px;
+  color: #2d4059;
+  border-bottom: 2px solid var(--clr-primary-400);
+}
+
+.tab-content {
+  width: 100%;
+}
+
+.tab-content {
+  display: none;
+  width: 100%;
+}
+
+.tab-content.active-content {
+  display: block;
+}
+
 #content {
   width: 100vw;
 }
@@ -2562,31 +2696,6 @@ ul.footer-nav li a:hover {
 
 .project-title .menu-icon {
   font-size: 1.5rem;
-}
-
-.tab-navigation {
-  width: 100%;
-  margin-top: 50px;
-  border-bottom: 1px solid var(--clr-dark-300);
-}
-
-.tab-nav {
-  width: 100%;
-  display: flex;
-  gap: 60px;
-  font-weight: 600;
-  color: var(--clr-dark-400);
-}
-
-.tab-nav-item:hover,
-.tab-nav-item.active-tab {
-  padding-bottom: 10px;
-  color: #2d4059;
-  border-bottom: 2px solid var(--clr-primary-400);
-}
-
-.tab-content {
-  width: 100%;
 }
 
 .single-feature-menu a {

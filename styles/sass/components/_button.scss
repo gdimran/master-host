@@ -1,1 +1,68 @@
-/* Created on 27/04/2020 */ 
+/*all button */ 
+/*
+.btn{
+    font-size:1.3rem;
+    font-weight:400;
+    padding:15px 20px;
+    border:none;
+    border-radius: 3px;
+}
+.btn-inactive{
+    background:var(--clr-dark-300);
+    color:var(--clr-dark-400);
+}
+.btn-active{
+    background:var(--clr-primary-400);
+    color:var(--clr-light-100);
+}
+
+*/
+
+%btn{
+  display: inline-flex;
+  border-radius: 3px;
+  padding: 6px 15px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight:500;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  //line-height: 1.3;
+  &:focus,
+  &:hover{
+    background:var(--clr-primary-400);
+    color:var(--clr-light-100);
+    
+  }
+}
+.btn-primary{
+  @extend %btn;
+  background:var(--clr-primary-400);
+    color:var(--clr-light-100);
+}
+.btn-inactive{
+    @extend %btn;
+    background:var(--clr-dark-300);
+    color:var(--clr-dark-400);
+    border:none;
+}
+.btn-active{
+    @extend %btn;
+    background:var(--clr-primary-400);
+    color:var(--clr-light-100);
+    border:none;
+}
+.btn-outline{
+  @extend %btn;
+  background: transparent;
+  color: var(--clr-primary-400);
+  border: 1px solid var(--clr-primary-400);
+}
+
+.btn-action{
+  @extend %btn;
+  border: none;
+  background:var(--clr-warning-500);
+    color:var(--clr-light-100);
+}

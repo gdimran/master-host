@@ -16,27 +16,7 @@
         font-size: 1.5rem;
     }
 }
-.tab-navigation {
-	width: 100%;
-	margin-top: 50px;
-    border-bottom: 1px solid var(--clr-dark-300);
-}
-.tab-nav {
-	width: 100%;
-	display: flex;
-	gap: 60px;
-	font-weight: 600;
-	color: var(--clr-dark-400);
-}
-.tab-nav-item:hover,
-.tab-nav-item.active-tab{
-    padding-bottom:10px;
-    color:$dark-navyblue;
-    border-bottom: 2px solid var(--clr-primary-400);
-}
-.tab-content {
-	width: 100%;
-}
+
 
 .single-feature-menu a {
 	display: flex;
