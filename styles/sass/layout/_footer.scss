@@ -1,0 +1,28 @@
+.dashboard-footer {
+  width:100%;
+  position: absolute;
+  bottom: 0;
+  left:0;
+  margin-top: 100px;
+  border-top: 1px solid $grey5;
+
+}
+ ul.footer-nav {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    grid-gap: 30px;
+    align-items: center;
+    width: 100%;
+    li {
+      font-size:1rem;
+      font-weight:600;
+      padding: 15px 0;
+      a{
+        color:$grey4;
+      }
+      a:hover{
+        color:$blue;
+      }
+    }
+  }

@@ -3,6 +3,7 @@
 ----------------------------------------------------- */
 
 #content {
+    height:auto;
     min-height: 100vh;
     transition: all 0.3s;
 }
@@ -35,10 +36,13 @@
 .tab-content {
 	width: 100%;
 }
-
+.child,
+.single-feature-menu{
+    background:$light-green;
+}
 .single-feature-menu a {
 	display: flex;
-    justify-content: flex-end;
+    //justify-content: flex-end;
     align-items: center;
     .menu-icon {
         width:auto;
@@ -62,8 +66,10 @@
 }
 }
 
+/*
 .features-options {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 }
+*/
