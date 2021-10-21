@@ -4,6 +4,7 @@ html {
   color: var(--clr-secondary-500);
   font-size: $base-font-size;
   box-sizing: border-box;
+  font-family:'Roboto', sans-serif;
 }
 
 // Fix the box model
@@ -109,4 +110,8 @@ ul li {
 }
 .desc-text{
   font-size:1rem;
+}
+.title-description-sec {
+	font-size: 1.4rem;
+	margin: 5px 0;
 }

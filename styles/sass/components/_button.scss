@@ -21,11 +21,11 @@
 %btn{
   display: inline-flex;
   border-radius: 3px;
-  padding: 6px 15px;
+  padding: 6px 25px;
   text-align: center;
-  font-size: 1.3rem;
-  font-weight:500;
-  min-height: 40px;
+  font-size: 1.2rem;
+  font-weight:600;
+  height: clamp(40px, 50px,60px);
   align-items: center;
   justify-content: center;
   //line-height: 1.3;
@@ -47,10 +47,11 @@
     color:var(--clr-dark-400);
     border:none;
 }
+.btn-active a,
 .btn-active{
     @extend %btn;
     background:var(--clr-primary-400);
-    color:var(--clr-light-100);
+    color:var(--clr-light-100) !important;
     border:none;
 }
 .btn-outline{
@@ -65,4 +66,12 @@
   border: none;
   background:var(--clr-warning-500);
     color:var(--clr-light-100);
+}
+.search-btn {
+	border: none;
+	background: none;
+	position: absolute;
+	line-height: 50px;
+	color: var(--clr-primary-600);
+	left: 10px;
 }

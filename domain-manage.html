@@ -204,92 +204,123 @@
             </div>
             <!-- dashboard header End -->
             <div class="container mt-5 mb-3">
-                <div class="page-title mb-2">
-                    Domains
+                <div class="back-btn mb-2">
+                    <i class="fas fa-long-arrow-alt-left"></i> Domains
                 </div>
-
+                <div class="page-title mb-2">
+                    masteracademy.com
+                    <div class="title-description-sec ">
+                        in <i class="far fa-user-circle"></i> <span class="text-primary-400">Kristopher</span>
+                    </div>
+                </div>
 
                 <div class="tab-wrapper">
                     <div class="tab-navigation">
                         <ul class="tab-nav">
-                            <li class="tab-nav-item active-tab" data-id="domains">Domains</li>
-                            <li class="tab-nav-item" data-id="ip">Floating IPs</li>
-                            <li class="tab-nav-item" data-id="load">Load Balancers</li>
-                            <li class="tab-nav-item" data-id="vpc">VPC</li>
-                            <li class="tab-nav-item" data-id="firewall">Firewall</li>
-                            <li class="tab-nav-item" data-id="prt">PRT records</li>
+                            <li class="tab-nav-item active-tab" data-id="A">A</li>
+                            <li class="tab-nav-item" data-id="AAAA">AAAA</li>
+                            <li class="tab-nav-item" data-id="CNAME">CNAME</li>
+                            <li class="tab-nav-item" data-id="mx">MX</li>
+                            <li class="tab-nav-item" data-id="txt">TXT</li>
+                            <li class="tab-nav-item" data-id="ns">NS</li>
+                            <li class="tab-nav-item" data-id="srv">SRV</li>
+                            <li class="tab-nav-item" data-id="caa">CAA</li>
 
                         </ul>
                     </div>
 
-                    <div class="form-container my-1">
-                        <div class="form-title">Add a domain</div>
-                        <div class="desc-text text-dark-400">Can only contain lowercase alphanumerich characters and
-                            dashes.
+
+
+                    <div class="tab-content active-content" id="A">
+                        <div class="form-container my-1">
+                            <div class="form-title">Create new record</div>
+                            <div class="desc-text text-dark-400">Can only contain lowercase alphanumerich characters and
+                                dashes. Can only contain lowercase alphanumerich characters and dashes.
+                            </div>
+                            <form class="inline-form" action="">
+                                <div class="field-group">
+                                    <div class="lable">HOSTNAME</div>
+                                    <div class="validate-info require text-primary-400"><i
+                                            class="fas fa-star-of-life"></i>
+                                    </div>
+                                    <input type="text" name="domain" id="domain" class="text-field required"
+                                        placeholder="Enter @ or hostname">
+                                </div>
+                                <div class="field-group">
+                                    <div class="lable">WILL DIRECT TO</div>
+                                    <div class="validate-info"></div>
+                                    <input type="text" name="domain" id="domain" class="text-field required"
+                                        placeholder="Select resource or enter custom IP">
+                                </div>
+                                <div class="field-group">
+                                    <div class="lable">TTL (SECONDS)</div>
+                                    <div class="validate-info success text-success-400"><i
+                                            class="valid-icon icon-check"></i>
+                                    </div>
+                                    <input type="text" name="domain" id="domain" class="text-field small required"
+                                        placeholder="Enter domain name">
+                                </div>
+
+
+
+                                <button class="btn-inactive" type="submit">Create Record</button>
+                            </form>
                         </div>
-                        <form class="inline-form" action="">
-                            <input type="text" name="domain" id="domain" class="text-field required"
-                                placeholder="Enter domain name">
-
-                            <select name="sources" id="sources" class="custom-select sources"
-                                placeholder="Project Name">
-                                <option value="kristopher">kristopher</option>
-                                <option value="Eva">Eva</option>
-                                <option value="masteracademy">Master Academy</option>
-                            </select>
-                            <button class="btn-inactive" type="submit">Add Domain</button>
-                        </form>
-                    </div>
-
-                    <div class="tab-content active-content" id="domains">
-                        <div class="table-title">
-                            <h4>Domains(7)</h4>
+                        <div class="table-title mt-3">
+                            <h4>DNS records</h4>
                         </div>
                         <div class="table-content">
                             <table class="list-table">
                                 <tbody>
                                     <tr class="bg-info-100">
-                                        <th class="text-primary-400">Domain <i class="fas fa-caret-down"></i></th>
-                                        <th>Redirect To</th>
+                                        <th>Type</th>
+                                        <th>Hostname</th>
+                                        <th>Value</th>
+                                        <th>TTL(Seconds)</th>
                                         <th style="width:7%; text-align:center">Action</th>
                                     </tr>
                                     <tr>
-                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a>
-                                            <p class="desc-sub-text">14400/CNAME/example.com</p>
+                                        <td>ns</td>
+                                        <td><a href="masteracademy.org">masteracademy.org</a>
                                         </td>
-                                        <td>148.168.45.24</td>
+                                        <td><span class="text-dark-200">directs to</span> ns1.binaryhost.com.</td>
+                                        <td>1800</td>
                                         <td class="text-primary-400" style="width:7%; text-align:center">More <i
                                                 class="fas fa-angle-down"></i></td>
                                     </tr>
                                     <tr>
-                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a>
-                                            <p class="desc-sub-text">14400/CNAME/example.com</p>
+                                        <td>ns</td>
+                                        <td><a href="masteracademy.org">masteracademy.org</a>
                                         </td>
-                                        <td>148.168.45.24</td>
+                                        <td><span class="text-dark-200">directs to</span> ns1.binaryhost.com.</td>
+                                        <td>1800</td>
                                         <td class="text-primary-400" style="width:7%; text-align:center">More <i
                                                 class="fas fa-angle-down"></i></td>
                                     </tr>
                                     <tr>
-                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a>
-                                            <p class="desc-sub-text">14400/CNAME/example.com</p>
+                                        <td>ns</td>
+                                        <td><a href="masteracademy.org">masteracademy.org</a>
                                         </td>
-                                        <td>148.168.45.24</td>
+                                        <td><span class="text-dark-200">directs to</span> ns1.binaryhost.com.</td>
+                                        <td>1700</td>
                                         <td class="text-primary-400" style="width:7%; text-align:center">More <i
                                                 class="fas fa-angle-down"></i></td>
                                     </tr>
                                     <tr>
-                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a>
-                                            <p class="desc-sub-text">14400/CNAME/example.com</p>
+                                        <td>ns</td>
+                                        <td><a href="masteracademy.org">masteracademy.org</a>
                                         </td>
-                                        <td>148.168.45.24</td>
+                                        <td><span class="text-dark-200">directs to</span> ns1.binaryhost.com.</td>
+                                        <td>1200</td>
                                         <td class="text-primary-400" style="width:7%; text-align:center">More <i
                                                 class="fas fa-angle-down"></i></td>
                                     </tr>
                                     <tr>
-                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a>
-                                            <p class="desc-sub-text">14400/CNAME/example.com</p>
+                                        <td>ns</td>
+                                        <td><a href="masteracademy.org">masteracademy.org</a>
                                         </td>
-                                        <td>148.168.45.24</td>
+                                        <td><span class="text-dark-200">directs to</span> ns1.binaryhost.com.</td>
+                                        <td>1400</td>
                                         <td class="text-primary-400" style="width:7%; text-align:center">More <i
                                                 class="fas fa-angle-down"></i></td>
                                     </tr>
@@ -299,7 +330,7 @@
 
                         </div>
                     </div>
-                    <div class="tab-content" id="ip">
+                    <div class="tab-content" id="AAAA">
                         <div class="table-title">
                             <h4>Floation Ip</h4>
                         </div>
@@ -336,7 +367,7 @@
 
                         </div>
                     </div>
-                    <div class="tab-content" id="load">
+                    <div class="tab-content" id="CNAME">
                         <div class="table-title">
                             <h4>Load blancers</h4>
                         </div>
@@ -373,7 +404,7 @@
 
                         </div>
                     </div>
-                    <div class="tab-content" id="vpc">
+                    <div class="tab-content" id="mx">
                         <div class="table-title">
                             <h4>VPC</h4>
                         </div>
@@ -410,7 +441,7 @@
 
                         </div>
                     </div>
-                    <div class="tab-content" id="firewall">
+                    <div class="tab-content" id="txt">
                         <div class="table-title">
                             <h4>Firewall</h4>
                         </div>
@@ -447,7 +478,7 @@
 
                         </div>
                     </div>
-                    <div class="tab-content" id="prt">
+                    <div class="tab-content" id="ns">
                         <div class="table-title">
                             <h4>PRT Records</h4>
                         </div>
@@ -485,6 +516,7 @@
                         </div>
                     </div>
                 </div>
+
 
             </div>
 
