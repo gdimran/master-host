@@ -51,3 +51,27 @@
 	justify-content: space-between;
 }
 */
+.step-text,
+.back-btn{
+    display:inline-flex;
+    width:100%
+}
+.source-form {
+	width: 100%;
+	display: block;
+}
+
+.source-form ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.source-form ul li a {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+.source-form ul li a img{
+    margin-right:15px;
+}

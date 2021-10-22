@@ -109,9 +109,19 @@ ul li {
 	font-size: 1.3rem;
 }
 .desc-text{
-  font-size:1rem;
+  font-size:0.9rem;
 }
 .title-description-sec {
 	font-size: 1.4rem;
 	margin: 5px 0;
+}
+.inline-content {
+	display: inline-flex;
+	gap: 30px;
+  width:100%;
+}
+
+.title-border-btm {
+	border-bottom: 1px solid var(--clr-dark-300);
+	padding-bottom: 15px;
 }

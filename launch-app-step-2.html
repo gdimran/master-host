@@ -204,209 +204,139 @@
             </div>
             <!-- dashboard header End -->
             <div class="container mt-5 mb-3">
-                <div class="page-title mb-2">
-                    Emails
-                    <div class="desc-text text-dark-400">This features lets you create and manage email accounts. Want
-                        to learn more? Read our <a class="active" href="http://">documentation</a>
-                    </div>
-                </div>
-                <div class="form-with-btn my-1">
-                    <form class="search-form" action="">
-                        <input type="text" name="search" id="domain" class="search-field"
-                            placeholder="Please enter your search criteria">
-
-                        <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
-                    </form>
-                    <div class="btn-active create-email"><a href="http://"> <i class="icon icon-add-new-email mr-1"></i>
-                            Create an email</a>
-                    </div>
+                <a class="back-btn m1-2" href="#">
+                    <i class="fas fa-long-arrow-alt-left"></i> Previous
+                </a>
+                <div class="step-text text-dark-300 mt-2 mb-1">Step 2 of 5 Launch Application</div>
+                <div class="page-title mb-2 title-border-btm">
+                    Configure your app
                 </div>
 
-                <div class="tab-wrapper mt-3">
-                    <div class="tab-navigation">
-                        <ul class="tab-nav">
-                            <li class="tab-nav-item active-tab" data-id="emails">Emails</li>
-                            <li class="tab-nav-item" data-id="restricted">Restricted</li>
-                            <li class="tab-nav-item" data-id="system">System Account</li>
-                            <li class="tab-nav-item" data-id="exceeded">Exceeded Storage</li>
-
-                        </ul>
-                    </div>
-
-                    <div class="tab-content active-content" id="emails">
-                        <div class="table-title">
-                            <h4>Emails(7)</h4>
+                <form class="vertical-form" action="">
+                    <div class="field-group">
+                        <div class="lable">Application Type</div>
+                        <div class="desc-text text-dark-400 mb-1">Write the application types
                         </div>
-                        <div class="table-content">
-                            <table class="list-table">
-                                <tbody>
-                                    <tr class="bg-info-100">
-                                        <th class="text-primary-400">Account <i class="fas fa-caret-down"></i></th>
-                                        <th>Restrictions</th>
-                                        <th>Storage: Used / Allocated</th>
-                                        <th style="width:7%; text-align:center">Action</th>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="highlight" href="#">user@example.com</a></td>
-                                        <td>Unrestricted</td>
-                                        <td>3.96 MB / 500 MB</td>
-                                        <td class="text-primary-400" style="width:7%; text-align:center">More <i
-                                                class="fas fa-angle-down"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="highlight" href="#">user@example.com</a></td>
-                                        <td>Unrestricted</td>
-                                        <td>3.96 MB / 500 MB</td>
-                                        <td class="text-primary-400" style="width:7%; text-align:center">More <i
-                                                class="fas fa-angle-down"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="highlight" href="#">user@example.com</a></td>
-                                        <td>Unrestricted</td>
-                                        <td>3.96 MB / 500 MB</td>
-                                        <td class="text-primary-400" style="width:7%; text-align:center">More <i
-                                                class="fas fa-angle-down"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="highlight" href="#">user@example.com</a></td>
-                                        <td>Unrestricted</td>
-                                        <td>3.96 MB / 500 MB</td>
-                                        <td class="text-primary-400" style="width:7%; text-align:center">More <i
-                                                class="fas fa-angle-down"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="highlight" href="#">user@example.com</a></td>
-                                        <td>Unrestricted</td>
-                                        <td>3.96 MB / 500 MB</td>
-                                        <td class="text-primary-400" style="width:7%; text-align:center">More <i
-                                                class="fas fa-angle-down"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="highlight" href="#">user@example.com</a></td>
-                                        <td>Unrestricted</td>
-                                        <td>3.96 MB / 500 MB</td>
-                                        <td class="text-primary-400" style="width:7%; text-align:center">More <i
-                                                class="fas fa-angle-down"></i></td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-
+                        <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
+                        </div> -->
+                        <div class="form-with-right-tooltip mt-1">
+                            <input type="text" name="domain" id="domain" class="text-field required"
+                                placeholder="Web Service">
+                            <div class="tooltip-sec">
+                                <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                    <span class="tooltiptext">
+                                        <span class="tooltip-head">Heads up</span>
+                                        <span class="tooltip-body">This is the name of databse
+                                            required to connect to databse
+                                            with your application</span>
+                                        <span class="tooltip-footer">Ok <a class="text-light-100" href="http://">Learn
+                                                more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="tab-content" id="restricted">
-                        <div class="table-title">
-                            <h4>Floation Ip</h4>
+                    <div class="field-group">
+                        <div class="lable">Environment Variables</div>
+                        <div class="desc-text text-dark-400 mb-1">No environment variables defined yet.
                         </div>
-                        <div class="table-content">
-                            <table class="list-table">
-                                <tbody>
-                                    <tr>
-                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
-                                        <td>14400/CNAME/example.com</td>
-                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="highlight" href="mateors.com">mateors.com</a></td>
-                                        <td>14400/CNAME/example.com</td>
-                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
-                                        <td>3600/A/103.48.119.50</td>
-                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="highlight" href="binaryhosting.com">binaryhosting.com</a></td>
-                                        <td>3600/A/103.48.119.50</td>
-                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td> <a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
-                                        <td>14400/CNAME/example.com</td>
-                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
+                        <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
+                        </div> -->
+                        <div class="form-with-right-tooltip mt-1">
+                            <input type="text" name="domain" id="domain" class="text-field required"
+                                placeholder="Enter environment variable">
+                            <div class="tooltip-sec">
+                                <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                    <span class="tooltiptext">
+                                        <span class="tooltip-head">Heads up</span>
+                                        <span class="tooltip-body">This is the name of databse
+                                            required to connect to databse
+                                            with your application</span>
+                                        <span class="tooltip-footer">Ok <a class="text-light-100" href="http://">Learn
+                                                more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="tab-content" id="system">
-                        <div class="table-title">
-                            <h4>Load blancers</h4>
+                    <div class="field-group">
+                        <div class="lable">Run Command</div>
+                        <div class="desc-text text-dark-400 mb-1">No command defined yet.
                         </div>
-                        <div class="table-content">
-                            <table class="list-table">
-                                <tbody>
-                                    <tr>
-                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
-                                        <td>14400/CNAME/example.com</td>
-                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="highlight" href="mateors.com">mateors.com</a></td>
-                                        <td>14400/CNAME/example.com</td>
-                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
-                                        <td>3600/A/103.48.119.50</td>
-                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="highlight" href="binaryhosting.com">binaryhosting.com</a></td>
-                                        <td>3600/A/103.48.119.50</td>
-                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td> <a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
-                                        <td>14400/CNAME/example.com</td>
-                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
+                        <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
+                        </div> -->
+                        <div class="form-with-right-tooltip mt-1">
+                            <input type="text" name="domain" id="domain" class="text-field required"
+                                placeholder="Type Command">
+                            <div class="tooltip-sec">
+                                <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                    <span class="tooltiptext">
+                                        <span class="tooltip-head">Heads up</span>
+                                        <span class="tooltip-body">This is the name of databse
+                                            required to connect to databse
+                                            with your application</span>
+                                        <span class="tooltip-footer">Ok <a class="text-light-100" href="http://">Learn
+                                                more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="tab-content" id="exceeded">
-                        <div class="table-title">
-                            <h4>VPC</h4>
+                    <div class="field-group">
+                        <div class="lable">HTTP Port</div>
+                        <div class="desc-text text-dark-400 mb-1">Enter you port if you define any
                         </div>
-                        <div class="table-content">
-                            <table class="list-table">
-                                <tbody>
-                                    <tr>
-                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
-                                        <td>14400/CNAME/example.com</td>
-                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="highlight" href="mateors.com">mateors.com</a></td>
-                                        <td>14400/CNAME/example.com</td>
-                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
-                                        <td>3600/A/103.48.119.50</td>
-                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a class="highlight" href="binaryhosting.com">binaryhosting.com</a></td>
-                                        <td>3600/A/103.48.119.50</td>
-                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
-                                    </tr>
-                                    <tr>
-                                        <td> <a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
-                                        <td>14400/CNAME/example.com</td>
-                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
+                        <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
+                        </div> -->
+                        <div class="form-with-right-tooltip mt-1">
+                            <input type="text" name="domain" id="domain" class="text-field required" placeholder="8080">
+                            <div class="tooltip-sec">
+                                <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                    <span class="tooltiptext">
+                                        <span class="tooltip-head">Heads up</span>
+                                        <span class="tooltip-body">This is the name of databse
+                                            required to connect to databse
+                                            with your application</span>
+                                        <span class="tooltip-footer">Ok <a class="text-light-100" href="http://">Learn
+                                                more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field-group">
+                        <div class="lable">Application path</div>
+                        <div class="desc-text text-dark-400 mb-1">You can specify application path
+                        </div>
+                        <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
+                        </div> -->
+                        <div class="form-with-right-tooltip mt-1">
+                            <input type="text" name="domain" id="domain" class="text-field required"
+                                placeholder="path/">
+                            <div class="tooltip-sec">
+                                <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                    <span class="tooltiptext">
+                                        <span class="tooltip-head">Heads up</span>
+                                        <span class="tooltip-body">This is the name of databse
+                                            required to connect to databse
+                                            with your application</span>
+                                        <span class="tooltip-footer">Ok <a class="text-light-100" href="http://">Learn
+                                                more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                </div>
+                    <div class="inline-content mb-3">
+                        <a href="" class="btn-outline">Add a Database</a>
+                        <p>Optional, only if your app need a database.</p>
+                    </div>
+
+
+                    <button class="btn-active" type="submit">Next</button>
+                </form>
+
 
             </div>
 

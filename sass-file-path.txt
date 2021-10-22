@@ -23,3 +23,8 @@
 https://github.com/ResponsiveBP/Responsive
 
 https://github.com/fransyrcc/starter-html-sass-js-webpack/blob/master/src/styles/abstracts/_variables.scss
+
+
+https://codepen.io/gabrielferreira/pen/oYxNVy
+
+https://codepen.io/rakibjewel/pen/VwYXbbb

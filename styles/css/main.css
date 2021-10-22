@@ -1206,12 +1206,23 @@ ul li {
 }
 
 .desc-text {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .title-description-sec {
   font-size: 1.4rem;
   margin: 5px 0;
+}
+
+.inline-content {
+  display: inline-flex;
+  gap: 30px;
+  width: 100%;
+}
+
+.title-border-btm {
+  border-bottom: 1px solid var(--clr-dark-300);
+  padding-bottom: 15px;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1234,7 +1245,7 @@ html {
    * Remove the margin in all browsers.
    */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'Roboto', sans-serif;
   margin: 0;
 }
 
@@ -1583,6 +1594,14 @@ template {
   font-size: 1rem;
   font-weight: 400;
   margin-bottom: 10px;
+}
+
+.note-sec {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 .m-1 {
@@ -2452,6 +2471,146 @@ template {
   position: relative;
 }
 
+.form-with-right-tooltip {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+/*-----------tooltip-----------*/
+.tooltip-btn {
+  font-size: 1.8rem;
+  color: var(--clr-dark-400);
+  position: relative;
+  display: inline-block;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 190px;
+  min-height: 120px;
+  background-color: var(--clr-primary-400);
+  color: #fff;
+  text-align: left;
+  border-radius: 3px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip-btn .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent var(--clr-primary-400) transparent transparent;
+}
+
+.tooltip-btn:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-head {
+  font-size: 1rem;
+  font-weight: bold;
+  display: inherit;
+}
+
+.tooltip-body {
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1rem;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+.tooltip-footer {
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/***** RADIO BUTTON STYLES *****/
+.rdio {
+  position: relative;
+}
+
+.rdio input[type="radio"] {
+  opacity: 0;
+}
+
+.rdio label {
+  padding-left: 10px;
+  cursor: pointer;
+  margin-bottom: 7px !important;
+}
+
+.rdio label:before {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  content: '';
+  display: inline-block;
+  border-radius: 50px;
+  border: 1px solid var(--clr-dark-400);
+  background: #fff;
+}
+
+.rdio input[type="radio"] {
+  width: auto;
+  margin: 0px;
+}
+
+.rdio input[type="radio"]:disabled + label {
+  color: #999;
+}
+
+.rdio input[type="radio"]:disabled + label:before {
+  background-color: var(--clr-primary-400);
+}
+
+.rdio input[type="radio"]:checked + label::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  display: inline-block;
+  font-size: 11px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--clr-primary-400);
+  border-radius: 50px;
+}
+
+.rdio-default input[type="radio"]:checked + label:before {
+  border-color: var(--clr-primary-400);
+}
+
+.rdio-primary input[type="radio"]:checked + label:before {
+  border-color: var(--clr-primary-400);
+}
+
+.rdio-primary input[type="radio"]:checked + label::after {
+  background-color: var(--clr-primary-400);
+}
+
+.database-form {
+  width: 100%;
+}
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -2511,6 +2670,223 @@ tr:nth-child(even) {
 
 .tab-content.active-content {
   display: block;
+}
+
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element:*/
+}
+
+.select-selected {
+  border: 1px solid var(--clr-secondary-500);
+  background-color: var(--clr-light-100);
+  border-radius: 3px;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 40%;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: var(--clr-primary-400) transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent var(--clr-primary-400) transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+  color: var(--clr-secondary-500);
+  padding: 8px 16px;
+  cursor: pointer;
+  user-select: none;
+  min-height: 50px;
+  line-height: 33px;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: var(--clr-light-100);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border: 1px solid var(--clr-dark-300);
+  border-radius: 3px;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.same-as-selected,
+.select-items div:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*------------file upload cotent-----------------*/
+.upload-section {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  height: 150px;
+  align-content: center;
+  align-items: center;
+  background: var(--clr-primary-100);
+  border: 1px solid var(--clr-primary-400);
+  border-radius: 3px;
+  text-align: center;
+  flex-direction: column;
+}
+
+.input-file-container {
+  position: relative;
+  width: 225px;
+}
+
+.js .input-file-trigger {
+  display: block;
+  padding: 14px 45px;
+  background: var(--clr-primary-400);
+  color: #fff;
+  font-size: 1em;
+  transition: all .4s;
+  cursor: pointer;
+}
+
+.js .input-file {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 225px;
+  opacity: 0;
+  padding: 14px 0;
+  cursor: pointer;
+}
+
+.js .input-file:hover + .input-file-trigger,
+.js .input-file:focus + .input-file-trigger,
+.js .input-file-trigger:hover,
+.js .input-file-trigger:focus {
+  background: var(--clr-primary-400);
+  color: var(--clr-light-100);
+}
+
+.file-return {
+  margin: 0;
+}
+
+.file-return:not(:empty) {
+  margin: 1em 0;
+}
+
+.js .file-return {
+  font-style: italic;
+  font-size: .9em;
+  font-weight: bold;
+}
+
+.js .file-return:not(:empty):before {
+  content: "Selected file: ";
+  font-style: normal;
+  font-weight: normal;
+}
+
+/*--------------------------custome box radio button------------------------------*/
+.middle {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+}
+
+.middle input[type="radio"] {
+  display: none;
+}
+
+.middle input[type="radio"]:checked + .box {
+  color: var(--clr-primary-400);
+  background-color: var(--clr-light-100);
+  border: 1px solid var(--clr-primary-400);
+}
+
+.middle input[type="radio"]:checked + .box .active-icon {
+  display: block;
+}
+
+.middle input[type="radio"]:checked + .box .hidden-icon {
+  display: none;
+}
+
+.middle input[type="radio"]:checked + .box .database-brand {
+  width: 100%;
+  height: 120px;
+  background: var(--clr-primary-100);
+  border-bottom: 1px solid var(--clr-primary-400);
+}
+
+.middle .box {
+  width: 250px;
+  height: 150px;
+  background-color: var(--clr-light-100);
+  transition: all 250ms ease;
+  will-change: transition;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid var(--clr-dark-300);
+  position: relative;
+  font-weight: 600;
+}
+
+.middle .box .active-icon {
+  display: none;
+}
+
+.middle .box .hidden-icon {
+  display: block;
+}
+
+.middle .box:active {
+  transform: translateY(10px);
+}
+
+.middle .box .database-brand {
+  width: 100%;
+  height: 120px;
+  background: var(--clr-dark-200);
+  border-bottom: 1px solid var(--clr-dark-300);
+}
+
+.box p {
+  margin: 15px 0;
+}
+
+.icon {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.version {
+  margin: 5px 0 !important;
+  font-size: 0.8rem;
+  font-weight: 300;
 }
 
 #content {
@@ -2992,3 +3368,30 @@ ul.footer-nav li a:hover {
 	justify-content: space-between;
 }
 */
+.step-text,
+.back-btn {
+  display: inline-flex;
+  width: 100%;
+}
+
+.source-form {
+  width: 100%;
+  display: block;
+}
+
+.source-form ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.source-form ul li a {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.source-form ul li a img {
+  margin-right: 15px;
+}
