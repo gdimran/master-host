@@ -1,0 +1,367 @@
+/*the container must be positioned relative:*/
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select select {
+  display: none;
+  /*hide original SELECT element:*/
+}
+
+.select-selected {
+  border: 1px solid var(--clr-secondary-500);
+  background-color: var(--clr-light-100);
+  border-radius: 3px;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 40%;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: var(--clr-primary-400) transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent var(--clr-primary-400) transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+  color: var(--clr-secondary-500);
+  padding: 8px 16px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  min-height: 50px;
+  line-height: 33px;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: var(--clr-light-100);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  border: 1px solid var(--clr-dark-300);
+  border-radius: 3px;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.same-as-selected,
+.select-items div:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*------------file upload cotent-----------------*/
+.upload-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 150px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--clr-primary-100);
+  border: 1px solid var(--clr-primary-400);
+  border-radius: 3px;
+  text-align: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.input-file-container {
+  position: relative;
+  width: 225px;
+}
+
+.js .input-file-trigger {
+  display: block;
+  padding: 14px 45px;
+  background: var(--clr-primary-400);
+  color: #fff;
+  font-size: 1em;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  cursor: pointer;
+}
+
+.js .input-file {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 225px;
+  opacity: 0;
+  padding: 14px 0;
+  cursor: pointer;
+}
+
+.js .input-file:hover + .input-file-trigger,
+.js .input-file:focus + .input-file-trigger,
+.js .input-file-trigger:hover,
+.js .input-file-trigger:focus {
+  background: var(--clr-primary-400);
+  color: var(--clr-light-100);
+}
+
+.file-return {
+  margin: 0;
+}
+
+.file-return:not(:empty) {
+  margin: 1em 0;
+}
+
+.js .file-return {
+  font-style: italic;
+  font-size: .9em;
+  font-weight: bold;
+}
+
+.js .file-return:not(:empty):before {
+  content: "Selected file: ";
+  font-style: normal;
+  font-weight: normal;
+}
+
+/*--------------------------custome box radio button------------------------------*/
+.middle {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+.middle input[type="radio"] {
+  display: none;
+}
+
+.middle input[type="radio"]:checked + .box {
+  color: var(--clr-primary-400);
+  background-color: var(--clr-light-100);
+  border: 1px solid var(--clr-primary-400);
+}
+
+.middle input[type="radio"]:checked + .box .active-icon {
+  display: block;
+}
+
+.middle input[type="radio"]:checked + .box .hidden-icon {
+  display: none;
+}
+
+.middle input[type="radio"]:checked + .box .database-brand {
+  width: 100%;
+  height: 120px;
+  background: var(--clr-primary-100);
+  border-bottom: 1px solid var(--clr-primary-400);
+}
+
+.middle .box {
+  width: 250px;
+  height: 150px;
+  background-color: var(--clr-light-100);
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  will-change: transition;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid var(--clr-dark-300);
+  position: relative;
+  font-weight: 600;
+}
+
+.middle .box .active-icon {
+  display: none;
+}
+
+.middle .box .hidden-icon {
+  display: block;
+}
+
+.middle .box:active {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.middle .box .database-brand {
+  width: 100%;
+  height: 120px;
+  background: var(--clr-dark-200);
+  border-bottom: 1px solid var(--clr-dark-300);
+}
+
+.box p {
+  margin: 15px 0;
+}
+
+.icon {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.version {
+  margin: 5px 0 !important;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+/*---------------------password generator copy and hide show--------------------------*/
+.container {
+  border-radius: 10px;
+  height: 68px;
+  overflow: hidden;
+  position: relative;
+  width: 340px;
+}
+
+.hidden {
+  background-color: #121726;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  padding: 0 86px 0 60px;
+  position: absolute;
+  width: 100%;
+}
+
+.lock {
+  left: 28px;
+  position: absolute;
+  top: 14px;
+  width: 17px;
+}
+
+.lock-white {
+  fill: white;
+}
+
+.lock-black {
+  fill: black;
+}
+
+.hidden-input {
+  background-color: transparent;
+  border: 0;
+  color: #575cba;
+  font-family: "Space Mono", monospace;
+  font-size: 18px;
+  height: 100%;
+  outline: none;
+  width: 100%;
+}
+
+.revealed {
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-clip-path: polygon(85.39075% 28.16254%, 85.86161% 27.31304%, 86.33801% 26.7167%, 86.81675% 26.36695%, 87.29462% 26.25723%, 87.7684% 26.38091%, 88.23487% 26.73144%, 88.69081% 27.30221%, 89.13302% 28.08664%, 89.55826% 29.07816%, 89.96332% 30.27017%, 90.345% 31.6561%, 90.70007% 33.22935%, 91.02531% 34.98333%, 91.31751% 36.91147%, 91.57346% 39.00718%, 91.78992% 41.26386%, 91.95983% 43.6181%, 92.0791% 46.00012%, 92.14904% 48.39386%, 92.17099% 50.78321%, 92.14625% 53.15209%, 92.07615% 55.48444%, 91.96199% 57.76415%, 91.80511% 59.97518%, 91.6068% 62.10138%, 91.3684% 64.12672%, 91.09122% 66.0351%, 90.77657% 67.81044%, 90.42577% 69.43666%, 90.04014% 70.89766%, 89.621% 72.17737%, 89.16967% 73.25972%, 88.69881% 74.10923%, 88.22241% 74.70556%, 87.74366% 75.05532%, 87.26579% 75.16504%, 86.79201% 75.04135%, 86.32555% 74.69083%, 85.86961% 74.12006%, 85.4274% 73.33563%, 85.00216% 72.3441%, 84.59709% 71.15209%, 84.21541% 69.76616%, 83.86035% 68.19292%, 83.53511% 66.43893%, 83.2429% 64.51079%, 82.98696% 62.41508%, 82.77049% 60.1584%, 82.60059% 57.80416%, 82.48132% 55.42214%, 82.41137% 53.0284%, 82.38942% 50.63905%, 82.41416% 48.27017%, 82.48427% 45.93782%, 82.59843% 43.65811%, 82.75531% 41.4471%, 82.95362% 39.3209%, 83.19202% 37.29556%, 83.4692% 35.38717%, 83.78385% 33.61184%, 84.13465% 31.98561%, 84.52027% 30.5246%, 84.93942% 29.2449%);
+          clip-path: polygon(85.39075% 28.16254%, 85.86161% 27.31304%, 86.33801% 26.7167%, 86.81675% 26.36695%, 87.29462% 26.25723%, 87.7684% 26.38091%, 88.23487% 26.73144%, 88.69081% 27.30221%, 89.13302% 28.08664%, 89.55826% 29.07816%, 89.96332% 30.27017%, 90.345% 31.6561%, 90.70007% 33.22935%, 91.02531% 34.98333%, 91.31751% 36.91147%, 91.57346% 39.00718%, 91.78992% 41.26386%, 91.95983% 43.6181%, 92.0791% 46.00012%, 92.14904% 48.39386%, 92.17099% 50.78321%, 92.14625% 53.15209%, 92.07615% 55.48444%, 91.96199% 57.76415%, 91.80511% 59.97518%, 91.6068% 62.10138%, 91.3684% 64.12672%, 91.09122% 66.0351%, 90.77657% 67.81044%, 90.42577% 69.43666%, 90.04014% 70.89766%, 89.621% 72.17737%, 89.16967% 73.25972%, 88.69881% 74.10923%, 88.22241% 74.70556%, 87.74366% 75.05532%, 87.26579% 75.16504%, 86.79201% 75.04135%, 86.32555% 74.69083%, 85.86961% 74.12006%, 85.4274% 73.33563%, 85.00216% 72.3441%, 84.59709% 71.15209%, 84.21541% 69.76616%, 83.86035% 68.19292%, 83.53511% 66.43893%, 83.2429% 64.51079%, 82.98696% 62.41508%, 82.77049% 60.1584%, 82.60059% 57.80416%, 82.48132% 55.42214%, 82.41137% 53.0284%, 82.38942% 50.63905%, 82.41416% 48.27017%, 82.48427% 45.93782%, 82.59843% 43.65811%, 82.75531% 41.4471%, 82.95362% 39.3209%, 83.19202% 37.29556%, 83.4692% 35.38717%, 83.78385% 33.61184%, 84.13465% 31.98561%, 84.52027% 30.5246%, 84.93942% 29.2449%);
+  height: 100%;
+  padding: 0 86px 0 60px;
+  position: absolute;
+  pointer-events: none;
+  -webkit-transition: -webkit-clip-path 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-clip-path 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: clip-path 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: clip-path 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-clip-path 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+}
+
+.revealed-input {
+  border: 0;
+  font-family: "Space Mono", monospace;
+  font-size: 18px;
+  height: 100%;
+  outline: none;
+  width: 100%;
+}
+
+.active .revealed {
+  -webkit-clip-path: polygon(2.28031% 0%, 14.21024% 0.00147%, 26.14016% 0%, 38.07008% 0.00147%, 50% 0%, 61.92992% 0.00147%, 73.85984% 0%, 85.78976% 0.00147%, 97.71969% 0%, 98.18037% 0.23084%, 98.60894% 0.89324%, 98.99635% 1.94205%, 99.33358% 3.33211%, 99.61159% 5.01825%, 99.82135% 6.95531%, 99.95383% 9.09814%, 100% 11.40157%, 100.00029% 21.05118%, 100% 30.70079%, 100.00029% 40.35039%, 100% 50%, 100.00029% 59.64961%, 100% 69.29921%, 100.00029% 78.94882%, 100% 88.59843%, 99.95383% 90.90186%, 99.82135% 93.04469%, 99.61159% 94.98175%, 99.33358% 96.66789%, 98.99635% 98.05795%, 98.60894% 99.10676%, 98.18037% 99.76916%, 97.71969% 100%, 85.78976% 100.00147%, 73.85984% 100%, 61.92992% 100.00147%, 50% 100%, 38.07008% 100.00147%, 26.14016% 100%, 14.21024% 100.00147%, 2.28031% 100%, 1.81963% 99.76916%, 1.39106% 99.10676%, 1.00365% 98.05795%, 0.66642% 96.66789%, 0.38841% 94.98175%, 0.17865% 93.04469%, 0.04617% 90.90186%, 0% 88.59843%, 0.00029% 78.94882%, 0% 69.29921%, 0.00029% 59.64961%, 0% 50%, 0.00029% 40.35039%, 0% 30.70079%, 0.00029% 21.05118%, 0% 11.40157%, 0.04617% 9.09814%, 0.17865% 6.95531%, 0.38841% 5.01825%, 0.66642% 3.33211%, 1.00365% 1.94205%, 1.39106% 0.89324%, 1.81963% 0.23084%);
+          clip-path: polygon(2.28031% 0%, 14.21024% 0.00147%, 26.14016% 0%, 38.07008% 0.00147%, 50% 0%, 61.92992% 0.00147%, 73.85984% 0%, 85.78976% 0.00147%, 97.71969% 0%, 98.18037% 0.23084%, 98.60894% 0.89324%, 98.99635% 1.94205%, 99.33358% 3.33211%, 99.61159% 5.01825%, 99.82135% 6.95531%, 99.95383% 9.09814%, 100% 11.40157%, 100.00029% 21.05118%, 100% 30.70079%, 100.00029% 40.35039%, 100% 50%, 100.00029% 59.64961%, 100% 69.29921%, 100.00029% 78.94882%, 100% 88.59843%, 99.95383% 90.90186%, 99.82135% 93.04469%, 99.61159% 94.98175%, 99.33358% 96.66789%, 98.99635% 98.05795%, 98.60894% 99.10676%, 98.18037% 99.76916%, 97.71969% 100%, 85.78976% 100.00147%, 73.85984% 100%, 61.92992% 100.00147%, 50% 100%, 38.07008% 100.00147%, 26.14016% 100%, 14.21024% 100.00147%, 2.28031% 100%, 1.81963% 99.76916%, 1.39106% 99.10676%, 1.00365% 98.05795%, 0.66642% 96.66789%, 0.38841% 94.98175%, 0.17865% 93.04469%, 0.04617% 90.90186%, 0% 88.59843%, 0.00029% 78.94882%, 0% 69.29921%, 0.00029% 59.64961%, 0% 50%, 0.00029% 40.35039%, 0% 30.70079%, 0.00029% 21.05118%, 0% 11.40157%, 0.04617% 9.09814%, 0.17865% 6.95531%, 0.38841% 5.01825%, 0.66642% 3.33211%, 1.00365% 1.94205%, 1.39106% 0.89324%, 1.81963% 0.23084%);
+}
+
+.button {
+  border-radius: 50%;
+  cursor: pointer;
+  height: 33px;
+  left: 280px;
+  position: absolute;
+  top: 18px;
+  width: 33px;
+}
+
+.eye {
+  left: 0px;
+  position: absolute;
+  top: -1px;
+}
+
+.eye-lower {
+  fill: none;
+  stroke: #575cba;
+  stroke-width: 4.5;
+  stroke-linecap: round;
+}
+
+.eye-iris {
+  fill: #575cba;
+  stroke-width: 4.65066;
+  stroke-linecap: round;
+}
+
+.eye-lid {
+  -webkit-clip-path: polygon(17px 53px, 61px 52px, 57px 14px, 25px 14px);
+          clip-path: polygon(17px 53px, 61px 52px, 57px 14px, 25px 14px);
+  fill: #fff;
+  stroke-linecap: butt;
+  stroke-width: 4.5;
+  stroke: #575cba;
+}
+
+.eye-lashes {
+  -webkit-transform-origin: 50%;
+          transform-origin: 50%;
+}
+
+.eye-lash {
+  fill: none;
+  stroke: #575cba;
+  stroke-width: 4.5;
+  stroke-linecap: butt;
+}
+/*# sourceMappingURL=customElements.css.map */

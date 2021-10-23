@@ -1,4 +1,5 @@
 //All mixins are here
+
 /*
 @import "mixins/breakpoints";
 @import "mixins/grid-state";
@@ -11,3 +12,45 @@
 @import "mixins/visibility";
 
 */
+
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin flex($flex-value) {
+    -webkit-box-flex: $flex-value;
+    -moz-box-flex: $flex-value;
+    -webkit-flex: $flex-value;
+    -ms-flex: $flex-value;
+    flex: $flex-value;
+}
+
+@mixin justify($justify-value) {
+    -webkit-justify-content: $justify-value;
+    -moz-justify-content: $justify-value;
+    justify-content: $justify-value;
+}
+
+@mixin box-pack($box-pack) {
+    -webkit-box-pack: $box-pack;
+    -moz-box-pack: $box-pack;
+    -ms-flex-pack: $box-pack;
+}
+
+@mixin trans ($prop, $time) {
+    -webkit-transition: $prop $time;
+    -moz-transition: $prop $time;
+    -ms-transition: $prop $time;
+    -o-transition: $prop $time;
+    transition: $prop $time;
+}
+
+@mixin border-radius($bdrs) {
+    -webkit-border-radius: $bdrs;
+    -moz-border-radius: $bdrs;
+    border-radius: $bdrs;
+}
