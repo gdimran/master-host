@@ -179,7 +179,6 @@
     }
     .box {
         width: 250px;
-        height: 150px;
         background-color: var(--clr-light-100);
         transition: all 250ms ease;
         will-change: transition;
@@ -222,7 +221,12 @@
     font-size: 0.8rem;
     font-weight: 300;
 }
-
+.description-content {
+	font-size: small;
+	font-weight: 300;
+	margin: 0 !important;
+	padding: 10px 8px;
+}
 
 /*---------------------password generator copy and hide show--------------------------*/
 
@@ -267,7 +271,7 @@
 
 
 /*------------login form----------------*/
-
+/*
 .login_form {
     @include flexbox;
     @include flex(center);
@@ -353,3 +357,4 @@ form {
         cursor: pointer;
     }
 }
+*/

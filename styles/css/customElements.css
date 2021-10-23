@@ -168,7 +168,6 @@
 
 .middle .box {
   width: 250px;
-  height: 150px;
   background-color: var(--clr-light-100);
   transition: all 250ms ease;
   will-change: transition;
@@ -214,3 +213,138 @@
   font-size: 0.8rem;
   font-weight: 300;
 }
+
+.description-content {
+  font-size: small;
+  font-weight: 300;
+  margin: 0 !important;
+  padding: 10px 8px;
+}
+
+/*---------------------password generator copy and hide show--------------------------*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*------------login form----------------*/
+/*
+.login_form {
+    @include flexbox;
+    @include flex(center);
+    @include justify(center);
+    @include box-pack(center);
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.login-wrapper {
+    max-width: 500px;
+    width: 100%;
+}
+
+.logo {
+    text-align: center;
+    img {
+        max-width: 200px;
+        width: 100%;
+        margin: 1em auto 2em;
+    }
+}
+
+form {
+    background: #000;
+    padding: 2em 1em;
+    font-family: helvetica, sans-serif;
+    @include border-radius(5px);
+    label {
+        color: #fff;
+        margin: 0 3% .25em;
+        display: block;
+        font-family: helvetica, sans-serif;
+    }
+    input {
+        width: 94%;
+        padding: .5em .25em;
+        margin: 0 3% 1em;
+        font-size: 1.2em;
+        border: 2px solid #000;
+        outline: none;
+        @include trans(all, .25s);
+        @include border-radius(5px);
+        &.password {
+            padding-right: 4rem;
+        }
+    }
+    input:focus {
+        border: 2px solid var(--clr-primary-400);
+    }
+    button {
+        width: 94%;
+        margin: 2em 3% 0;
+        border: none;
+        background: var(--clr-primary-400);
+        padding: 1em 0;
+        font-size: 1.25em;
+        clear: both;
+        color: var(--clr-light-100);
+        @include border-radius(5px);
+        outline: none;
+        @include trans(all, .25s);
+        cursor: pointer;
+    }
+    button:focus,
+    button:hover {
+        background: var(--clr-primary-400);
+    }
+}
+
+.hide-show {
+    width: 94%;
+    margin: -3.62em 3% 0 1.5%;
+    position: relative;
+    z-index: 5;
+    display: none;
+    span {
+        background: var(--clr-primary-400);
+        font-size: 1em;
+        padding: .5em;
+        float: right;
+        @include border-radius(5px);
+        cursor: pointer;
+    }
+}
+*/

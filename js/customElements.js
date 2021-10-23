@@ -102,3 +102,9 @@ fileInput.addEventListener("change", function (event) {
     the_return.innerHTML = this.value;
 });
 
+//hide show div based on radio checked
+function ShowHideDomainlist() {
+    var chkYes = document.getElementById("existDomain");
+    var domainlist = document.getElementById("domain-list");
+    domainlist.style.display = chkYes.checked ? "block" : "none";
+}

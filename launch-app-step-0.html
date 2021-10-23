@@ -204,94 +204,79 @@
             </div>
             <!-- dashboard header End -->
             <div class="container mt-5 mb-3">
-                <a class="back-btn m1-2" href="#">
-                    <i class="fas fa-long-arrow-alt-left"></i>&nbsp;&nbsp; Previous
-                </a>
-                <div class="step-text text-dark-300 mt-2 mb-1">Step 2 of 5 Launch Application</div>
+                <div class="step-text text-dark-300 mt-2 mb-1">Step 1 of 5 Launch Application</div>
                 <div class="page-title mb-2 title-border-btm">
-                    Configure your app
+                    Name your web service
                 </div>
 
                 <form class="vertical-form" action="">
                     <div class="field-group">
-                        <div class="lable">Executable File Name</div>
-                        <div class="desc-text text-dark-400 mb-1">Write the application excutable file name
+                        <div class="lable">Name*</div>
+                        <div class="desc-text text-dark-400 mb-1">Can only contain lowercase alphanumerich characters
+                            and dashes.
                         </div>
                         <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
                         </div> -->
                         <div class="form-with-right-tooltip mt-1">
                             <input type="text" name="domain" id="domain" class="text-field required"
-                                placeholder="webservice">
-                            <div class="tooltip-sec">
-                                <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
-                                    <span class="tooltiptext">
-                                        <span class="tooltip-head">Heads up</span>
-                                        <span class="tooltip-body">This is the name of databse
-                                            required to connect to databse
-                                            with your application</span>
-                                        <span class="tooltip-footer">Ok <a class="text-light-100" href="http://">Learn
-                                                more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field-group">
-                        <div class="lable">HTTP Port</div>
-                        <div class="desc-text text-dark-400 mb-1">Enter you port if you define any
-                        </div>
-                        <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
-                        </div> -->
-                        <div class="form-with-right-tooltip mt-1">
-                            <input type="text" name="domain" id="domain" class="text-field required" placeholder="8080">
-                            <div class="tooltip-sec">
-                                <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
-                                    <span class="tooltiptext">
-                                        <span class="tooltip-head">Heads up</span>
-                                        <span class="tooltip-body">This is the name of databse
-                                            required to connect to databse
-                                            with your application</span>
-                                        <span class="tooltip-footer">Ok <a class="text-light-100" href="http://">Learn
-                                                more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field-group">
-                        <div class="lable">Application path</div>
-                        <div class="desc-text text-dark-400 mb-1">You can specify application path as a working
-                            directory
-                        </div>
-                        <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
-                        </div> -->
-                        <div class="form-with-right-tooltip mt-1">
-                            <input type="text" name="domain" id="domain" class="text-field required"
-                                placeholder="path/">
-                            <div class="tooltip-sec">
-                                <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
-                                    <span class="tooltiptext">
-                                        <span class="tooltip-head">Heads up</span>
-                                        <span class="tooltip-body">This is the name of databse
-                                            required to connect to databse
-                                            with your application</span>
-                                        <span class="tooltip-footer">Ok <a class="text-light-100" href="http://">Learn
-                                                more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
-                                    </span>
-                                </div>
-                            </div>
+                                placeholder="Web Service">
+
                         </div>
                     </div>
 
-                    <!-- <div class="inline-content mb-3">
-                        <a href="" class="btn-outline">Add a Database</a>
-                        <p>Optional, only if your app need a database.</p>
-                    </div> -->
+                    <div class="domain-section-sec">
+                        <div class="middle">
+                            <label>
+                                <input id="notExistDomain" type="radio" name="domain" checked
+                                    onclick="ShowHideDomainlist()" />
+                                <div class="front-end box">
+                                    <div class="database-brand">
+                                        <p class="icon text-center">
+                                            <i class="fas fa-dot-circle active-icon"></i>
+                                            <i class="far fa-circle hidden-icon"></i>
+                                        </p>
+                                        <p>Starter Domain</p>
+                                    </div>
+                                    <p class="description-content">We provide a domain, based on the app’s name, where
+                                        app will
+                                        always be accessible</p>
+                                </div>
+                            </label>
+
+                            <label>
+                                <input id="existDomain" type="radio" name="domain" onclick="ShowHideDomainlist()" />
+                                <div class="back-end box">
+                                    <div class="database-brand">
+                                        <p class="icon text-center">
+                                            <i class="fas fa-dot-circle active-icon"></i>
+                                            <i class="far fa-circle hidden-icon"></i>
+                                        </p>
+                                        <p>Existing Domain</p>
+                                    </div>
+                                    <p class="description-content">Select existing domain from the select list in the
+                                        bellow</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="field-group mt-3" id="domain-list" style="display: none">
+                        <div class="custom-select">
+                            <select>
+                                <option value="0">Select Domain:</option>
+                                <option value="masteracademy.org" selected>masteracademy.org</option>
+                                <option value="mateors.com">mateors.com</option>
+                                <option value="imran.com">imran.com</option>
+                                <option value="binaryhost.io">binaryhost.io</option>
+                            </select>
+                        </div>
+                    </div>
 
 
-                    <button class="btn-active" type="submit">Next</button>
+
+
+
+                    <button class="btn-active mt-3" type="submit"> <a href="launch-app-step-1.html">Next</a></button>
                 </form>
-
 
             </div>
 

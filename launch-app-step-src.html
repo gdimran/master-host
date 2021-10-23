@@ -204,67 +204,58 @@
             </div>
             <!-- dashboard header End -->
             <div class="container mt-5 mb-3">
-                <a class="back-btn m1-2" href="#">
-                    <i class="fas fa-long-arrow-alt-left"></i> Previous
-                </a>
-                <div class="step-text text-dark-300 mt-2 mb-1">Step 3 of 5 Launch Application</div>
+
+                <div class="step-text text-dark-300 mt-2 mb-1">Step 1 of 5 Launch Application</div>
                 <div class="page-title mb-2 title-border-btm">
-                    Name your web service
+                    Choose Source
+                    <div class="note-sec title-description-sec">
+                        <i class="fas fa-exclamation-circle text-warning-500"></i>
+                        <p>Note: We will request access only to repos or containers you choose.
+                            You can revoke access through the source at any time.</p>
+                    </div>
                 </div>
 
-                <form class="vertical-form" action="">
-                    <div class="field-group">
-                        <div class="lable">Name*</div>
-                        <div class="desc-text text-dark-400 mb-1">Can only contain lowercase alphanumerich characters
-                            and dashes.
-                        </div>
-                        <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
-                        </div> -->
-                        <div class="form-with-right-tooltip mt-1">
-                            <input type="text" name="domain" id="domain" class="text-field required"
-                                placeholder="Web Service">
 
-                        </div>
+                <form class="source-form" action="">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="images/github-i.svg" alt=""> GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="images/gitlab-i.svg" alt=""> GitLab
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="images/bit-bucker-i.svg" alt=""> BitBucket
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="images/docker-i.svg" alt=""> Docker Hub
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-secondary-500 mt-5">No github? don’t worry upload your source code as a zip file
+                    </h4>
+                    <div class="upload-section my-3">
+                        <p class="text-primary-400">Or you can upload you zip file here.</p>
+                        <form action="#">
+                            <div class="input-file-container">
+                                <input class="input-file" id="my-file" type="file">
+                                <label tabindex="0" for="my-file" class="input-file-trigger">Select a file...</label>
+                            </div>
+                            <p class="file-return"></p>
+                        </form>
                     </div>
-                    <div class="field-group">
-                        <div class="rdio rdio-primary radio-inline"> <input name="radio" value="1" id="radio1"
-                                type="radio">
-                            <label for="radio1">Starter Domain</label>
-                        </div>
-                        <div class="desc-text text-dark-400 mb-1 mt-1">We provide a domain, based on the app’s name,
-                            where
-                            app will
-                            always be accessible
-                        </div>
-                    </div>
-                    <div class="field-group">
-                        <div class="rdio rdio-primary radio-inline"> <input name="radio" value="1" id="radio1"
-                                type="radio" checked>
-                            <label for="radio1">Existing Domain</label>
-                        </div>
-                        <div class="desc-text text-dark-400 mb-1 mt-1">We provide a domain, based on the app’s name,
-                            where
-                            app will
-                            always be accessible
-                        </div>
-                        <div class="custom-select">
-                            <select>
-                                <option value="0">Select Domain:</option>
-                                <option value="masteracademy.org" selected>masteracademy.org</option>
-                                <option value="mateors.com">mateors.com</option>
-                                <option value="imran.com">imran.com</option>
-                                <option value="binaryhost.io">binaryhost.io</option>
-                            </select>
-                        </div>
-
-
-                    </div>
-
-
-
 
                     <button class="btn-active" type="submit">Next</button>
                 </form>
+
 
             </div>
 
@@ -304,6 +295,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/customElements.js"></script>
+
 </body>
 
 </html>
