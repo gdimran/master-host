@@ -1,0 +1,68 @@
+//Login registration form
+.login-content {
+    min-height: 100vh;
+    margin: 0 auto;
+    input {
+        border-radius: 3px;
+        width: 100%;
+        padding: 5px 10px;
+        margin: 10px 0;
+        border: 1px solid var(--clr-secondary-500);
+        min-height: 50px;
+    }
+    input[type=password] {
+        position: relative;
+    }
+    // a.forgot-pass {
+    //     position: absolute;
+    //     right: 7%;
+    //     bottom: 41%;
+    // }
+    .btn-action {
+        width: 100%;
+    }
+    p.signup-redirect {
+        font-size: 1rem;
+    }
+}
+
+.conditions {
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+}
+
+.user-login-content {
+    width: 30vw;
+    background: white;
+    border: 1px solid solid var(--clr-secondary-500);
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.password-group {
+    position: relative;
+}
+
+.custom-checkbox {
+    position: absolute;
+    top: 40%;
+    right: 15px;
+}
+
+// .form-title {
+//     font-size: $channel-title-font-size;
+//     font-family: $title-font-family;
+//     font-weight: $title-font-weight;
+//     line-height: $channel-title-line-height;
+//     margin: 15px 0;
+// }
+// .form-area {
+//     font-size: $subheadline-font-size;
+//     line-height: $subheadline-line-height;
+// }
+// .form-subtitle {
+//     font-size: $subheadline-font-size;
+//     line-height: $subheadline-line-height;
+// }
