@@ -18,7 +18,7 @@ for (i = 0; i < l; i++) {
         create a new DIV that will act as an option item:*/
         c = document.createElement("DIV");
         c.innerHTML = selElmnt.options[j].innerHTML;
-        c.addEventListener("click", function(e) {
+        c.addEventListener("click", function (e) {
             /*when an item is clicked, update the original select box,
             and the selected item:*/
             var y, i, k, s, h, sl, yl;
@@ -43,7 +43,7 @@ for (i = 0; i < l; i++) {
         b.appendChild(c);
     }
     x[i].appendChild(b);
-    a.addEventListener("click", function(e) {
+    a.addEventListener("click", function (e) {
         /*when the select box is clicked, close any other select boxes,
         and open/close the current select box:*/
         e.stopPropagation();
@@ -90,24 +90,30 @@ var fileInput = document.querySelector(".input-file"),
     button = document.querySelector(".input-file-trigger"),
     the_return = document.querySelector(".file-return");
 
-button.addEventListener("keydown", function(event) {
+button.addEventListener("keydown", function (event) {
     if (event.keyCode == 13 || event.keyCode == 32) {
         fileInput.focus();
     }
 });
-button.addEventListener("click", function(event) {
+button.addEventListener("click", function (event) {
     fileInput.focus();
     return false;
 });
-fileInput.addEventListener("change", function(event) {
+fileInput.addEventListener("change", function (event) {
     the_return.innerHTML = this.value;
 });
 
 //hide show div based on radio checked
 function ShowHideDomainlist() {
     var chkYes = document.getElementById("existDomain");
+    var chkNo = document.getElementById("notExistDomain");
+    var noDomian = document.getElementById("noDomain");
     var domainlist = document.getElementById("domain-list");
+    var addDomain = document.getElementById("add-newdomain");
+    var domainHint = document.getElementById("no-domain-hint");
     domainlist.style.display = chkYes.checked ? "block" : "none";
+    addDomain.style.display = chkNo.checked ? "block" : "none";
+    domainHint.style.display = noDomian.checked ? "block" : "none";
 }
 
 

@@ -235,11 +235,9 @@
                                             <i class="fas fa-dot-circle active-icon"></i>
                                             <i class="far fa-circle hidden-icon"></i>
                                         </p>
-                                        <p>Starter Domain</p>
+                                        <p>Add a Domain</p>
                                     </div>
-                                    <p class="description-content">We provide a domain, based on the app’s name, where
-                                        app will
-                                        always be accessible</p>
+                                    <p class="description-content">If you have a domain then add here.</p>
                                 </div>
                             </label>
 
@@ -257,6 +255,39 @@
                                         bellow</p>
                                 </div>
                             </label>
+                            <label>
+                                <input id="noDomain" type="radio" name="domain" onclick="ShowHideDomainlist()" />
+                                <div class="back-end box">
+                                    <div class="database-brand">
+                                        <p class="icon text-center">
+                                            <i class="fas fa-dot-circle active-icon"></i>
+                                            <i class="far fa-circle hidden-icon"></i>
+                                        </p>
+                                        <p>No Domain</p>
+                                    </div>
+                                    <p class="description-content">If you don't have any domain at all?</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="field-group mt-3" id="no-domain-hint" style="display: none">
+                        <div class="lable">You have no domain?</div>
+                        <div class="desc-text text-dark-400 mb-1">Don't worry, you can register a new domain from here.
+                            Just <a href="" class="active">Click Here <i class="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
+
+                    </div>
+                    <div class="field-group mt-3" id="add-newdomain">
+                        <div class="lable">Domain</div>
+                        <div class="desc-text text-dark-400 mb-1">Can only contain lowercase alphanumerich characters
+                            and dashes.
+                        </div>
+                        <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
+                        </div> -->
+                        <div class="form-with-right-tooltip mt-1">
+                            <input type="text" name="domain" id="domain" class="text-field required"
+                                placeholder="Web Service">
+
                         </div>
                     </div>
                     <div class="field-group mt-3" id="domain-list" style="display: none">

@@ -1,4 +1,4 @@
 rearrange page
-1. name application / radion as database
+1. 2 page name application / radion as database single row radio button
 
 2. launchapp 2 page > fields-> excuteable name, wokring dir, port
