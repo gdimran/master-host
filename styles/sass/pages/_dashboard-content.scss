@@ -5,7 +5,7 @@
 #content {
     height:auto;
     min-height: 100vh;
-    transition: all 0.3s;
+   // transition: all 0.3s;
 }
 
 .project-title {
@@ -74,4 +74,11 @@
 }
 .source-form ul li a img{
     margin-right:15px;
+}
+
+.cloud-source{
+    display:flex;
+    width:100%;
+    flex-flow:row;
+    justify-content:space-between;
 }

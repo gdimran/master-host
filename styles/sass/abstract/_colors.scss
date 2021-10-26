@@ -39,6 +39,7 @@ $colors: (
             --clr-#{$color}-#{$shade}:#{$value};
         }
     }
+    --bounceEasing: cubic-bezier(0.51, 0.92, 0.24, 1.15);
 }
 @each $color,$shades in $colors{
         @each $shade, $value in $shades{

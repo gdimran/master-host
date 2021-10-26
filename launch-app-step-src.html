@@ -217,30 +217,30 @@
                     </div>
                 </div>
 
+                <ul class="cloud-source">
+                    <li>
+                        <a class="open-modal" data-open="gitConfig" href="#">
+                            <img src="images/github-i.svg" alt=""> GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/gitlab-i.svg" alt=""> GitLab
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/bit-bucker-i.svg" alt=""> BitBucket
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/docker-i.svg" alt=""> Docker Hub
+                        </a>
+                    </li>
+                </ul>
 
                 <form class="source-form" action="">
-                    <ul>
-                        <li>
-                            <a href="">
-                                <img src="images/github-i.svg" alt=""> GitHub
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/gitlab-i.svg" alt=""> GitLab
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/bit-bucker-i.svg" alt=""> BitBucket
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="images/docker-i.svg" alt=""> Docker Hub
-                            </a>
-                        </li>
-                    </ul>
 
                     <h4 class="text-secondary-500 mt-5">No github? don’t worry upload your source code as a zip file
                     </h4>
@@ -292,11 +292,151 @@
             </div>
             <!-- Dashboard footer END -->
 
-        </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/customElements.js"></script>
+            <!-- Modal content start -->
+
+            <div class="modal" id="gitConfig" data-animation="slideInOutLeft">
+                <div class="modal-dialog">
+                    <header class="modal-header">
+                        The header of the first modal
+                        <button class="close-modal" aria-label="close modal" data-close>
+                            ✕
+                        </button>
+                    </header>
+                    <section class="modal-content">
+                        <div class="field-group">
+                            <div class="lable">Executable File Name</div>
+                            <div class="desc-text text-dark-400 mb-1">Write the application excutable file name
+                            </div>
+                            <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
+                            </div> -->
+                            <div class="form-with-right-tooltip mt-1">
+                                <input type="text" name="domain" id="domain" class="text-field required"
+                                    placeholder="webservice">
+                                <div class="tooltip-sec">
+                                    <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                        <span class="tooltiptext">
+                                            <span class="tooltip-head">Heads up</span>
+                                            <span class="tooltip-body">This is the name of databse
+                                                required to connect to databse
+                                                with your application</span>
+                                            <span class="tooltip-footer">Ok <a class="text-light-100"
+                                                    href="http://">Learn
+                                                    more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field-group">
+                            <div class="lable">Executable File Name</div>
+                            <div class="desc-text text-dark-400 mb-1">Write the application excutable file name
+                            </div>
+                            <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
+                            </div> -->
+                            <div class="form-with-right-tooltip mt-1">
+                                <input type="text" name="domain" id="domain" class="text-field required"
+                                    placeholder="webservice">
+                                <div class="tooltip-sec">
+                                    <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                        <span class="tooltiptext">
+                                            <span class="tooltip-head">Heads up</span>
+                                            <span class="tooltip-body">This is the name of databse
+                                                required to connect to databse
+                                                with your application</span>
+                                            <span class="tooltip-footer">Ok <a class="text-light-100"
+                                                    href="http://">Learn
+                                                    more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field-group">
+                            <div class="lable">Executable File Name</div>
+                            <div class="desc-text text-dark-400 mb-1">Write the application excutable file name
+                            </div>
+                            <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
+                            </div> -->
+                            <div class="form-with-right-tooltip mt-1">
+                                <input type="text" name="domain" id="domain" class="text-field required"
+                                    placeholder="webservice">
+                                <div class="tooltip-sec">
+                                    <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                        <span class="tooltiptext">
+                                            <span class="tooltip-head">Heads up</span>
+                                            <span class="tooltip-body">This is the name of databse
+                                                required to connect to databse
+                                                with your application</span>
+                                            <span class="tooltip-footer">Ok <a class="text-light-100"
+                                                    href="http://">Learn
+                                                    more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field-group">
+                            <div class="lable">Executable File Name</div>
+                            <div class="desc-text text-dark-400 mb-1">Write the application excutable file name
+                            </div>
+                            <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
+                            </div> -->
+                            <div class="form-with-right-tooltip mt-1">
+                                <input type="text" name="domain" id="domain" class="text-field required"
+                                    placeholder="webservice">
+                                <div class="tooltip-sec">
+                                    <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                        <span class="tooltiptext">
+                                            <span class="tooltip-head">Heads up</span>
+                                            <span class="tooltip-body">This is the name of databse
+                                                required to connect to databse
+                                                with your application</span>
+                                            <span class="tooltip-footer">Ok <a class="text-light-100"
+                                                    href="http://">Learn
+                                                    more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field-group">
+                            <div class="lable">Executable File Name</div>
+                            <div class="desc-text text-dark-400 mb-1">Write the application excutable file name
+                            </div>
+                            <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
+                            </div> -->
+                            <div class="form-with-right-tooltip mt-1">
+                                <input type="text" name="domain" id="domain" class="text-field required"
+                                    placeholder="webservice">
+                                <div class="tooltip-sec">
+                                    <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                        <span class="tooltiptext">
+                                            <span class="tooltip-head">Heads up</span>
+                                            <span class="tooltip-body">This is the name of databse
+                                                required to connect to databse
+                                                with your application</span>
+                                            <span class="tooltip-footer">Ok <a class="text-light-100"
+                                                    href="http://">Learn
+                                                    more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <footer class="modal-footer">
+                        The footer of the first modal
+                    </footer>
+                </div>
+            </div>
+
+
+
+            <!-- Modal content end -->
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="js/script.js"></script>
+            <script src="js/customElements.js"></script>
 
 </body>
 
