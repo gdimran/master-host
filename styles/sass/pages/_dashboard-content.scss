@@ -82,3 +82,9 @@
     flex-flow:row;
     justify-content:space-between;
 }
+ul.cloud-source li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}

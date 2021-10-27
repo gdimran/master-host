@@ -297,135 +297,106 @@
             <div class="modal" id="gitConfig" data-animation="slideInOutLeft">
                 <div class="modal-dialog">
                     <header class="modal-header">
-                        The header of the first modal
+                        <div class="source-logo"><img src="images/github-i.svg" alt=""></div>
                         <button class="close-modal" aria-label="close modal" data-close>
-                            ✕
+                            <i class="far fa-times-circle"></i>
                         </button>
                     </header>
                     <section class="modal-content">
-                        <div class="field-group">
-                            <div class="lable">Executable File Name</div>
-                            <div class="desc-text text-dark-400 mb-1">Write the application excutable file name
-                            </div>
-                            <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
-                            </div> -->
-                            <div class="form-with-right-tooltip mt-1">
-                                <input type="text" name="domain" id="domain" class="text-field required"
-                                    placeholder="webservice">
-                                <div class="tooltip-sec">
-                                    <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
-                                        <span class="tooltiptext">
-                                            <span class="tooltip-head">Heads up</span>
-                                            <span class="tooltip-body">This is the name of databse
-                                                required to connect to databse
-                                                with your application</span>
-                                            <span class="tooltip-footer">Ok <a class="text-light-100"
-                                                    href="http://">Learn
-                                                    more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
-                                        </span>
+                        <form action="" method="post">
+                            <div class="field-group">
+                                <div class="form-with-right-tooltip mt-1">
+                                    <input type="text" name="gitrepo" id="git" class="text-field required"
+                                        placeholder="Repository Url">
+                                    <div class="tooltip-sec">
+                                        <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                            <span class="tooltiptext">
+                                                <span class="tooltip-head">Heads up</span>
+                                                <span class="tooltip-body">This is the name of databse
+                                                    required to connect to databse
+                                                    with your application</span>
+                                                <span class="tooltip-footer">Ok <a class="text-light-100"
+                                                        href="http://">Learn
+                                                        more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="field-group">
-                            <div class="lable">Executable File Name</div>
-                            <div class="desc-text text-dark-400 mb-1">Write the application excutable file name
-                            </div>
-                            <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
-                            </div> -->
-                            <div class="form-with-right-tooltip mt-1">
-                                <input type="text" name="domain" id="domain" class="text-field required"
-                                    placeholder="webservice">
-                                <div class="tooltip-sec">
-                                    <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
-                                        <span class="tooltiptext">
-                                            <span class="tooltip-head">Heads up</span>
-                                            <span class="tooltip-body">This is the name of databse
-                                                required to connect to databse
-                                                with your application</span>
-                                            <span class="tooltip-footer">Ok <a class="text-light-100"
-                                                    href="http://">Learn
-                                                    more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
-                                        </span>
+                            <div class="field-group mt-2">
+                                <div class="lable">Credentials</div>
+                                <div class="desc-text text-dark-400 mb-1">If your repository is private then give
+                                    credentials otherwise you can keep blank
+                                </div>
+                                <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
+                                </div> -->
+                                <div class="form-with-right-tooltip mt-1">
+                                    <input type="text" name="gitusername" id="git-user" class="text-field required"
+                                        placeholder="git username">
+                                    <div class="tooltip-sec">
+                                        <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                            <span class="tooltiptext">
+                                                <span class="tooltip-head">Heads up</span>
+                                                <span class="tooltip-body">This is the name of databse
+                                                    required to connect to databse
+                                                    with your application</span>
+                                                <span class="tooltip-footer">Ok <a class="text-light-100"
+                                                        href="http://">Learn
+                                                        more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-with-right-tooltip mt-1">
+                                    <input type="password" name="password" id="password-git" class="text-field required"
+                                        placeholder="password">
+                                    <div class="tooltip-sec">
+                                        <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                            <span class="tooltiptext">
+                                                <span class="tooltip-head">Heads up</span>
+                                                <span class="tooltip-body">This is the name of databse
+                                                    required to connect to databse
+                                                    with your application</span>
+                                                <span class="tooltip-footer">Ok <a class="text-light-100"
+                                                        href="http://">Learn
+                                                        more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="field-group">
-                            <div class="lable">Executable File Name</div>
-                            <div class="desc-text text-dark-400 mb-1">Write the application excutable file name
-                            </div>
-                            <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
-                            </div> -->
-                            <div class="form-with-right-tooltip mt-1">
-                                <input type="text" name="domain" id="domain" class="text-field required"
-                                    placeholder="webservice">
-                                <div class="tooltip-sec">
-                                    <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
-                                        <span class="tooltiptext">
-                                            <span class="tooltip-head">Heads up</span>
-                                            <span class="tooltip-body">This is the name of databse
-                                                required to connect to databse
-                                                with your application</span>
-                                            <span class="tooltip-footer">Ok <a class="text-light-100"
-                                                    href="http://">Learn
-                                                    more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
-                                        </span>
+                            <div class="field-group mt-2">
+                                <div class="lable">Branches to build</div>
+                                <div class="desc-text text-dark-400 mb-1">Branch Specifier (blank for ‘any’)
+                                </div>
+                                <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
+                                </div> -->
+                                <div class="form-with-right-tooltip mt-1">
+                                    <input type="text" name="gitbranch" id="git-user" class="text-field required"
+                                        placeholder="*/master">
+                                    <div class="tooltip-sec">
+                                        <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                            <span class="tooltiptext">
+                                                <span class="tooltip-head">Heads up</span>
+                                                <span class="tooltip-body">This is the name of databse
+                                                    required to connect to databse
+                                                    with your application</span>
+                                                <span class="tooltip-footer">Ok <a class="text-light-100"
+                                                        href="http://">Learn
+                                                        more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
+
                             </div>
-                        </div>
-                        <div class="field-group">
-                            <div class="lable">Executable File Name</div>
-                            <div class="desc-text text-dark-400 mb-1">Write the application excutable file name
-                            </div>
-                            <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
-                            </div> -->
-                            <div class="form-with-right-tooltip mt-1">
-                                <input type="text" name="domain" id="domain" class="text-field required"
-                                    placeholder="webservice">
-                                <div class="tooltip-sec">
-                                    <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
-                                        <span class="tooltiptext">
-                                            <span class="tooltip-head">Heads up</span>
-                                            <span class="tooltip-body">This is the name of databse
-                                                required to connect to databse
-                                                with your application</span>
-                                            <span class="tooltip-footer">Ok <a class="text-light-100"
-                                                    href="http://">Learn
-                                                    more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="field-group">
-                            <div class="lable">Executable File Name</div>
-                            <div class="desc-text text-dark-400 mb-1">Write the application excutable file name
-                            </div>
-                            <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
-                            </div> -->
-                            <div class="form-with-right-tooltip mt-1">
-                                <input type="text" name="domain" id="domain" class="text-field required"
-                                    placeholder="webservice">
-                                <div class="tooltip-sec">
-                                    <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
-                                        <span class="tooltiptext">
-                                            <span class="tooltip-head">Heads up</span>
-                                            <span class="tooltip-body">This is the name of databse
-                                                required to connect to databse
-                                                with your application</span>
-                                            <span class="tooltip-footer">Ok <a class="text-light-100"
-                                                    href="http://">Learn
-                                                    more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            <p class="text-center"><button class="btn-active" type="submit">Done</button></p>
+                        </form>
+
+
                     </section>
                     <footer class="modal-footer">
-                        The footer of the first modal
+
                     </footer>
                 </div>
             </div>
