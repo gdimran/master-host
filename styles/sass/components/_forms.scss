@@ -11,7 +11,7 @@
 
 .select-field,
 .text-field {
-    width: 40%;
+    width: clamp(40%, 50%, 55%);
     border: 1px solid var(--clr-secondary-500);
     min-height: 50px;
     border-radius: 3px;
@@ -381,4 +381,44 @@
 
 .custom-checkbox input[type="checkbox"]:checked~.unchecked {
     display: none;
+}
+
+
+/*--------------password generate and cpy option-----------------*/
+.password-content{
+    position:relative;
+    width:100%;
+}
+input.password {
+	width: 50% !important;
+	min-height: 54px;
+	border: 1px solid var(--clr-secondary-500);
+	border-radius: 3px;
+	padding: 10px;
+}
+.pass-checkbox {
+	position: absolute;
+	top: 40%;
+	right: 15px;
+}
+.pass.custom-checkbox {
+	left: 47%;
+	top: 33%;
+}
+
+.project-group{
+    width:50%;
+}
+
+.pass-content-inner {
+	display: flex;
+	gap: 15px;
+	justify-content: center;
+	align-items: center;
+}
+
+.pass-gen-content {
+	position: absolute;
+	left: 55%;
+	bottom: 48.5%;
 }

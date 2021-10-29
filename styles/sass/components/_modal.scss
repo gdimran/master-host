@@ -78,7 +78,7 @@
     cursor:pointer;
 }
 .modal-header .close-modal:hover {
-    color: var(--clr-primary-400);
+    color: var(--clr-warning-400);
     cursor:pointer;
 }
 
@@ -254,7 +254,16 @@
 	position: relative;
 	background: none;
 	border: none;
-	width: 100%;
+
+}
+.notification-card{
+  	left: -148px !important;
+	top: 34px !important;
+}
+.user-card {
+  width:230px !important;
+	left: -62px !important;
+	top: 34px !important;
 }
 .card-paper-list_target_menu:focus .card-paper-list_target_menu_menupaper {
   background: #fff;

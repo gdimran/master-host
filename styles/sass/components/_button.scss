@@ -37,7 +37,10 @@
         color: var(--clr-light-100);
     }
 }
+.btn-rounded {
+	border-radius: 40px;
 
+}
 .btn-primary {
     @extend %btn;
     background: var(--clr-primary-400);

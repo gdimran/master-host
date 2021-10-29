@@ -1394,6 +1394,8 @@ textarea {
   /* 1 */
   margin: 0;
   /* 2 */
+  cursor: pointer;
+  color: var(--clr-secondary-500);
 }
 
 /**
@@ -1597,7 +1599,7 @@ template {
 
 .lable {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   margin-bottom: 10px;
 }
 
@@ -2215,6 +2217,10 @@ template {
   color: var(--clr-light-100);
 }
 
+.btn-rounded {
+  border-radius: 40px;
+}
+
 .btn-primary {
   background: var(--clr-primary-400);
   color: var(--clr-light-100);
@@ -2274,7 +2280,7 @@ template {
 
 .select-field,
 .text-field {
-  width: 40%;
+  width: clamp(40%, 50%, 55%);
   border: 1px solid var(--clr-secondary-500);
   min-height: 50px;
   border-radius: 3px;
@@ -2640,6 +2646,48 @@ template {
   display: none;
 }
 
+/*--------------password generate and cpy option-----------------*/
+.password-content {
+  position: relative;
+  width: 100%;
+}
+
+input.password {
+  width: 50% !important;
+  min-height: 54px;
+  border: 1px solid var(--clr-secondary-500);
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.pass-checkbox {
+  position: absolute;
+  top: 40%;
+  right: 15px;
+}
+
+.pass.custom-checkbox {
+  left: 47%;
+  top: 33%;
+}
+
+.project-group {
+  width: 50%;
+}
+
+.pass-content-inner {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pass-gen-content {
+  position: absolute;
+  left: 55%;
+  bottom: 48.5%;
+}
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -2648,7 +2696,7 @@ table {
 
 tr {
   border: 1px solid var(--clr-dark-200);
-  height: 45px;
+  height: 54px;
 }
 
 th:first-child {
@@ -2664,6 +2712,10 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }*/
+tr:hover {
+  background: var(--clr-primary-100);
+}
+
 .tab-wrapper {
   width: 100%;
 }
@@ -2784,7 +2836,7 @@ tr:nth-child(even) {
 }
 
 .modal-header .close-modal:hover {
-  color: var(--clr-primary-400);
+  color: var(--clr-warning-400);
   cursor: pointer;
 }
 
@@ -2951,7 +3003,17 @@ tr:nth-child(even) {
   position: relative;
   background: none;
   border: none;
-  width: 100%;
+}
+
+.notification-card {
+  left: -148px !important;
+  top: 34px !important;
+}
+
+.user-card {
+  width: 230px !important;
+  left: -62px !important;
+  top: 34px !important;
 }
 
 .card-paper-list_target_menu:focus .card-paper-list_target_menu_menupaper {
@@ -3415,7 +3477,7 @@ form {
   gap: 40px;
   margin-right: 30px;
   margin-top: 10px;
-  align-items: baseline;
+  align-items: center;
 }
 
 .dropdown {
@@ -3425,6 +3487,7 @@ form {
 
 .dropdown .dropbtn {
   padding: 8px 10px;
+  min-width: 100px;
   background: var(--clr-success-500);
   color: #ffffff;
   border: none;
@@ -3436,7 +3499,7 @@ form {
 }
 
 .dropdown-content {
-  display: none;
+  display: block;
   width: 270px;
   position: absolute;
   background: white;
@@ -3447,10 +3510,26 @@ form {
   border-radius: 5px;
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
   z-index: 1200;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.dropdown:hover .dropdown-content {
+.dropbtn:focus .dropdown-content {
   display: block;
+  width: 270px;
+  position: absolute;
+  background: white;
+  border: 1px solid var(--clr-dark-200);
+  padding: 20px 10px;
+  top: 50px;
+  left: -125px;
+  border-radius: 5px;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  z-index: 1200;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .dropdown-content:before {
@@ -3517,6 +3596,51 @@ form {
 
 .single-icon-menu a:hover {
   background: var(--clr-primary-100);
+}
+
+/*---------------------user setting section---------------------*/
+.toggle-card-header {
+  border-bottom: 1px solid var(--clr-dark-100);
+  padding-bottom: 15px;
+}
+
+.header-with-left-pic {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+}
+
+.user-profile-pic img {
+  width: 100%;
+}
+
+.user-profile-pic {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--clr-dark-100);
+}
+
+.user-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.1rem;
+}
+
+.user-email {
+  margin-bottom: 15px;
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+.account-detail-link {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  color: var(--clr-primary-400);
 }
 
 /* ---------------------------------------------------

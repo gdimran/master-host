@@ -37,7 +37,7 @@
   gap: 40px;
   margin-right: 30px;
   margin-top: 10px;
-  align-items: baseline;
+  align-items: center;
 }
 
 //dropdown content
@@ -46,6 +46,7 @@
   cursor: pointer;
   .dropbtn {
     padding: 8px 10px;
+    min-width:100px;
     background: var(--clr-success-500);
     color: #ffffff;
     border: none;
@@ -58,7 +59,7 @@
 }
 
 .dropdown-content {
-  display: none;
+  display: block;
   width: 270px;
   position: absolute;
   background: white;
@@ -69,10 +70,26 @@
   border-radius: 5px;
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
   z-index: 1200;
+  opacity:0;
+  visibility:hidden;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.dropdown:hover .dropdown-content {
+.dropbtn:focus .dropdown-content {
   display: block;
+  width: 270px;
+  position: absolute;
+  background: white;
+  border: 1px solid var(--clr-dark-200);
+  padding: 20px 10px;
+  top: 50px;
+  left: -125px;
+  border-radius: 5px;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  z-index: 1200;
+  opacity:1;
+  visibility:visible;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .dropdown-content:before {
@@ -138,4 +155,44 @@
 
 .single-icon-menu a:hover {
   background: var(--clr-primary-100);
+}
+
+
+/*---------------------user setting section---------------------*/
+.toggle-card-header {
+	border-bottom: 1px solid var(--clr-dark-100);
+	padding-bottom: 15px;
+}
+.header-with-left-pic {
+	display: flex;
+	gap: 15px;
+	padding: 15px;
+}
+.user-profile-pic img {
+	width: 100%;
+}
+.user-profile-pic{
+	width: 40px !important;
+	height: 40px !important;
+	border-radius: 50%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  border:1px solid var(--clr-dark-100);
+}
+.user-name {
+	font-size: 1.1rem;
+	font-weight: 500;
+	line-height: 1.1rem;
+}
+.user-email {
+	margin-bottom: 15px;
+	font-size: 0.8rem;
+	line-height: 1rem;
+}
+.account-detail-link {
+	font-size: 0.8rem;
+	line-height: 1rem;
+  color:var(--clr-primary-400);
 }

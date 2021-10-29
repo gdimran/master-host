@@ -6,7 +6,7 @@ table {
 }
 tr{
 	border: 1px solid var(--clr-dark-200);
-	height:45px;
+	height:54px;
 }
 th:first-child{
   -webkit-border-radius: 3px 3px 0 0;
@@ -22,3 +22,6 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }*/
 
+tr:hover {
+	background: var(--clr-primary-100);
+}
