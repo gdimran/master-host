@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/css/main.css" />
+    <link rel="stylesheet" href="icons-fonts/css/imran_iconfont.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Side bar start -->
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                <i id="sidebarCollapse" class="demo-icon icon-menu"></i>
+                <a class="logo-section" href="/"><img class="logo-icon" src="images/master-l.svg" alt="" /><img
+                        class="logo-text" src="images/masterHost.svg" alt="" /></a>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="nav-section-title">
+                    <a class="section-dev" href="">Projects <i class="demo-icon icon-up-open-mini"></i></a>
+                    <ul class="submenue list-unstyled" id="projectSub">
+                        <li>
+                            <a href="#"><i class="menu-icon icon-user circle-icon highlight-user"></i>
+                                <span class="menu-text">Kristopher</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-user circle-icon highlight-user"></i>
+                                <span class="menu-text">Abu Rayhan</span></a>
+                        </li>
+                        <li>
+                            <a class="focuse" href="#"><i class="menu-icon icon-plus"></i><span class="menu-text">New
+                                    Project</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-section-title">
+                    <a class="section-dev" href="">
+                        Manage<i class="demo-icon icon-up-open-mini"></i></a>
+                    <ul class="submenue list-unstyled" id="mangeSub">
+                        <li>
+                            <a class="active" href="#"><i class="menu-icon icon-app-launch"></i>
+                                <span class="menu-text">Apps</span></a>
+                        </li>
+                        <li>
+                            <a href="domains.html"><i class="menu-icon icon-domain"></i>
+                                <span class="menu-text">Domain</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-email"></i>
+                                <span class="menu-text">Emais</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-database"></i>
+                                <span class="menu-text">Databases</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-file-manager"></i>
+                                <span class="menu-text">File Manager</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-networking"></i>
+                                <span class="menu-text">Networking</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-monitoring"></i>
+                                <span class="menu-text">Monitoring</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-section-title">
+                    <ul class="submenue list-unstyled">
+                        <li>
+                            <a href="#"><i class="menu-icon icon-settings"></i>
+                                <span class="menu-text">Settings</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-bill"></i>
+                                <span class="menu-text">Billing</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-api"></i>
+                                <span class="menu-text">API</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-section-title">
+                    <ul class="submenue list-unstyled">
+                        <li>
+                            <a href="#"><i class="menu-icon icon-documents"></i>
+                                <span class="menu-text">Documentation</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-live-support"></i>
+                                <span class="menu-text">Support</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- Side bar end -->
+
+        <div id="content">
+            <!-- dashboard header start -->
+            <div class="dasboard-header">
+                <div class="search-sec left">
+                    <button type="submit" class="searchButton">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <input type="text" class="searchTerm" placeholder="What are you looking for?" />
+                </div>
+
+                <div class="navbar right">
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            Create
+                            <i class="fa fa-angle-down"></i>
+                            <div class="dropdown-content">
+                                <div class="dropdown-menu-item">
+                                    <div class="single-icon-menu">
+                                        <a href="launch-app-step-0.html">
+                                            <i class="menu-icon icon-app-launch"></i>
+                                            <div class="menu-text-content">
+                                                <span class="menu-title-text">Apps</span>
+                                                <span class="menu-desc-text">Launch Your App</span>
+                                            </div>
+                                            <div class="menu-tag">
+                                                <span class="tag-btn">New</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu-item">
+                                    <div class="single-icon-menu">
+                                        <a href="#">
+                                            <i class="menu-icon icon-domain"></i>
+                                            <div class="menu-text-content">
+                                                <span class="menu-title-text">Doamin/DNS</span>
+                                                <span class="menu-desc-text">Route Your Existing Domain</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu-item">
+                                    <div class="single-icon-menu">
+                                        <a href="#">
+                                            <i class="menu-icon icon-email"></i>
+                                            <div class="menu-text-content">
+                                                <span class="menu-title-text">Emails</span>
+                                                <span class="menu-desc-text">Create Your Email</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu-item">
+                                    <div class="single-icon-menu">
+                                        <a href="#">
+                                            <i class="menu-icon icon-database"></i>
+                                            <div class="menu-text-content">
+                                                <span class="menu-title-text">Databases</span>
+                                                <span class="menu-desc-text">Create Database</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu-item">
+                                    <div class="single-icon-menu">
+                                        <a href="#">
+                                            <i class="menu-icon icon-file-manager"></i>
+                                            <div class="menu-text-content">
+                                                <span class="menu-title-text">File Manager</span>
+                                                <span class="menu-desc-text">Enter into your file manager</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu-item">
+                                    <div class="single-icon-menu">
+                                        <a href="#">
+                                            <i class="menu-icon icon-networking"></i>
+                                            <div class="menu-text-content">
+                                                <span class="menu-title-text">Networking</span>
+                                                <span class="menu-desc-text">Manage your network</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+
+                    </div>
+
+                    <button class="card-toggle_next_iconmenu card-paper-list_target_menu">
+                        <i class="fa fa-envelope"></i>
+                        <div class="card-toggle_next_iconmenu_menufloatmain notification-card">
+                            <ul>
+                                <li><a class="entry-paper-list" href="#">
+                                        <i class="fas fa-credit-card"></i> Membership</a>
+                                </li>
+                                <li><a class="entry-paper-list" href="#"><i class="fas fa-power-off"></i> Sign out</a>
+                                </li>
+                                <li><a class="entry-paper-list" href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                                <li><a class="entry-paper-list" href="#"><i class="icon-language-1"></i> Language:
+                                        English <i class="fa fa-angle-down"></i></a></li>
+                                <li><a class="entry-paper-list" href="#"><i class="far fa-question-circle"></i> Help
+                                    </a></li>
+
+                            </ul>
+                        </div>
+                    </button>
+                    <button class="card-toggle_next_iconmenu card-paper-list_target_menu">
+                        <i class="fa fa-bell"></i>
+                        <div class="card-toggle_next_iconmenu_menufloatmain notification-card">
+                            <ul>
+                                <li><a class="entry-paper-list" href="#">
+                                        <i class="fas fa-credit-card"></i> Membership</a>
+                                </li>
+                                <li><a class="entry-paper-list" href="#"><i class="fas fa-power-off"></i> Sign out</a>
+                                </li>
+                                <li><a class="entry-paper-list" href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                                <li><a class="entry-paper-list" href="#"><i class="icon-language-1"></i> Language:
+                                        English <i class="fa fa-angle-down"></i></a></li>
+                                <li><a class="entry-paper-list" href="#"><i class="far fa-question-circle"></i> Help
+                                    </a></li>
+
+                            </ul>
+                        </div>
+                    </button>
+                    <button class="card-toggle_next_iconmenu card-paper-list_target_menu">
+                        <i class="fa fa-user-circle-o"></i> Imran Hossain
+                        <i class="fa fa-angle-down"></i>
+                        <div class="card-toggle_next_iconmenu_menufloatmain user-card">
+                            <div class="toggle-card-header">
+                                <div class="header-with-left-pic">
+                                    <div class="user-profile-pic"> <img src="images/imran.jpg" alt=""></div>
+
+                                    <div class="user-info">
+                                        <div class="user-name">Imran Hossain</div>
+                                        <div class="user-email">gdimran@gmail.com</div>
+                                        <a href="" class="account-detail-link">Manage
+                                            your Account</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul>
+                                <li><a class="entry-paper-list" href="#">
+                                        <i class="fas fa-credit-card"></i> Membership</a>
+                                </li>
+                                <li><a class="entry-paper-list" href="#"><i class="fas fa-power-off"></i> Sign out</a>
+                                </li>
+                                <li><a class="entry-paper-list" href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                                <li><a class="entry-paper-list" href="#"><i class="icon-language-1"></i> Language:
+                                        English <i class="fa fa-angle-down"></i></a></li>
+                                <li><a class="entry-paper-list" href="#"><i class="far fa-question-circle"></i> Help
+                                    </a></li>
+
+                            </ul>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <!-- dashboard header End -->
+            <div class="container mt-5 mb-3">
+                <a class="back-btn m1-2" href="#">
+                    <i class="fas fa-long-arrow-alt-left"></i> Previous
+                </a>
+                <div class="step-text text-dark-300 mt-2 mb-1">Step 4 of 5 Launch Application</div>
+
+                <div class="page-title mb-2 title-border-btm">
+                    Select Plan
+                    <div class="desc-text text-dark-400 mb-1">We’ve selected the basic plan on your code. Starter
+                        plans may contains static sites.
+                    </div>
+                </div>
+
+                <form action="#" class="database-form">
+                    <div class="lable">Plans *</div>
+
+                    <div class="database-option pb-3 mb-3 title-border-btm">
+                        <div class="middle">
+                            <label>
+                                <input id="notExistDomain" type="radio" name="starter" checked />
+                                <div class="front-end box">
+                                    <div class="database-brand display-flex">
+                                        <div class="radion-icon">
+                                            <i class="fas fa-dot-circle active-icon"></i>
+                                            <i class="far fa-circle hidden-icon"></i>
+                                        </div>
+                                        <div class="plan-text">
+                                            <p class="plan-title">Starter</p>
+                                            <p class="plan-desc">Deploy static sites</p>
+                                            <p class="price-tag">Starts at $0/mo*</p>
+                                        </div>
+                                    </div>
+                                    <div class="description-content">
+                                        <ul>
+                                            <li><i class="icon-check"></i><strong>Starter</strong></li>
+                                            <li><i class="icon-check"></i>Deploy from <strong>GitHub</strong></li>
+                                            <li><i class="icon-check"></i>Automatic <strong>HTTPS</strong></li>
+                                            <li><i class="icon-check"></i>Bring your custom <strong>domain</strong></li>
+                                            <li><i class="icon-check"></i>Global <strong>CDN</strong></li>
+                                            <li><i class="icon-check"></i><strong>DDoS</strong> mitigation</li>
+                                            <li><i class="icon-check"></i><strong>1GB</strong> outbound transfer</li>
+                                            <li><i class="icon-check"></i><strong>100</strong> build minitues</li>
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+                            </label>
+
+                            <label>
+                                <input id="existDomain" type="radio" name="domain" />
+                                <div class="back-end box">
+                                    <div class="database-brand display-flex">
+                                        <div class="radion-icon">
+                                            <i class="fas fa-dot-circle active-icon"></i>
+                                            <i class="far fa-circle hidden-icon"></i>
+                                        </div>
+                                        <div class="plan-text">
+                                            <p class="plan-title">Basic</p>
+                                            <p class="plan-desc">Deploy Basic sites</p>
+                                            <p class="price-tag">Basic at $2/mo*</p>
+                                        </div>
+                                    </div>
+                                    <div class="description-content">
+                                        <ul>
+                                            <li><i class="icon-check"></i><strong>Basic</strong></li>
+                                            <li><i class="icon-check"></i>Deploy from <strong>GitHub</strong></li>
+                                            <li><i class="icon-check"></i>Automatic <strong>HTTPS</strong></li>
+                                            <li><i class="icon-check"></i>Bring your custom <strong>domain</strong></li>
+                                            <li><i class="icon-check"></i>Global <strong>CDN</strong></li>
+                                            <li><i class="icon-check"></i><strong>DDoS</strong> mitigation</li>
+                                            <li><i class="icon-check"></i><strong>1GB</strong> outbound transfer</li>
+                                            <li><i class="icon-check"></i><strong>100</strong> build minitues</li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </label>
+                            <label>
+                                <input id="noDomain" type="radio" name="domain" onclick="ShowHideDomainlist()" />
+                                <div class="back-end box">
+                                    <div class="database-brand display-flex">
+                                        <div class="radion-icon">
+                                            <i class="fas fa-dot-circle active-icon"></i>
+                                            <i class="far fa-circle hidden-icon"></i>
+                                        </div>
+                                        <div class="plan-text">
+                                            <p class="plan-title">Pro</p>
+                                            <p class="plan-desc">Deploy Pro sites</p>
+                                            <p class="price-tag">Pro at $5/mo*</p>
+                                        </div>
+                                    </div>
+                                    <div class="description-content">
+                                        <ul>
+                                            <li><i class="icon-check"></i><strong>Pro</strong></li>
+                                            <li><i class="icon-check"></i>Deploy from <strong>GitHub</strong></li>
+                                            <li><i class="icon-check"></i>Automatic <strong>HTTPS</strong></li>
+                                            <li><i class="icon-check"></i>Bring your custom <strong>domain</strong></li>
+                                            <li><i class="icon-check"></i>Global <strong>CDN</strong></li>
+                                            <li><i class="icon-check"></i><strong>DDoS</strong> mitigation</li>
+                                            <li><i class="icon-check"></i><strong>1GB</strong> outbound transfer</li>
+                                            <li><i class="icon-check"></i><strong>100</strong> build minitues</li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="field-group">
+                        <div class="lable">Containers</div>
+
+                        <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
+                        </div> -->
+                        <div class="plans-slector-counter">
+                            <div class="form-with-right-counter ">
+                                <div class="lable">Basic size</div>
+                                <div class="custom-select ">
+                                    <select>
+                                        <option value="0" selected>Choose a platform:</option>
+                                        <option value="GO-v-15">Go-v-15</option>
+                                        <option value="GO-v-15">Go-v-15</option>
+                                        <option value="Java-v-8">Java-v-8</option>
+                                        <option value="Java-v-7">Java-v-7</option>
+                                        <option value="php8">php8</option>
+                                        <option value="php7">php7</option>
+                                        <option value="php6">php6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="iteam-counter">
+                                <div class="lable">Number of Containers</div>
+                                <div class="item-counter-content">
+                                    <button class="counter-btn left-btn" onclick="buttonClickdes();"><i
+                                            class="fa fa-minus"></i></button>
+                                    <input class="counter-input" type="text" id="inc" value="1"></input>
+                                    <button class="counter-btn right-btn" onclick="buttonClickins();"><i
+                                            class="fa fa-plus"></i></button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="desc-text text-dark-400 my-3">* We provide a domain, based on the app’s name, where
+                            app will always be accessible
+                        </div>
+                        <div class="calc-container">
+                            <div class="calc-units">
+                                <div class="calc-single-unit">
+                                    <div class="unit-text">Containers</div>
+                                    <div class="unit-price">$5.00</div>
+                                </div>
+                                <div class="calc-single-unit">
+                                    <div class="unit-text">Domain</div>
+                                    <div class="unit-price">$9.00</div>
+                                </div>
+                            </div>
+                            <div class="calc-total-content">
+                                <div class="unit-text">Monthly app cost </div>
+                                <div class="unit-price">$14.00</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="final-section mt-2">
+                        <a class="text-primary-400" href="#">Pricing Details <i
+                                class="fas fa-long-arrow-alt-right"></i></a>
+                        <button class="btn-active " type="submit">Finalize</button>
+                    </div>
+
+
+                </form>
+
+
+            </div>
+
+
+            <!-- Dashboard footer start -->
+            <div class="dashboard-footer">
+                <div class="container">
+                    <ul class="footer-nav">
+                        <li>
+                            <a href="">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="">Terms</a>
+                        </li>
+                        <li>
+                            <a href="">Privacy</a>
+                        </li>
+                        <li>
+                            <a href="">Status</a>
+                        </li>
+                        <li>
+                            <a href="">Docs</a>
+                        </li>
+                        <li>
+                            <a href="">Tutorials</a>
+                        </li>
+                        <li>
+                            <a href="">Support</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Dashboard footer END -->
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/customElements.js"></script>
+
+</body>
+
+</html>

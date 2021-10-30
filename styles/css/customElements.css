@@ -194,7 +194,6 @@
 .middle .box .database-brand {
   width: 100%;
   height: 120px;
-  background: var(--clr-dark-200);
   border-bottom: 1px solid var(--clr-dark-300);
 }
 
@@ -348,3 +347,84 @@ form {
     }
 }
 */
+/*--------------------custome counter-------------------------------*/
+.plans-slector-counter {
+  display: flex;
+  gap: 30px;
+}
+
+.form-with-right-counter {
+  width: 250px;
+}
+
+.counter-btn {
+  height: 50px;
+  width: 50px;
+  background: transparent;
+  border: 1px solid var(--clr-secondary-500);
+}
+
+.left-btn {
+  border-radius: 3px 0 0 3px;
+}
+
+.right-btn {
+  border-radius: 0 3px 3px 0;
+}
+
+input.counter-input {
+  width: 54px;
+  height: 50px;
+  border: 1px solid var(--clr-secondary-500);
+  text-align: center;
+}
+
+.item-counter-content {
+  display: flex;
+}
+
+.description-content ul li {
+  text-align: left;
+  line-height: 29px;
+  font-size: initial;
+  color: var(--clr-secondary-500);
+}
+
+.description-content ul li i {
+  margin-right: 10px;
+  color: var(--clr-primary-400);
+}
+
+.radion-icon {
+  width: 20px;
+}
+
+.database-brand.display-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: normal;
+  padding-left: 13px;
+  gap: 10px;
+  padding-top: 25px;
+}
+
+.plan-text {
+  text-align: left !important;
+}
+
+.plan-desc {
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin: 3px 0 !important;
+}
+
+.price-tag {
+  margin: 3px 0 !important;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.plan-title {
+  margin: 0 !important;
+  padding: 0 !important;
+}

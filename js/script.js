@@ -77,3 +77,13 @@ $(".custom-option").on("click", function () {
 
 
 
+// =============================counter el js------------------
+var i = 0;
+function buttonClickins() {
+    i++;
+    document.getElementById('inc').value = i;
+}
+function buttonClickdes() {
+    i--;
+    document.getElementById('inc').value = i;
+}
