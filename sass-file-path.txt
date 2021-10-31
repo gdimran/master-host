@@ -28,3 +28,6 @@ https://github.com/fransyrcc/starter-html-sass-js-webpack/blob/master/src/styles
 https://codepen.io/gabrielferreira/pen/oYxNVy
 
 https://codepen.io/rakibjewel/pen/VwYXbbb
+
+modal issue
+https://www.youtube.com/watch?v=Ifx85VUGQIY

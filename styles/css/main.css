@@ -2202,6 +2202,7 @@ template {
   padding: 6px 25px;
   text-align: center;
   font-size: 1.2rem;
+  min-height: 54px;
   font-weight: 600;
   height: clamp(40px, 50px, 60px);
   align-items: center;
@@ -2685,7 +2686,16 @@ input.password {
 .pass-gen-content {
   position: absolute;
   left: 55%;
-  bottom: 48.5%;
+  top: 34px;
+}
+
+/*--------------------------form validation------------------------------------*/
+.error {
+  color: var(--clr-danger-400);
+  text-align: left;
+  padding: 5px 0;
+  display: block;
+  min-height: 30px;
 }
 
 table {
@@ -3312,42 +3322,67 @@ tr:hover {
 }
 
 /*---------------------password generator copy and hide show--------------------------*/
-.tooltip {
-  position: relative;
-  display: inline-block;
+.copy-btn {
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
 }
 
-.tooltip .tooltiptext {
+.copyTooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.copyTooltip .copyTooltiptext {
   visibility: hidden;
-  width: 140px;
-  background-color: #555;
+  min-width: 150px;
+  min-height: 75px;
+  background-color: var(--clr-primary-400);
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 5px;
+  padding: 5px 0;
   position: absolute;
   z-index: 1;
-  bottom: 150%;
+  top: 150%;
   left: 50%;
-  margin-left: -75px;
-  opacity: 0;
-  transition: opacity 0.3s;
+  margin-left: -60px;
 }
 
-.tooltip .tooltiptext::after {
+.copyTooltip .copyTooltiptext::after {
   content: "";
   position: absolute;
-  top: 100%;
+  bottom: 100%;
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: #555 transparent transparent transparent;
+  border-color: transparent transparent var(--clr-primary-400) transparent;
 }
 
-.tooltip:hover .tooltiptext {
+.copyTooltip:hover .copyTooltiptext {
   visibility: visible;
-  opacity: 1;
+}
+
+.dashed-active {
+  display: block;
+  width: 25px;
+  height: 5px;
+  background: var(--clr-primary-400);
+}
+
+.dashed {
+  display: block;
+  width: 25px;
+  height: 5px;
+  background: var(--clr-dark-200);
+}
+
+#strength {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
 }
 
 /*------------login form----------------*/
@@ -4183,7 +4218,7 @@ ul.cloud-source li a {
 
 .custom-checkbox {
   position: absolute;
-  top: 40%;
+  top: 27%;
   right: 15px;
 }
 

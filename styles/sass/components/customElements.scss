@@ -233,45 +233,65 @@
 /*---------------------password generator copy and hide show--------------------------*/
 
 // copy tooltip
-.tooltip {
-    position: relative;
-    display: inline-block;
+.copy-btn {
+	border: none;
+	background: transparent;
+	font-size: 1.5rem;
+}
+.copyTooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }
 
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 140px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 150%;
-    left: 50%;
-    margin-left: -75px;
-    opacity: 0;
-    transition: opacity 0.3s;
+.copyTooltip .copyTooltiptext {
+  visibility: hidden;
+  min-width: 150px;
+  min-height:75px;
+  background-color: var(--clr-primary-400);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
 }
 
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
+.copyTooltip .copyTooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent var(--clr-primary-400) transparent;
 }
 
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
+.copyTooltip:hover .copyTooltiptext {
+  visibility: visible;
+}
+.dashed-active{
+    display:block;
+     width:25px;
+    height:5px;
+     background:var(--clr-primary-400);
+}
+.dashed{
+    display:block;
+    width:25px;
+    height:5px;
+    background:var(--clr-dark-200);
 }
 
-
+#strength {
+	display: flex;
+    gap:15px;
+	margin-top: 10px;
+}
 /*------------login form----------------*/
 
 

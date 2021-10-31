@@ -151,6 +151,15 @@ document.addEventListener("keyup", e => {
     }
 });
 
+//=====================update modal code===============
+var modalBtns = document.querySelectorAll('.open-modal');
+modalBtns.forEach(function (btn) {
+    btn.onclick = function () {
+        var modal = btn.getAttribute("data-modal");
+        modal.getElementById(modal).style.display = "block";
+    };
+});
+
 // =============modal scrpit end============================
 
 //=================password section==========================
@@ -162,6 +171,15 @@ function showPassword() {
         x.type = "text";
     } else {
         x.type = "password";
+    }
+}
+
+function showPasswordUser() {
+    var x = document.getElementById("user_password");
+    if (x.type === "user_password") {
+        x.type = "text";
+    } else {
+        x.type = "user_password";
     }
 }
 
@@ -207,10 +225,134 @@ function passwordChanged() {
     } else if (false == enoughRegex.test(pwd.value)) {
         strength.innerHTML = 'More Characters';
     } else if (strongRegex.test(pwd.value)) {
-        strength.innerHTML = '<span style="color:green">Strong!</span>';
+        strength.innerHTML = '<span class="dashed-active"></span> <span class="dashed-active"></span> <span class="dashed-active"> </span> <span class="dashed-active"></span> <span class="dashed-active"></span>';
     } else if (mediumRegex.test(pwd.value)) {
-        strength.innerHTML = '<span style="color:orange">Medium!</span>';
+        strength.innerHTML = '<span class="dashed-active"></span> <span class="dashed-active"></span> <span class="dashed-active"> </span> <span class="dashed"></span> <span class="dashed"></span>';
     } else {
-        strength.innerHTML = '<span style="color:red">Weak!</span>';
+        strength.innerHTML = '<span class="dashed-active"> </span> <span class="dashed"></span> <span class="dashed"></span> <span class="dashed"></span> <span class="dashed"></span>';
+    }
+}
+
+// function check() {
+//     if (document.getElementById('password').value ==
+//         document.getElementById('confirm_password').value) {
+//         document.getElementById('password_error').style.color = 'green';
+//         document.getElementById('password_error').innerHTML = 'Password Matched';
+//     } else {
+//         document.getElementById('password_error').style.color = 'red';
+//         document.getElementById('password_error').innerHTML = 'Password Not matching';
+//     }
+// }
+
+//=================================form validation=====================================
+// function phoneNumberValidation(phoneNumber) {
+//     var phoneno = /^\d{10}$/;
+//     if (phoneNumber.match(phoneno)) {
+//         return true;
+//     }
+//     else {
+//         var div = document.getElementById('phone_error');
+//         div.innerHTML = "* Enter valid 10 digit number like this 9876543210.";
+//         return false;
+//     }
+// }
+
+function validatetion() {
+    var valid = true;
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    var confirm_password = document.getElementById('confirm_password').value;
+
+
+    if (name == '' || name == null) {
+        valid = false;
+        var div = document.getElementById('name_error');
+        div.innerHTML = "* Please enter name.";
+    }
+    else {
+        document.getElementById('name_error').innerHTML = '';
+    }
+
+
+    if (email == '' || email == null) {
+        valid = false;
+        var div = document.getElementById('email_error');
+        div.innerHTML = "* Please enter email.";
+    }
+    else {
+        document.getElementById('email_error').innerHTML = '';
+    }
+
+    if (password == '' || password == null) {
+        valid = false;
+        var div = document.getElementById('password_error');
+        div.innerHTML = "* Please enter password.";
+    }
+    else {
+        document.getElementById('password_error').innerHTML = '';
+    }
+
+    if (confirm_password == '' || confirm_password == null) {
+        valid = false;
+        var div = document.getElementById('confirm_password_error');
+        div.innerHTML = "* Retype your password here.";
+    }
+    else {
+        document.getElementById('confirm_password_error').innerHTML = '';
+    }
+
+
+    if (password != '' && confirm_password != '') {
+        if (password != confirm_password) {
+            valid = false;
+            var div = document.getElementById('confirm_password_error');
+            div.innerHTML = "* Password do not match. Please check it.";
+        }
+
+        if (password == confirm_password) {
+            document.getElementById('confirm_password_error').innerHTML = '';
+        }
+    }
+
+    if (valid == false) {
+        return false;
+    }
+    else {
+        alert("You form is ready to submit.");
+        return true;
+    }
+}
+
+function user_validatetion() {
+    var valid = true;
+    var email = document.getElementById('user_email').value;
+    var password = document.getElementById('user_password').value;
+
+
+    if (email == '' || email == null) {
+        valid = false;
+        var div = document.getElementById('email_error');
+        div.innerHTML = "* Please enter email.";
+    }
+    else {
+        document.getElementById('email_error').innerHTML = '';
+    }
+
+    if (password == '' || password == null) {
+        valid = false;
+        var div = document.getElementById('password_error');
+        div.innerHTML = "* Please enter password.";
+    }
+    else {
+        document.getElementById('password_error').innerHTML = '';
+    }
+
+    if (valid == false) {
+        return false;
+    }
+    else {
+        alert("You form is ready to submit.");
+        return true;
     }
 }

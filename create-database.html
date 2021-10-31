@@ -352,7 +352,8 @@
                             <div class="password-content">
                                 <input class="password" type="password" name="password" id="password"
                                     placeholder="password" onkeyup="return passwordChanged();"
-                                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+                                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                                    autocomplete="off">
                                 <label class="pass custom-checkbox">
                                     <input type="checkbox" onclick="showPassword()" />
                                     <i class="far fa-eye checked"></i>
@@ -360,6 +361,23 @@
                                 </label>
                             </div>
 
+                            <div class="pass-gen-content">
+                                <div class="pass-content-inner">
+                                    <div id="btn-pass-generate" class="btn-outline text-primary-400"
+                                        onclick="getPassword();">
+                                        Generate
+                                        Password</div>
+
+                                    <div class="copyTooltip">
+                                        <i class="far fa-copy copy-btn" onclick="copyPassword()"
+                                            onmouseout="outFunc()"></i>
+                                        <span class="copyTooltiptext" id="myTooltip">Copy to clipboard</span>
+
+                                    </div>
+                                </div>
+
+                                <span id="strength">Type Password</span>
+                            </div>
 
 
                         </div>
@@ -384,22 +402,7 @@
 
                     <button class="btn-active mt-3" type="submit">Next</button>
                 </form>
-                <div class="pass-gen-content">
-                    <div class="pass-content-inner">
-                        <div id="btn-pass-generate" class="btn-outline text-primary-400" onclick="getPassword();">
-                            Generate
-                            Password</div>
 
-                        <div class="tooltip">
-                            <button onclick="copyPassword()" onmouseout="outFunc()">
-                                <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
-                                <i class="far fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <span id="strength">Type Password</span>
-                </div>
 
 
             </div>

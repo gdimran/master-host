@@ -23,13 +23,16 @@
                                 class="logo-text" src="images/masterHost.svg" alt="" /></a>
                     </div>
                     <div class="form-subtitle">Let’s get started</div>
-                    <div class="form-area my-1">
-                        <form action="" method="post">
-                            <input type="email" name="email" id="" placeholder="Email">
+                    <div class="form-area my-3">
+                        <form action="" method="post" onsubmit="return user_validatetion();">
+                            <input type="email" name="email" id="user_email" placeholder="Email" autocomplete="off">
+                            <div class="error" id="email_error"></div>
                             <div class="password-group">
-                                <input type="password" name="password" id="password" placeholder="password">
+                                <input type="password" name="password" id="user_password" placeholder="password"
+                                    autocomplete="off">
+                                <div class="error" id="password_error"></div>
                                 <label class="custom-checkbox">
-                                    <input type="checkbox" onclick="showPassword()" />
+                                    <input type="checkbox" onclick="showPasswordUser()" />
                                     <i class="far fa-eye checked"></i>
                                     <i class="far fa-eye-slash unchecked"></i>
                                 </label>
@@ -41,13 +44,13 @@
                                     <a href="Privacy Policy"></a>.
                                 </p>
                             </div>
-                            <button type="submit" class="logn-btn 
-                                my-1 text-primary-400">Login</button>
+                            <input type="submit" name="submit" value="Login" class="signup-btn
+                            my-1" autocomplete="off">
                         </form>
                     </div>
                     <p class="signup-redirect">
                         <a href="" class="forgot-pass text-primary-500">Forgot Password?</a> | Don’t have an account? <a
-                            class="text-warning-500" href="singup.html">Register now</a>
+                            class="text-warning-500" href="signup.html">Register now</a>
                     </p>
                 </div>
 

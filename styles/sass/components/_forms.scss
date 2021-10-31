@@ -420,5 +420,15 @@ input.password {
 .pass-gen-content {
 	position: absolute;
 	left: 55%;
-	bottom: 48.5%;
+	top: 34px;
+}
+
+
+/*--------------------------form validation------------------------------------*/
+.error {
+	color: var(--clr-danger-400);
+	text-align: left;
+	padding: 5px 0;
+	display: block;
+	min-height: 30px;
 }
