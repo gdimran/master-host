@@ -47,7 +47,7 @@
 
 .modal-dialog {
   position: relative;
-  max-width: 800px;
+  width: clamp(40%,60%,100%);
   max-height: 80vh;
   border-radius: 5px;
   background: var(--clr-light-100);
@@ -334,4 +334,63 @@
   top: -20px;
   right: 20px;
   z-index: 1;
+}
+
+
+//=============custom modal content=========================
+.header-content {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	gap: 15px;
+  align-items:center;
+}
+.modal-title-txt {
+	font-size: 1.2rem;
+	margin-bottom: 5px;
+  font-weight: 500;
+}
+.title-icon {
+	font-size: 3rem;
+	color: var(--clr-primary-400);
+}
+.form-lable-with-right-tooltip {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+}
+input.modal-password {
+	width: 100%;
+  border: 1px solid var(--clr-secondary-500);
+  min-height: 50px;
+  border-radius: 3px;
+  padding: 10px;
+}
+.modal-pass-content{
+  position:relative;
+  width:100%;
+  .pass.custom-checkbox {
+	left: 93%;
+	top: 33%;
+}
+}
+.modal-pass-content-inner{
+  display:flex;
+  justify-content: space-between;
+	align-content: center;
+	align-items: center;
+}
+.modal-copyTooltip {
+	background: var(--clr-dark-100);
+	height: 50px;
+	border-radius: 3px;
+	padding: 10px 20px;
+  min-width: 200px;
+  line-height: 30px;
+  text-align: center;
+}
+.pass-info-content{
+  display:flex;
+  justify-content: space-between;
 }

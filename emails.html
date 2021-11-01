@@ -281,9 +281,9 @@
 
                         <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
                     </form>
-                    <div class="btn-active create-email"><a class="open-modal" data-modal="add-email" href="#"> <i
+                    <div class="create-email"><button class="open-modal btn-active" data-open="addEmail"> <i
                                 class=" icon-add-new-email mr-1"></i>
-                            Create an email</a>
+                            Create an email</button>
                     </div>
                 </div>
 
@@ -305,7 +305,7 @@
                         <div class="table-content">
                             <table class="list-table">
                                 <tbody>
-                                    <tr class="bg-info-100">
+                                    <tr class="bg-dark-100">
                                         <th class="text-primary-400">Account <i class="fas fa-caret-down"></i></th>
                                         <th>Restrictions</th>
                                         <th>Storage: Used / Allocated</th>
@@ -315,43 +315,175 @@
                                         <td><a class="highlight" href="#">user@example.com</a></td>
                                         <td>Unrestricted</td>
                                         <td>3.96 MB / 500 MB</td>
-                                        <td class="text-primary-400" style="width:7%; text-align:center">More <i
-                                                class="fas fa-angle-down"></i></td>
+                                        <td class="text-primary-400" style="width:7%; text-align:center">
+                                            <button
+                                                class="card-toggle_next_iconmenu card-paper-list_target_menu text-primary-400">
+                                                More <i class=" fas fa-angle-down"></i>
+                                                <div class="card-toggle_next_iconmenu_menufloatmain">
+                                                    <ul>
+                                                        <li><a class="entry-paper-list" href="#">
+                                                                <i class="fas fa-exclamation-circle"></i>Check Email</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-power-off"></i> Manage Email</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Password</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Limit</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-trash-alt"></i> Delete</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td><a class="highlight" href="#">user@example.com</a></td>
                                         <td>Unrestricted</td>
                                         <td>3.96 MB / 500 MB</td>
-                                        <td class="text-primary-400" style="width:7%; text-align:center">More <i
-                                                class="fas fa-angle-down"></i></td>
+                                        <td class="text-primary-400" style="width:7%; text-align:center">
+                                            <button
+                                                class="card-toggle_next_iconmenu card-paper-list_target_menu text-primary-400">
+                                                More <i class=" fas fa-angle-down"></i>
+                                                <div class="card-toggle_next_iconmenu_menufloatmain">
+                                                    <ul>
+                                                        <li><a class="entry-paper-list" href="#">
+                                                                <i class="fas fa-exclamation-circle"></i>Check Email</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-power-off"></i> Manage Email</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Password</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Limit</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-trash-alt"></i> Delete</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td><a class="highlight" href="#">user@example.com</a></td>
                                         <td>Unrestricted</td>
                                         <td>3.96 MB / 500 MB</td>
-                                        <td class="text-primary-400" style="width:7%; text-align:center">More <i
-                                                class="fas fa-angle-down"></i></td>
+                                        <td class="text-primary-400" style="width:7%; text-align:center">
+                                            <button
+                                                class="card-toggle_next_iconmenu card-paper-list_target_menu text-primary-400">
+                                                More <i class=" fas fa-angle-down"></i>
+                                                <div class="card-toggle_next_iconmenu_menufloatmain">
+                                                    <ul>
+                                                        <li><a class="entry-paper-list" href="#">
+                                                                <i class="fas fa-exclamation-circle"></i>Check Email</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-power-off"></i> Manage Email</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Password</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Limit</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-trash-alt"></i> Delete</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td><a class="highlight" href="#">user@example.com</a></td>
                                         <td>Unrestricted</td>
                                         <td>3.96 MB / 500 MB</td>
-                                        <td class="text-primary-400" style="width:7%; text-align:center">More <i
-                                                class="fas fa-angle-down"></i></td>
+                                        <td class="text-primary-400" style="width:7%; text-align:center">
+                                            <button
+                                                class="card-toggle_next_iconmenu card-paper-list_target_menu text-primary-400">
+                                                More <i class=" fas fa-angle-down"></i>
+                                                <div class="card-toggle_next_iconmenu_menufloatmain">
+                                                    <ul>
+                                                        <li><a class="entry-paper-list" href="#">
+                                                                <i class="fas fa-exclamation-circle"></i>Check Email</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-power-off"></i> Manage Email</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Password</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Limit</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-trash-alt"></i> Delete</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td><a class="highlight" href="#">user@example.com</a></td>
                                         <td>Unrestricted</td>
                                         <td>3.96 MB / 500 MB</td>
-                                        <td class="text-primary-400" style="width:7%; text-align:center">More <i
-                                                class="fas fa-angle-down"></i></td>
+                                        <td class="text-primary-400" style="width:7%; text-align:center">
+                                            <button
+                                                class="card-toggle_next_iconmenu card-paper-list_target_menu text-primary-400">
+                                                More <i class=" fas fa-angle-down"></i>
+                                                <div class="card-toggle_next_iconmenu_menufloatmain">
+                                                    <ul>
+                                                        <li><a class="entry-paper-list" href="#">
+                                                                <i class="fas fa-exclamation-circle"></i>Check Email</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-power-off"></i> Manage Email</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Password</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Limit</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-trash-alt"></i> Delete</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td><a class="highlight" href="#">user@example.com</a></td>
                                         <td>Unrestricted</td>
                                         <td>3.96 MB / 500 MB</td>
-                                        <td class="text-primary-400" style="width:7%; text-align:center">More <i
-                                                class="fas fa-angle-down"></i></td>
+                                        <td class="text-primary-400" style="width:7%; text-align:center">
+                                            <button
+                                                class="card-toggle_next_iconmenu card-paper-list_target_menu text-primary-400">
+                                                More <i class=" fas fa-angle-down"></i>
+                                                <div class="card-toggle_next_iconmenu_menufloatmain">
+                                                    <ul>
+                                                        <li><a class="entry-paper-list" href="#">
+                                                                <i class="fas fa-exclamation-circle"></i>Check Email</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-power-off"></i> Manage Email</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Password</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Limit</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-trash-alt"></i> Delete</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </button>
+                                        </td>
                                     </tr>
 
                                 </tbody>
@@ -511,101 +643,162 @@
 
     <!-- Modal content start -->
 
-    <div class="modals" id="add-email" data-animation="slideInOutLeft">
+    <div class="modal" id="addEmail" data-animation="slideInOutLeft">
         <div class="modal-dialog">
             <header class="modal-header mt-2">
-                <div class="source-logo"><img src="images/github-i.svg" alt=""></div>
+                <div class="header-content">
+                    <i class="title-icon icon-add-new-email"></i>
+                    <div class="modal-h-text">
+                        <div class="modal-title-txt text-primary-400">Create an email account</div>
+                        <div class="desc-text text-dark-400">Create new emails for you</div>
+                    </div>
+                </div>
                 <button class="close-modal" aria-label="close modal" data-close>
                     <i class="far fa-times-circle"></i>
                 </button>
             </header>
             <section class="modal-content">
                 <form action="" method="post">
-                    <div class="field-group">
-                        <div class="form-with-right-tooltip mt-1">
-                            <input type="text" name="gitrepo" id="git" class="text-field required"
-                                placeholder="Repository Url">
-                            <div class="tooltip-sec">
-                                <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
-                                    <span class="tooltiptext">
-                                        <span class="tooltip-head">Heads up</span>
-                                        <span class="tooltip-body">This is the name of databse
-                                            required to connect to databse
-                                            with your application</span>
-                                        <span class="tooltip-footer">Ok <a class="text-light-100" href="http://">Learn
-                                                more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
-                                    </span>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mt-2">
+                                <div class="field-group">
+                                    <div class="form-lable-with-right-tooltip">
+                                        <div class="lable">Username</div>
+                                        <div class="tooltip-sec">
+                                            <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                                <span class="tooltiptext">
+                                                    <span class="tooltip-head">Heads up</span>
+                                                    <span class="tooltip-body">This is the name of databse
+                                                        required to connect to databse
+                                                        with your application</span>
+                                                    <span class="tooltip-footer">Ok <a class="text-light-100"
+                                                            href="http://">Learn
+                                                            more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="text" name="Email username" id="emailusername"
+                                        class="text-field required" placeholder="Email username">
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="field-group mt-2">
-                        <div class="lable">Credentials</div>
-                        <div class="desc-text text-dark-400 mb-1">If your repository is private then give
-                            credentials otherwise you can keep blank
-                        </div>
-                        <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
-                    </div> -->
-                        <div class="form-with-right-tooltip mt-1">
-                            <input type="text" name="gitusername" id="git-user" class="text-field required"
-                                placeholder="git username">
-                            <div class="tooltip-sec">
-                                <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
-                                    <span class="tooltiptext">
-                                        <span class="tooltip-head">Heads up</span>
-                                        <span class="tooltip-body">This is the name of databse
-                                            required to connect to databse
-                                            with your application</span>
-                                        <span class="tooltip-footer">Ok <a class="text-light-100" href="http://">Learn
-                                                more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
-                                    </span>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mt-2">
+                                <div class="field-group">
+                                    <div class="form-lable-with-right-tooltip">
+                                        <div class="lable">Select Domain</div>
+                                        <div class="tooltip-sec">
+                                            <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                                <span class="tooltiptext">
+                                                    <span class="tooltip-head">Heads up</span>
+                                                    <span class="tooltip-body">This is the name of databse
+                                                        required to connect to databse
+                                                        with your application</span>
+                                                    <span class="tooltip-footer">Ok <a class="text-light-100"
+                                                            href="http://">Learn
+                                                            more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field-group" id="domain-list">
+                                        <div class="custom-select">
+                                            <select>
+                                                <option value="0">Select Domain:</option>
+                                                <option value="masteracademy.org" selected>masteracademy.org</option>
+                                                <option value="mateors.com">mateors.com</option>
+                                                <option value="imran.com">imran.com</option>
+                                                <option value="binaryhost.io">binaryhost.io</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-with-right-tooltip mt-1">
-                            <input type="password" name="password" id="password-git" class="text-field required"
-                                placeholder="password">
-                            <div class="tooltip-sec">
-                                <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
-                                    <span class="tooltiptext">
-                                        <span class="tooltip-head">Heads up</span>
-                                        <span class="tooltip-body">This is the name of databse
-                                            required to connect to databse
-                                            with your application</span>
-                                        <span class="tooltip-footer">Ok <a class="text-light-100" href="http://">Learn
-                                                more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="field-group mt-2">
-                        <div class="lable">Branches to build</div>
-                        <div class="desc-text text-dark-400 mb-1">Branch Specifier (blank for ‘any’)
-                        </div>
-                        <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
-                    </div> -->
-                        <div class="form-with-right-tooltip mt-1">
-                            <input type="text" name="gitbranch" id="git-user" class="text-field required"
-                                placeholder="*/master">
-                            <div class="tooltip-sec">
-                                <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
-                                    <span class="tooltiptext">
-                                        <span class="tooltip-head">Heads up</span>
-                                        <span class="tooltip-body">This is the name of databse
-                                            required to connect to databse
-                                            with your application</span>
-                                        <span class="tooltip-footer">Ok <a class="text-light-100" href="http://">Learn
-                                                more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mt-2">
+                                <div class="field-group">
+                                    <div class="form-lable-with-right-tooltip">
+                                        <div class="lable">Create password</div>
+                                        <div class="tooltip-sec">
+                                            <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                                <span class="tooltiptext">
+                                                    <span class="tooltip-head">Heads up</span>
+                                                    <span class="tooltip-body">This is the name of databse
+                                                        required to connect to databse
+                                                        with your application</span>
+                                                    <span class="tooltip-footer">Ok <a class="text-light-100"
+                                                            href="http://">Learn
+                                                            more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="password-content modal-pass-content">
+                                        <input class="modal-password" type="password" name="password" id="password"
+                                            placeholder="password" onkeyup="return passwordChanged();"
+                                            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                                            autocomplete="off">
+                                        <label class="pass custom-checkbox">
+                                            <input type="checkbox" onclick="showPassword()" />
+                                            <i class="far fa-eye checked"></i>
+                                            <i class="far fa-eye-slash unchecked"></i>
+                                        </label>
+                                    </div>
 
+                                    <div class="modal-pass-gen-content mt-1">
+                                        <div class="modal-pass-content-inner">
+                                            <div id="btn-pass-generate" class="btn-outline text-primary-400"
+                                                onclick="getPassword();">
+                                                Generate
+                                                Password</div>
+
+                                            <div class="modal-copyTooltip" onclick="copyPassword()"
+                                                onmouseout="outFunc()">
+                                                <span class="copyTooltiptext" id="modal-Tooltip">Copy to
+                                                    clipboard</span>
+
+                                                <!-- <i class="far fa-copy copy-btn" onclick="copyPassword()"
+                                                    onmouseout="outFunc()"></i> -->
+
+                                            </div>
+                                        </div>
+
+                                        <div class="pass-info-content">
+                                            <span id="strength">Type Password</span>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mt-2">
+                                <div class="field-group">
+                                    <div class="form-lable-with-right-tooltip">
+                                        <div class="lable">Email Quota (MB)</div>
+                                        <div class="tooltip-sec">
+                                            <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                                <span class="tooltiptext">
+                                                    <span class="tooltip-head">Heads up</span>
+                                                    <span class="tooltip-body">This is the name of databse
+                                                        required to connect to databse
+                                                        with your application</span>
+                                                    <span class="tooltip-footer">Ok <a class="text-light-100"
+                                                            href="http://">Learn
+                                                            more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="text" name="Email username" id="emailusername"
+                                        class="text-field required" placeholder="Email username">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-center mt-2"><button class="btn-outline full-btn" type="submit"
+                                aria-label="close modal" data-close>Create new Email</button>
+                        </p>
                     </div>
-                    <p class="text-center"><button class="btn-outline" type="submit" aria-label="close modal"
-                            data-close>Cancle</button> <button class="btn-active" type="submit">Save</button>
-                    </p>
+
+
                 </form>
 
 
@@ -615,6 +808,7 @@
             </footer>
         </div>
     </div>
+
 
     <!-- Modal content end -->
 

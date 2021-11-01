@@ -84,24 +84,24 @@ document.addEventListener("click", closeAllSelect);
 
 
 
-document.querySelector("html").classList.add('js');
+// document.querySelector("html").classList.add('js');
 
-var fileInput = document.querySelector(".input-file"),
-    button = document.querySelector(".input-file-trigger"),
-    the_return = document.querySelector(".file-return");
+// var fileInput = document.querySelector(".input-file"),
+//     button = document.querySelector(".input-file-trigger"),
+//     the_return = document.querySelector(".file-return");
 
-button.addEventListener("keydown", function (event) {
-    if (event.keyCode == 13 || event.keyCode == 32) {
-        fileInput.focus();
-    }
-});
-button.addEventListener("click", function (event) {
-    fileInput.focus();
-    return false;
-});
-fileInput.addEventListener("change", function (event) {
-    the_return.innerHTML = this.value;
-});
+// button.addEventListener("keydown", function (event) {
+//     if (event.keyCode == 13 || event.keyCode == 32) {
+//         fileInput.focus();
+//     }
+// });
+// button.addEventListener("click", function (event) {
+//     fileInput.focus();
+//     return false;
+// });
+// fileInput.addEventListener("change", function (event) {
+//     the_return.innerHTML = this.value;
+// });
 
 //hide show div based on radio checked
 function ShowHideDomainlist() {
@@ -120,47 +120,7 @@ function ShowHideDomainlist() {
 
 
 
-// =============modal scrpit start============================
-const openEls = document.querySelectorAll("[data-open]");
-const closeEls = document.querySelectorAll("[data-close]");
-const isVisible = "is-visible";
 
-for (const el of openEls) {
-    el.addEventListener("click", function () {
-        const modalId = this.dataset.open;
-        document.getElementById(modalId).classList.add(isVisible);
-    });
-}
-
-for (const el of closeEls) {
-    el.addEventListener("click", function () {
-        this.parentElement.parentElement.parentElement.classList.remove(isVisible);
-    });
-}
-
-document.addEventListener("click", e => {
-    if (e.target == document.querySelector(".modal.is-visible")) {
-        document.querySelector(".modal.is-visible").classList.remove(isVisible);
-    }
-});
-
-document.addEventListener("keyup", e => {
-    // if we press the ESC
-    if (e.key == "Escape" && document.querySelector(".modal.is-visible")) {
-        document.querySelector(".modal.is-visible").classList.remove(isVisible);
-    }
-});
-
-//=====================update modal code===============
-var modalBtns = document.querySelectorAll('.open-modal');
-modalBtns.forEach(function (btn) {
-    btn.onclick = function () {
-        var modal = btn.getAttribute("data-modal");
-        modal.getElementById(modal).style.display = "block";
-    };
-});
-
-// =============modal scrpit end============================
 
 //=================password section==========================
 
@@ -195,6 +155,10 @@ function getPassword() {
         password += chars.substring(randomNumber, randomNumber + 1);
     }
     document.getElementById("password").value = password;
+
+    var modatooltip = document.getElementById("modal-Tooltip");
+    modatooltip.innerHTML = password;
+
 }
 
 //copy password
@@ -206,11 +170,18 @@ function copyPassword() {
 
     var tooltip = document.getElementById("myTooltip");
     tooltip.innerHTML = "Copied: " + copyText.value;
+
+    var modatooltip = document.getElementById("copy-info");
+    modatooltip.innerHTML = "Copied: " + copyText.value;
+
 }
 
 function outFunc() {
     var tooltip = document.getElementById("myTooltip");
     tooltip.innerHTML = "Copy to clipboard";
+
+    var modatooltip = document.getElementById("modal-Tooltip");
+    modatooltip.innerHTML = "Copy to clipboard";
 }
 
 //strong pass section======================

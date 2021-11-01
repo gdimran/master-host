@@ -47,7 +47,7 @@
     position: relative;
     display: inline-block;
     user-select: none;
-    width: 40%;
+    width: 100%;
 }
 
 .custom-select-wrapper select {
@@ -118,6 +118,7 @@
     visibility: hidden;
     pointer-events: none;
     transform: translateY(-15px);
+    z-index:15;
 }
 
 .custom-select.opened .custom-options {

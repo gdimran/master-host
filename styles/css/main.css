@@ -1228,6 +1228,7 @@ ul li {
 
 .text-center {
   text-align: center;
+  width: 100%;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -2269,6 +2270,10 @@ template {
   border: none;
 }
 
+.full-btn {
+  width: 100%;
+}
+
 .inline-form {
   display: flex;
   width: 100%;
@@ -2315,7 +2320,7 @@ template {
   position: relative;
   display: inline-block;
   user-select: none;
-  width: 40%;
+  width: 100%;
 }
 
 .custom-select-wrapper select {
@@ -2386,6 +2391,7 @@ template {
   visibility: hidden;
   pointer-events: none;
   transform: translateY(-15px);
+  z-index: 15;
 }
 
 .custom-select.opened .custom-options {
@@ -2814,7 +2820,7 @@ tr:hover {
 
 .modal-dialog {
   position: relative;
-  max-width: 800px;
+  width: clamp(40%, 60%, 100%);
   max-height: 80vh;
   border-radius: 5px;
   background: var(--clr-light-100);
@@ -3097,6 +3103,72 @@ tr:hover {
   top: -20px;
   right: 20px;
   z-index: 1;
+}
+
+.header-content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+}
+
+.modal-title-txt {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.title-icon {
+  font-size: 3rem;
+  color: var(--clr-primary-400);
+}
+
+.form-lable-with-right-tooltip {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+input.modal-password {
+  width: 100%;
+  border: 1px solid var(--clr-secondary-500);
+  min-height: 50px;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.modal-pass-content {
+  position: relative;
+  width: 100%;
+}
+
+.modal-pass-content .pass.custom-checkbox {
+  left: 93%;
+  top: 33%;
+}
+
+.modal-pass-content-inner {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.modal-copyTooltip {
+  background: var(--clr-dark-100);
+  height: 50px;
+  border-radius: 3px;
+  padding: 10px 20px;
+  min-width: 200px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.pass-info-content {
+  display: flex;
+  justify-content: space-between;
 }
 
 /*the container must be positioned relative:*/
