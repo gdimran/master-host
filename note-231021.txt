@@ -1,4 +1,16 @@
 rearrange page
-1. 2 page name application / radion as database single row radio button
 
-2. launchapp 2 page > fields-> excuteable name, wokring dir, port
+
+
+3. tooltip in first option domain and  video link with domain do.
+last line help content to understand the domain issue?
+
+need explaination ?
+
+4. focuse color border for all input full. text should bold
+
+5. create email button active color all time and dark on hover
+
+6. forgot password heightlight and page as well
+
+with sucess message
