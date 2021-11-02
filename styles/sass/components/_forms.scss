@@ -9,11 +9,19 @@
     position: relative;
 }
 
+input {
+    border: 1px solid var(--clr-secondary-500);
+    height: 50px;
+    border-radius: 3px;
+    padding: 10px;
+    width: 100%;
+}
+
 .select-field,
 .text-field {
     width: clamp(40%, 50%, 55%);
     border: 1px solid var(--clr-secondary-500);
-    min-height: 50px;
+    height: 50px;
     border-radius: 3px;
     padding: 10px;
 }
@@ -30,7 +38,7 @@
 .search-field {
     width: 100%;
     border: 1px solid var(--clr-secondary-500);
-    min-height: 50px;
+    height: 50px;
     border-radius: 3px;
     padding: 10px 10px 10px 40px;
 }
@@ -74,7 +82,7 @@
     line-height: 50px;
     background: transparent;
     border: 1px solid var(--clr-secondary-500);
-    min-height: 50px;
+    height: 50px;
     border-radius: 3px;
     cursor: pointer;
 }
@@ -118,7 +126,7 @@
     visibility: hidden;
     pointer-events: none;
     transform: translateY(-15px);
-    z-index:15;
+    z-index: 15;
 }
 
 .custom-select.opened .custom-options {
@@ -386,50 +394,55 @@
 
 
 /*--------------password generate and cpy option-----------------*/
-.password-content{
-    position:relative;
-    width:100%;
-}
-input.password {
-	width: 50% !important;
-	min-height: 54px;
-	border: 1px solid var(--clr-secondary-500);
-	border-radius: 3px;
-	padding: 10px;
-}
-.pass-checkbox {
-	position: absolute;
-	top: 40%;
-	right: 15px;
-}
-.pass.custom-checkbox {
-	left: 47%;
-	top: 33%;
+
+.password-content {
+    position: relative;
+    width: 100%;
 }
 
-.project-group{
-    width:50%;
+input.password {
+    width: 50% !important;
+    height: 50px;
+    border: 1px solid var(--clr-secondary-500);
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.pass-checkbox {
+    position: absolute;
+    top: 40%;
+    right: 15px;
+}
+
+.pass.custom-checkbox {
+    left: 47%;
+    top: 33%;
+}
+
+.project-group {
+    width: 50%;
 }
 
 .pass-content-inner {
-	display: flex;
-	gap: 15px;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
 }
 
 .pass-gen-content {
-	position: absolute;
-	left: 55%;
-	top: 34px;
+    position: absolute;
+    left: 55%;
+    top: 34px;
 }
 
 
 /*--------------------------form validation------------------------------------*/
+
 .error {
-	color: var(--clr-danger-400);
-	text-align: left;
-	padding: 5px 0;
-	display: block;
-	min-height: 30px;
+    color: var(--clr-danger-400);
+    text-align: left;
+    padding: 5px 0;
+    display: block;
+    min-height: 30px;
 }

@@ -213,7 +213,6 @@
 .middle .box .database-brand {
   width: 100%;
   height: 120px;
-  background: var(--clr-dark-200);
   border-bottom: 1px solid var(--clr-dark-300);
 }
 
@@ -245,43 +244,69 @@
 }
 
 /*---------------------password generator copy and hide show--------------------------*/
-.tooltip {
-  position: relative;
-  display: inline-block;
+.copy-btn {
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
 }
 
-.tooltip .tooltiptext {
+.copyTooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.copyTooltip .copyTooltiptext {
   visibility: hidden;
-  width: 140px;
-  background-color: #555;
+  min-width: 150px;
+  min-height: 75px;
+  background-color: var(--clr-primary-400);
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 5px;
+  padding: 5px 0;
   position: absolute;
   z-index: 1;
-  bottom: 150%;
+  top: 150%;
   left: 50%;
-  margin-left: -75px;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  margin-left: -60px;
 }
 
-.tooltip .tooltiptext::after {
+.copyTooltip .copyTooltiptext::after {
   content: "";
   position: absolute;
-  top: 100%;
+  bottom: 100%;
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: #555 transparent transparent transparent;
+  border-color: transparent transparent var(--clr-primary-400) transparent;
 }
 
-.tooltip:hover .tooltiptext {
+.copyTooltip:hover .copyTooltiptext {
   visibility: visible;
-  opacity: 1;
+}
+
+.dashed-active {
+  display: block;
+  width: 25px;
+  height: 5px;
+  background: var(--clr-primary-400);
+}
+
+.dashed {
+  display: block;
+  width: 25px;
+  height: 5px;
+  background: var(--clr-dark-200);
+}
+
+#strength {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
 }
 
 /*------------login form----------------*/
@@ -372,4 +397,95 @@ form {
     }
 }
 */
+/*--------------------custome counter-------------------------------*/
+.plans-slector-counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+.form-with-right-counter {
+  width: 250px;
+}
+
+.counter-btn {
+  height: 50px;
+  width: 50px;
+  background: transparent;
+  border: 1px solid var(--clr-secondary-500);
+}
+
+.left-btn {
+  border-radius: 3px 0 0 3px;
+}
+
+.right-btn {
+  border-radius: 0 3px 3px 0;
+}
+
+input.counter-input {
+  width: 54px;
+  height: 50px;
+  border: 1px solid var(--clr-secondary-500);
+  text-align: center;
+}
+
+.item-counter-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.description-content ul li {
+  text-align: left;
+  line-height: 29px;
+  font-size: initial;
+  color: var(--clr-secondary-500);
+}
+
+.description-content ul li i {
+  margin-right: 10px;
+  color: var(--clr-primary-400);
+}
+
+.radion-icon {
+  width: 20px;
+}
+
+.database-brand.display-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
+  padding-left: 13px;
+  gap: 10px;
+  padding-top: 25px;
+}
+
+.plan-text {
+  text-align: left !important;
+}
+
+.plan-desc {
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin: 3px 0 !important;
+}
+
+.price-tag {
+  margin: 3px 0 !important;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.plan-title {
+  margin: 0 !important;
+  padding: 0 !important;
+}
 /*# sourceMappingURL=customElements.css.map */

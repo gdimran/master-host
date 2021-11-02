@@ -18,8 +18,7 @@
         <nav id="sidebar" class="active">
             <div class="sidebar-header">
                 <i id="sidebarCollapse" class="demo-icon icon-menu"></i>
-                <a class="logo-section" href="/"><img class="logo-icon" src="images/master-l.svg" alt="" /><img
-                        class="logo-text" src="images/masterHost.svg" alt="" /></a>
+                <a class="logo-section" href="/"><img class="logo-icon" src="images/master-l.svg" alt="" /><img class="logo-text" src="images/masterHost.svg" alt="" /></a>
             </div>
 
             <ul class="list-unstyled components">
@@ -286,22 +285,28 @@
                         </ul>
                     </div>
 
-                    <div class="form-container my-1">
+                    <div class="form-container my-2">
                         <div class="form-title">Add a domain</div>
-                        <div class="desc-text text-dark-400">Can only contain lowercase alphanumerich characters and
-                            dashes.
+                        <div class="desc-text text-dark-400">Can only contain lowercase alphanumerich characters and dashes.
                         </div>
-                        <form class="inline-form" action="">
-                            <input type="text" name="domain" id="domain" class="text-field required"
-                                placeholder="Enter domain name">
+                        <form action="" class="my-2">
+                            <div class="row">
+                                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                                    <input type="text" name="domain" id="domain" class=" required " placeholder="Enter domain name">
+                                </div>
+                                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                                    <select name="sources" id="sources" class="custom-select sources" placeholder="Project Name">
+                                        <option value="kristopher">kristopher</option>
+                                        <option value="Eva">Eva</option>
+                                        <option value="masteracademy">Master Academy</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                                    <button class="btn-inactive" type="submit">Add Domain</button>
+                                </div>
 
-                            <select name="sources" id="sources" class="custom-select sources"
-                                placeholder="Project Name">
-                                <option value="kristopher">kristopher</option>
-                                <option value="Eva">Eva</option>
-                                <option value="masteracademy">Master Academy</option>
-                            </select>
-                            <button class="btn-inactive" type="submit">Add Domain</button>
+                            </div>
+
                         </form>
                     </div>
 
@@ -312,7 +317,7 @@
                         <div class="table-content">
                             <table class="list-table">
                                 <tbody>
-                                    <tr class="bg-info-100">
+                                    <tr class="bg-dark-100">
                                         <th class="text-primary-400">Domain <i class="fas fa-caret-down"></i></th>
                                         <th>Redirect To</th>
                                         <th style="width:7%; text-align:center">Action</th>
@@ -322,40 +327,145 @@
                                             <p class="desc-sub-text">14400/CNAME/example.com</p>
                                         </td>
                                         <td>148.168.45.24</td>
-                                        <td class="text-primary-400" style="width:7%; text-align:center">More <i
-                                                class="fas fa-angle-down"></i></td>
+                                        <td class="text-primary-400" style="width:7%; text-align:center">
+                                            <button class="card-toggle_next_iconmenu card-paper-list_target_menu text-primary-400">
+                                                More <i class=" fas fa-angle-down"></i>
+                                                <div class="card-toggle_next_iconmenu_menufloatmain">
+                                                    <ul>
+                                                        <li><a class="entry-paper-list" href="#">
+                                                                <i class="fas fa-exclamation-circle"></i>Application
+                                                                Details</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-power-off"></i> Application
+                                                                Stop</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Application
+                                                                Restart</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-trash-alt"></i> Application
+                                                                Delete</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td><a class="highlight" href="masteracademy.org">masteracademy.org</a>
                                             <p class="desc-sub-text">14400/CNAME/example.com</p>
                                         </td>
                                         <td>148.168.45.24</td>
-                                        <td class="text-primary-400" style="width:7%; text-align:center">More <i
-                                                class="fas fa-angle-down"></i></td>
+                                        <td class="text-primary-400" style="width:7%; text-align:center">
+                                            <button class="card-toggle_next_iconmenu card-paper-list_target_menu text-primary-400">
+                                                More <i class=" fas fa-angle-down"></i>
+                                                <div class="card-toggle_next_iconmenu_menufloatmain">
+                                                    <ul>
+                                                        <li><a class="entry-paper-list" href="#">
+                                                                <i class="fas fa-exclamation-circle"></i>Application
+                                                                Details</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-power-off"></i> Application
+                                                                Stop</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Application
+                                                                Restart</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-trash-alt"></i> Application
+                                                                Delete</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td><a class="highlight" href="masteracademy.org">masteracademy.org</a>
                                             <p class="desc-sub-text">14400/CNAME/example.com</p>
                                         </td>
                                         <td>148.168.45.24</td>
-                                        <td class="text-primary-400" style="width:7%; text-align:center">More <i
-                                                class="fas fa-angle-down"></i></td>
+                                        <td class="text-primary-400" style="width:7%; text-align:center">
+                                            <button class="card-toggle_next_iconmenu card-paper-list_target_menu text-primary-400">
+                                                More <i class=" fas fa-angle-down"></i>
+                                                <div class="card-toggle_next_iconmenu_menufloatmain">
+                                                    <ul>
+                                                        <li><a class="entry-paper-list" href="#">
+                                                                <i class="fas fa-exclamation-circle"></i>Application
+                                                                Details</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-power-off"></i> Application
+                                                                Stop</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Application
+                                                                Restart</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-trash-alt"></i> Application
+                                                                Delete</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td><a class="highlight" href="masteracademy.org">masteracademy.org</a>
                                             <p class="desc-sub-text">14400/CNAME/example.com</p>
                                         </td>
                                         <td>148.168.45.24</td>
-                                        <td class="text-primary-400" style="width:7%; text-align:center">More <i
-                                                class="fas fa-angle-down"></i></td>
+                                        <td class="text-primary-400" style="width:7%; text-align:center">
+                                            <button class="card-toggle_next_iconmenu card-paper-list_target_menu text-primary-400">
+                                                More <i class=" fas fa-angle-down"></i>
+                                                <div class="card-toggle_next_iconmenu_menufloatmain">
+                                                    <ul>
+                                                        <li><a class="entry-paper-list" href="#">
+                                                                <i class="fas fa-exclamation-circle"></i>Application
+                                                                Details</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-power-off"></i> Application
+                                                                Stop</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Application
+                                                                Restart</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-trash-alt"></i> Application
+                                                                Delete</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </button>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td><a class="highlight" href="masteracademy.org">masteracademy.org</a>
                                             <p class="desc-sub-text">14400/CNAME/example.com</p>
                                         </td>
                                         <td>148.168.45.24</td>
-                                        <td class="text-primary-400" style="width:7%; text-align:center">More <i
-                                                class="fas fa-angle-down"></i></td>
+                                        <td class="text-primary-400" style="width:7%; text-align:center">
+                                            <button class="card-toggle_next_iconmenu card-paper-list_target_menu text-primary-400">
+                                                More <i class=" fas fa-angle-down"></i>
+                                                <div class="card-toggle_next_iconmenu_menufloatmain">
+                                                    <ul>
+                                                        <li><a class="entry-paper-list" href="#">
+                                                                <i class="fas fa-exclamation-circle"></i>Application
+                                                                Details</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-power-off"></i> Application
+                                                                Stop</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Application
+                                                                Restart</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-trash-alt"></i> Application
+                                                                Delete</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </button>
+                                        </td>
                                     </tr>
 
                                 </tbody>
