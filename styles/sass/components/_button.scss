@@ -62,7 +62,9 @@
     color: var(--clr-light-100) !important;
     border: none;
 }
-
+.btn-active:hover {
+	background: var(--clr-primary-500);
+}
 .btn-outline {
     @extend %btn;
     background: transparent;

@@ -1,4 +1,7 @@
 //forms Styles
+.vertical-form-full{
+    width:100%;
+}
 .inline-form {
     display: flex;
     width: 100%;
@@ -435,6 +438,13 @@ input.password {
     left: 55%;
     top: 34px;
 }
+
+.content-right-tooltip {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 
 
 /*--------------------------form validation------------------------------------*/
