@@ -1,24 +1,24 @@
 // 1. Use the iOS devices hardware accelerator to provide native scrolling.
 html {
-  -webkit-overflow-scrolling: touch; // 1
-  color: var(--clr-secondary-500);
-  font-size: $base-font-size;
-  box-sizing: border-box;
-  font-family:'Roboto', sans-serif;
+    -webkit-overflow-scrolling: touch; // 1
+    color: var(--clr-secondary-500);
+    font-size: $base-font-size;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 // Fix the box model
 *,
 :before,
 :after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 // Suppress the focus outline on links that cannot be accessed via keyboard.
 // This prevents an unwanted focus outline from appearing around elements that
 // might still respond to pointer events.
 [tabindex="-1"]:focus {
-  outline: none;
+    outline: none;
 }
 
 // Headers
@@ -30,102 +30,110 @@ h3,
 h4,
 h5,
 h6 {
-  text-rendering: optimizeLegibility; // 1
-  page-break-after: avoid; // 2
+    text-rendering: optimizeLegibility; // 1
+    page-break-after: avoid; // 2
 }
 
 // Address variable `h1` font-size and margin within `section` and `article`
 // contexts in Firefox 4+, Safari, and Chrome.
 h1 {
-  font-size: $h1-font-size;
-  margin: $h1-margin 0;
+    font-size: $h1-font-size;
+    margin: $h1-margin 0;
 }
 
 h2 {
-  font-size: $h2-font-size;
-  margin: $h2-margin 0;
+    font-size: $h2-font-size;
+    margin: $h2-margin 0;
 }
 
 h3 {
-  font-size: $h3-font-size;
-  margin: $h3-margin 0;
+    font-size: $h3-font-size;
+    margin: $h3-margin 0;
 }
 
 h4 {
-  font-size: $h4-font-size;
-  margin: $h4-margin 0;
+    font-size: $h4-font-size;
+    margin: $h4-margin 0;
 }
 
 h5 {
-  font-size: $h5-font-size;
-  margin: $h5-margin 0;
+    font-size: $h5-font-size;
+    margin: $h5-margin 0;
 }
 
 h6 {
-  font-size: $h6-font-size;
-  margin: $h6-margin 0;
+    font-size: $h6-font-size;
+    margin: $h6-margin 0;
 }
 
 // Remove text-shadow in selection highlight: h5bp.com/i
 ::selection {
-  background: $selection-background;
-  text-shadow: none;
+    background: $selection-background;
+    text-shadow: none;
 }
 
 // A better looking default horizontal rule
 hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid $horizontal-rule-color;
-  margin: 1rem 0;
-  padding: 0;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $horizontal-rule-color;
+    margin: 1rem 0;
+    padding: 0;
 }
 
 .wrapper {
-  display: flex;
-  align-items: stretch;
-  position: relative;
+    display: flex;
+    align-items: stretch;
+    flex-flow: column;
+    position: relative;
 }
+
 ul {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 ul li {
-  list-style: none;
+    list-style: none;
 }
 
-.section-title{
-  width:100%;
-  margin-top:50px;
+.section-title {
+    width: 100%;
+    margin-top: 50px;
 }
-.page-title{
-    width:100%;
-    font-size:2.5rem;
-    font-weight:300;
+
+.page-title {
+    width: 100%;
+    font-size: 2.5rem;
+    font-weight: 300;
 }
+
 .form-title {
-	font-size: 1.3rem;
+    font-size: 1.3rem;
 }
-.desc-text{
-  font-size:0.9rem;
+
+.desc-text {
+    font-size: 0.9rem;
 }
+
 .title-description-sec {
-	font-size: 1.4rem;
-	margin: 5px 0;
+    font-size: 1.4rem;
+    margin: 5px 0;
 }
+
 .inline-content {
-	display: inline-flex;
-	gap: 30px;
-  width:100%;
+    display: inline-flex;
+    gap: 30px;
+    width: 100%;
 }
 
 .title-border-btm {
-	border-bottom: 1px solid var(--clr-dark-300);
-	padding-bottom: 15px;
+    border-bottom: 1px solid var(--clr-dark-300);
+    padding-bottom: 15px;
 }
-.text-center{
-  text-align:center;
-  width: 100%;
+
+.text-center {
+    text-align: center;
+    width: 100%;
 }
