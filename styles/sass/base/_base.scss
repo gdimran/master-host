@@ -85,7 +85,6 @@ hr {
 .wrapper {
     display: flex;
     align-items: stretch;
-    flex-flow: column;
     position: relative;
 }
 
@@ -135,5 +134,13 @@ ul li {
 
 .text-center {
     text-align: center;
+    width: 100%;
+}
+.text-left{
+    text-align: left;
+    width: 100%;
+}
+.text-right{
+    text-align: right;
     width: 100%;
 }

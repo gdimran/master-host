@@ -13,47 +13,44 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="header-brand">
-            <div class="branding">
-                <a class="logo-section" href="/"><img class="logo-icon" src="images/master-l.svg" alt="" /><img class="logo-text" src="images/masterHost.svg" alt="" /></a>
-            </div>
-            <div class="accees-link">Don't have an account? <a href="signup.html" class="active">Sign up</a></div>
+    <!-- <div class="wrapper"> -->
+    <div class="header-brand">
+        <div class="branding">
+            <a class="logo-section" href="index.html"><img class="logo-icon" src="images/master-l.svg" alt="" /><img
+                    class="logo-text" src="images/masterHost.svg" alt="" /></a>
         </div>
+        <div class="accees-link">Don't have an account? <a href="signup.html" class="active">Sign up</a></div>
+    </div>
 
-        <div class="container-fluid" style="background: url(images/for-gotbanner-launch.svg); background-repeat: no-repeat; background-size: cover;">
+    <div class="container-fluid"
+        style="background: url(images/pass-bg-2.webp); background-repeat: no-repeat; background-size: cover;">
 
-            <div class="row center-xs center-sm center-lg middle-xs middle-sm
+        <div class="row center-xs center-sm center-lg middle-xs middle-sm
                 middle-md middle-lg login-content">
-                <div class="user-login-content p-2">
+            <div class="user-login-content p-2">
 
-                    <div class="form-area my-3">
+                <div class="form-area">
 
-                        <form action="" method="post" onsubmit="return user_validatetion();">
-                            <div class="lable">Forgot password?</div>
-                            <div class="description">Enter the email address associated with your account and we will send you a link to reset your password.</div>
-                            <div class="lable">Email address</div>
-                            <input type="email" name="email" id="user_email" placeholder="Email" autocomplete="off">
-                            <div class="error" id="email_error"></div>
+                    <form action="" method="post" onsubmit="return forgotPass_validatetion();">
+                        <div class="form-title text-left mb-1">Forgot password?</div>
+                        <div class="description text-left">Enter the email address associated with your account and
+                            we will
+                            send you a link to reset your password.</div>
+                        <div class="lable text-left mt-2">Email address <span class="text-primary-400">*</span>
+                        </div>
+                        <input type="email" name="email" id="user_email" placeholder="Email" autocomplete="off">
+                        <div class="error" id="email_error"></div>
 
-                            <div class="conditions my-1">
-                                <p>Please Note: By continuing and signing in, you agree to Master-Academy's
-                                    <a href="">Terms & Conditions</a> and
-                                    <a href="Privacy Policy"></a>.
-                                </p>
-                            </div>
-                            <input type="submit" name="submit" value="Login" class="signup-btn
+                        <input type="submit" name="submit" value="Request Password Reset" class="signup-btn
                             my-1" autocomplete="off">
-                        </form>
-                    </div>
-                    <p class="signup-redirect">
-                        <a href="" class="forgot-pass text-primary-500 text-primary-400">Forgot Password?</a> | Don’t have an account? <a class="text-warning-500" href="signup.html">Register now</a>
-                    </p>
+                    </form>
                 </div>
 
             </div>
+
         </div>
     </div>
+    <!-- </div> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/customElements.js"></script>

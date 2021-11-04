@@ -10,8 +10,8 @@
 }
 
 .select-selected {
-  border: 1px solid var(--clr-secondary-500);
-  background-color: var(--clr-light-100);
+  border: 1px solid var(--clr-primary-400);
+  background-color: var(--clr-primary-100);
   border-radius: 3px;
 }
 
@@ -63,7 +63,7 @@
 
 .same-as-selected,
 .select-items div:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--clr-primary-100);
 }
 
 /*------------file upload cotent-----------------*/

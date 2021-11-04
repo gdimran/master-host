@@ -371,3 +371,76 @@ function user_validatetion() {
 }
 
 
+//forgotpass validation
+function forgotPass_validatetion() {
+    var valid = true;
+    var email = document.getElementById('user_email').value;
+    if (email == '' || email == null) {
+        valid = false;
+        var div = document.getElementById('email_error');
+        div.innerHTML = "* Please enter email.";
+    }
+    else {
+        document.getElementById('email_error').innerHTML = '';
+    }
+
+    if (valid == false) {
+        return false;
+    }
+    else {
+
+        alert("You form is ready to submit.");
+        return true;
+    }
+}
+
+
+
+//=====================================notifications==========================
+function warning() {
+    const deleteBtn = document.getElementById("delete");
+    const notification = document.getElementById("notification-warning");
+    const closeBtn = document.getElementById("close");
+
+    deleteBtn.addEventListener("click", () => {
+        notification.classList.add("notification-show");
+    });
+
+    closeBtn.addEventListener("click", () => {
+        notification.classList.remove("notification-show");
+    });
+}
+
+warning();
+
+function success() {
+    const successBtn = document.getElementById("success");
+    const notification = document.getElementById("notification-success");
+    const closeBtn = document.getElementById("close-s");
+
+    successBtn.addEventListener("click", () => {
+        notification.classList.add("notification-show");
+    });
+
+    closeBtn.addEventListener("click", () => {
+        notification.classList.remove("notification-show");
+    });
+}
+
+success();
+
+function information() {
+    const infoBtn = document.getElementById("info");
+    const notification = document.getElementById("notification-info");
+    const closeBtn = document.getElementById("close-i");
+
+    infoBtn.addEventListener("click", () => {
+        notification.classList.add("notification-show");
+    });
+
+    closeBtn.addEventListener("click", () => {
+        notification.classList.remove("notification-show");
+    });
+}
+
+information();

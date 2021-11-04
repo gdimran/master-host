@@ -25,7 +25,7 @@
     border-radius: 3px;
     padding: 6px 25px;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     height: 50px;
     font-weight: 600;
     align-items: center;
@@ -47,7 +47,11 @@
     background: var(--clr-primary-400);
     color: var(--clr-light-100);
 }
-
+.btn-success {
+    @extend %btn;
+    background: var(--clr-success-500);
+    color: var(--clr-light-100);
+}
 .btn-inactive {
     @extend %btn;
     background: var(--clr-dark-300);
@@ -99,4 +103,17 @@
 
 .full-btn {
     width: 100%;
+}
+.btn-small{
+	text-align: center;
+	font-size: 1rem;
+	height: 35px;
+	font-weight: 400;
+}
+
+.btn-plan-active{
+    border:none;
+    background:transparent;
+    font-weight:600;
+    color: var(--clr-primary-400);
 }

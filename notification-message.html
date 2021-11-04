@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/css/main.css" />
+    <link rel="stylesheet" href="icons-fonts/css/imran_iconfont.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Document</title>
+
+    <style>
+        .warning-msg {
+            position: absolute;
+            left: 20%;
+            transform: translatex(-20%);
+            background-color: var(--clr-danger-100);
+            border-radius: 0.2rem;
+            overflow: hidden;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .success-msg {
+            position: absolute;
+            left: 30%;
+            transform: translatex(-30%);
+            background-color: var(--clr-success-200);
+            border-radius: 0.2rem;
+            overflow: hidden;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .info-msg {
+            position: absolute;
+            left: 50%;
+            transform: translatex(-50%);
+            background-color: var(--clr-primary-100);
+            border-radius: 0.2rem;
+            overflow: hidden;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .notification__warning {
+            width: 1.5rem;
+            margin-left: 1rem;
+            color: var(--clr-danger-300);
+        }
+
+        .notification__close {
+            padding: 5px;
+            font-size: 1.5rem;
+            display: flex;
+            cursor: pointer;
+            border: none;
+            color: var(--clr-danger-300);
+            background: transparent;
+        }
+
+        .notification-show {
+            animation: warning 400ms ease-in-out forwards;
+            display: flex;
+        }
+
+        @keyframes warning {
+            0% {
+                opacity: 0;
+                top: 2rem;
+            }
+
+            5% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+                top: 4rem;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <button id="delete" class="btn-primary">
+        <i class="icon-trash-empty"></i> Delete
+    </button>
+    <button id="success" class="btn-success">
+        <i class="far fa-check-circle"></i> Success
+    </button>
+    <button id="info" class="btn-info">
+        <i class="fas fa-info-circle"></i> Informatio
+    </button>
+
+    <div id="notification-warning" class="warning-msg">
+        <i class="fas fa-exclamation-circle notification__warning"></i>
+
+        <p>Item has been deleted</p>
+        <button class="btn-plan-active">Undo</button>
+        <button id="close" class="notification__close">
+            <i class="far fa-times-circle"></i>
+        </button>
+    </div>
+
+    <div id="notification-success" class="success-msg">
+        <i class="fas fa-exclamation-circle notification__warning"></i>
+
+        <p>Item has been deleted</p>
+        <button class="btn-plan-active">Undo</button>
+        <button id="close-s" class="notification__close">
+            <i class="far fa-times-circle"></i>
+        </button>
+    </div>
+    <div id="notification-info" class="info-msg">
+        <i class="fas fa-exclamation-circle notification__warning"></i>
+
+        <p>Item has been deleted</p>
+        <button class="btn-plan-active">Undo</button>
+        <button id="close-i" class="notification__close">
+            <i class="far fa-times-circle"></i>
+        </button>
+    </div>
+
+
+
+    <script>
+        function warning() {
+            const deleteBtn = document.getElementById("delete");
+            const notification = document.getElementById("notification-warning");
+            const closeBtn = document.getElementById("close");
+
+            deleteBtn.addEventListener("click", () => {
+                notification.classList.add("notification-show");
+            });
+
+            closeBtn.addEventListener("click", () => {
+                notification.classList.remove("notification-show");
+            });
+        }
+
+        warning();
+
+        function success() {
+            const successBtn = document.getElementById("success");
+            const notification = document.getElementById("notification-success");
+            const closeBtn = document.getElementById("close-s");
+
+            successBtn.addEventListener("click", () => {
+                notification.classList.add("notification-show");
+            });
+
+            closeBtn.addEventListener("click", () => {
+                notification.classList.remove("notification-show");
+            });
+        }
+
+        success();
+
+        function information() {
+            const infoBtn = document.getElementById("info");
+            const notification = document.getElementById("notification-info");
+            const closeBtn = document.getElementById("close-i");
+
+            infoBtn.addEventListener("click", () => {
+                notification.classList.add("notification-show");
+            });
+
+            closeBtn.addEventListener("click", () => {
+                notification.classList.remove("notification-show");
+            });
+        }
+
+        information();
+
+
+
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/customElements.js"></script>
+</body>
+
+</html>
