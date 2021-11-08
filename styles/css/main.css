@@ -4379,6 +4379,22 @@ ul.cloud-source li a {
   gap: 10px;
 }
 
+.forgot-content {
+  height: calc(100vh - 70px);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-content-fg img {
+  width: 75%;
+}
+
+.banner-content-fg {
+  width: 40%;
+  text-align: center;
+}
+
 .login-content {
   min-height: 100vh;
   margin: 0 auto;

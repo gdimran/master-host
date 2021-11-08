@@ -117,3 +117,17 @@ ul.cloud-source li a {
 	align-items: end;
 	gap: 10px;
 }
+
+.forgot-content {
+  height: calc(100vh - 70px); 
+  width:100%;
+  justify-content:center;
+  align-items:center;
+}
+.banner-content-fg img {
+	width: 75%;
+}
+.banner-content-fg {
+	width: 40%;
+	text-align: center;
+}
