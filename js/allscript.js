@@ -1,5 +1,105 @@
+'use strict';
+
+$(document).ready(function () { $('#sidebarCollapse').on('click', function () { $('#sidebar').toggleClass('active'); }); });
+
+
+// Tabs navigation
+
+
+const tabs = document.querySelector(".tab-wrapper");
+const tabButton = document.querySelectorAll(".tab-nav-item");
+const contents = document.querySelectorAll(".tab-content");
+
+if (tabs) {
+    tabs.onclick = e => {
+        const id = e.target.dataset.id;
+        if (id) {
+            tabButton.forEach(btn => {
+                btn.classList.remove("active-tab");
+            });
+            e.target.classList.add("active-tab");
+
+            contents.forEach(content => {
+                content.classList.remove("active-content");
+            });
+            const element = document.getElementById(id);
+            element.classList.add("active-content");
+        }
+    }
+}
+
+
+
+
+
+//form script
+const customSelectEl = document.querySelectorAll(".custom-select");
+if (customSelectEl) {
+    $(".custom-select").each(function () {
+        var classes = $(this).attr("class"),
+            id = $(this).attr("id"),
+            name = $(this).attr("name");
+        var template = '<div class="' + classes + '">';
+        template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+        template += '<div class="custom-options">';
+        $(this).find("option").each(function () {
+            template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+        });
+        template += '</div></div>';
+
+        $(this).wrap('<div class="custom-select-wrapper"></div>');
+        $(this).hide();
+        $(this).after(template);
+    });
+    $(".custom-option:first-of-type").hover(function () {
+        $(this).parents(".custom-options").addClass("option-hover");
+    }, function () {
+        $(this).parents(".custom-options").removeClass("option-hover");
+    });
+    $(".custom-select-trigger").on("click", function () {
+        $('html').one('click', function () {
+            $(".custom-select").removeClass("opened");
+        });
+        $(this).parents(".custom-select").toggleClass("opened");
+        event.stopPropagation();
+    });
+    $(".custom-option").on("click", function () {
+        $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+        $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+        $(this).addClass("selection");
+        $(this).parents(".custom-select").removeClass("opened");
+        $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+    });
+}
+
+
+// =============================counter el js------------------
+//not solved yet
+
+if (document.getElementById("inc")) {
+    var i = 0;
+    function buttonClickins() {
+        i++;
+        document.getElementById('inc').value = i;
+    }
+    buttonClickins();
+    function buttonClickdes() {
+        i--;
+        document.getElementById('inc').value = i;
+    }
+    buttonClickdes();
+}
+
+
+
+
+
+
+
 // =============modal scrpit start============================
-$(document).ready(function () {
+const modals = document.querySelectorAll(".modal");
+
+if (modals) {
     const openEls = document.querySelectorAll("[data-open]");
     const closeEls = document.querySelectorAll("[data-close]");
     const isVisible = "is-visible";
@@ -29,144 +129,41 @@ $(document).ready(function () {
             document.querySelector(".modal.is-visible").classList.remove(isVisible);
         }
     });
-
-});
+}
 
 // =============modal scrpit end============================
 
-//didn't wrappup this
-
-$(document).ready(function () {
-
-    var x, i, j, l, ll, selElmnt, a, b, c;
-    /*look for any elements with the class "custom-select":*/
-    x = document.getElementsByClassName("custom-select");
-    l = x.length;
-    for (i = 0; i < l; i++) {
-        selElmnt = x[i].getElementsByTagName("select")[0];
-        ll = selElmnt.length;
-        /*for each element, create a new DIV that will act as the selected item:*/
-        a = document.createElement("DIV");
-        a.setAttribute("class", "select-selected");
-        a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-        x[i].appendChild(a);
-        /*for each element, create a new DIV that will contain the option list:*/
-        b = document.createElement("DIV");
-        b.setAttribute("class", "select-items select-hide");
-        for (j = 1; j < ll; j++) {
-            /*for each option in the original select element,
-            create a new DIV that will act as an option item:*/
-            c = document.createElement("DIV");
-            c.innerHTML = selElmnt.options[j].innerHTML;
-            c.addEventListener("click", function (e) {
-                /*when an item is clicked, update the original select box,
-                and the selected item:*/
-                var y, i, k, s, h, sl, yl;
-                s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-                sl = s.length;
-                h = this.parentNode.previousSibling;
-                for (i = 0; i < sl; i++) {
-                    if (s.options[i].innerHTML == this.innerHTML) {
-                        s.selectedIndex = i;
-                        h.innerHTML = this.innerHTML;
-                        y = this.parentNode.getElementsByClassName("same-as-selected");
-                        yl = y.length;
-                        for (k = 0; k < yl; k++) {
-                            y[k].removeAttribute("class");
-                        }
-                        this.setAttribute("class", "same-as-selected");
-                        break;
-                    }
-                }
-                h.click();
-            });
-            b.appendChild(c);
-        }
-        x[i].appendChild(b);
-        a.addEventListener("click", function (e) {
-            /*when the select box is clicked, close any other select boxes,
-            and open/close the current select box:*/
-            e.stopPropagation();
-            closeAllSelect(this);
-            this.nextSibling.classList.toggle("select-hide");
-            this.classList.toggle("select-arrow-active");
-        });
-    }
-
-    function closeAllSelect(elmnt) {
-        /*a function that will close all select boxes in the document,
-        except the current select box:*/
-        var x, y, i, xl, yl, arrNo = [];
-        x = document.getElementsByClassName("select-items");
-        y = document.getElementsByClassName("select-selected");
-        xl = x.length;
-        yl = y.length;
-        for (i = 0; i < yl; i++) {
-            if (elmnt == y[i]) {
-                arrNo.push(i)
-            } else {
-                y[i].classList.remove("select-arrow-active");
-            }
-        }
-        for (i = 0; i < xl; i++) {
-            if (arrNo.indexOf(i)) {
-                x[i].classList.add("select-hide");
-            }
-        }
-    }
-    /*if the user clicks anywhere outside the select box,
-    then close all select boxes:*/
-    document.addEventListener("click", closeAllSelect);
-
-});
-
 // file upload system
 
+var upload = document.querySelector(".input-file");
 
+if (upload) {
+    document.querySelector("html").classList.add('js');
 
-document.querySelector("html").classList.add('js');
+    var fileInput = document.querySelector(".input-file"),
+        button = document.querySelector(".input-file-trigger"),
+        the_return = document.querySelector(".file-return");
 
-var fileInput = document.querySelector(".input-file"),
-    button = document.querySelector(".input-file-trigger"),
-    the_return = document.querySelector(".file-return");
-
-button.addEventListener("keydown", function (event) {
-    if (event.keyCode == 13 || event.keyCode == 32) {
+    button.addEventListener("keydown", function (event) {
+        if (event.keyCode == 13 || event.keyCode == 32) {
+            fileInput.focus();
+        }
+    });
+    button.addEventListener("click", function (event) {
         fileInput.focus();
-    }
-});
-button.addEventListener("click", function (event) {
-    fileInput.focus();
-    return false;
-});
-fileInput.addEventListener("change", function (event) {
-    the_return.innerHTML = this.value;
-});
-
-
-//hide show div based on radio checked
-
-function ShowHideDomainlist() {
-    var chkYes = document.getElementById("existDomain");
-    var chkNo = document.getElementById("notExistDomain");
-    var noDomian = document.getElementById("noDomain");
-    var domainlist = document.getElementById("domain-list");
-    var addDomain = document.getElementById("add-newdomain");
-    var domainHint = document.getElementById("no-domain-hint");
-    domainlist.style.display = chkYes.checked ? "block" : "none";
-    addDomain.style.display = chkNo.checked ? "block" : "none";
-    domainHint.style.display = noDomian.checked ? "block" : "none";
+        return false;
+    });
+    fileInput.addEventListener("change", function (event) {
+        the_return.innerHTML = this.value;
+    });
 }
-
-
-
-
-
 
 
 //=================password section==========================
 
 //SHOW PASSWORD
+//var pass = document.getElementById("password");
+
 function showPassword() {
     var x = document.getElementById("password");
     if (x.type === "password") {
@@ -185,7 +182,6 @@ function showPasswordUser() {
     }
 }
 
-
 //generate password
 function getPassword() {
     var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyx0123456789!@#$%^&*()?/;:~_+><{}[]";
@@ -202,7 +198,7 @@ function getPassword() {
     modatooltip.innerHTML = password;
 
 }
-
+getPassword();
 //copy password
 function copyPassword() {
     var copyText = document.getElementById("password");
@@ -217,6 +213,7 @@ function copyPassword() {
     modatooltip.innerHTML = "Copied: " + copyText.value;
 
 }
+copyPassword();
 
 function outFunc() {
     var tooltip = document.getElementById("myTooltip");
@@ -225,7 +222,7 @@ function outFunc() {
     var modatooltip = document.getElementById("modal-Tooltip");
     modatooltip.innerHTML = "Copy to clipboard";
 }
-
+outFunc();
 //strong pass section======================
 function passwordChanged() {
     var strength = document.getElementById('strength');
@@ -246,30 +243,73 @@ function passwordChanged() {
     }
 }
 
-// function check() {
-//     if (document.getElementById('password').value ==
-//         document.getElementById('confirm_password').value) {
-//         document.getElementById('password_error').style.color = 'green';
-//         document.getElementById('password_error').innerHTML = 'Password Matched';
-//     } else {
-//         document.getElementById('password_error').style.color = 'red';
-//         document.getElementById('password_error').innerHTML = 'Password Not matching';
-//     }
-// }
+passwordChanged();
 
-//=================================form validation=====================================
-// function phoneNumberValidation(phoneNumber) {
-//     var phoneno = /^\d{10}$/;
-//     if (phoneNumber.match(phoneno)) {
-//         return true;
-//     }
-//     else {
-//         var div = document.getElementById('phone_error');
-//         div.innerHTML = "* Enter valid 10 digit number like this 9876543210.";
-//         return false;
-//     }
-// }
 
+
+
+//=====================================notifications==========================
+var deletefnc = document.getElementById("delete");
+if (deletefnc) {
+    function warning() {
+        const deleteBtn = document.getElementById("delete");
+        const notification = document.getElementById("notification-warning");
+        const closeBtn = document.getElementById("close");
+
+        deleteBtn.addEventListener("click", () => {
+            notification.classList.add("notification-show");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            notification.classList.remove("notification-show");
+        });
+    }
+
+    warning();
+}
+
+var successFnc = document.getElementById("success");
+
+if (successFnc) {
+    function success() {
+        const successBtn = document.getElementById("success");
+        const notification = document.getElementById("notification-success");
+        const closeBtn = document.getElementById("close-s");
+
+        successBtn.addEventListener("click", () => {
+            notification.classList.add("notification-show");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            notification.classList.remove("notification-show");
+        });
+    }
+
+    success();
+}
+
+var infoFnc = document.getElementById("info");
+if (infoFnc) {
+    function information() {
+        const infoBtn = document.getElementById("info");
+        const notification = document.getElementById("notification-info");
+        const closeBtn = document.getElementById("close-i");
+
+        infoBtn.addEventListener("click", () => {
+            notification.classList.add("notification-show");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            notification.classList.remove("notification-show");
+        });
+    }
+
+    information();
+}
+
+
+
+//=================form validation=============================
 function validatetion() {
     var valid = true;
     var name = document.getElementById('name').value;
@@ -396,51 +436,25 @@ function forgotPass_validatetion() {
 
 
 
-//=====================================notifications==========================
-function warning() {
-    const deleteBtn = document.getElementById("delete");
-    const notification = document.getElementById("notification-warning");
-    const closeBtn = document.getElementById("close");
 
-    deleteBtn.addEventListener("click", () => {
-        notification.classList.add("notification-show");
-    });
 
-    closeBtn.addEventListener("click", () => {
-        notification.classList.remove("notification-show");
-    });
+
+
+
+
+
+
+//hide show div based on radio checked
+
+function ShowHideDomainlist() {
+    var chkYes = document.getElementById("existDomain");
+    var chkNo = document.getElementById("notExistDomain");
+    var noDomian = document.getElementById("noDomain");
+    var domainlist = document.getElementById("domain-list");
+    var addDomain = document.getElementById("add-newdomain");
+    var domainHint = document.getElementById("no-domain-hint");
+    domainlist.style.display = chkYes.checked ? "block" : "none";
+    addDomain.style.display = chkNo.checked ? "block" : "none";
+    domainHint.style.display = noDomian.checked ? "block" : "none";
 }
 
-warning();
-
-function success() {
-    const successBtn = document.getElementById("success");
-    const notification = document.getElementById("notification-success");
-    const closeBtn = document.getElementById("close-s");
-
-    successBtn.addEventListener("click", () => {
-        notification.classList.add("notification-show");
-    });
-
-    closeBtn.addEventListener("click", () => {
-        notification.classList.remove("notification-show");
-    });
-}
-
-success();
-
-function information() {
-    const infoBtn = document.getElementById("info");
-    const notification = document.getElementById("notification-info");
-    const closeBtn = document.getElementById("close-i");
-
-    infoBtn.addEventListener("click", () => {
-        notification.classList.add("notification-show");
-    });
-
-    closeBtn.addEventListener("click", () => {
-        notification.classList.remove("notification-show");
-    });
-}
-
-information();

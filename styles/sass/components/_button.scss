@@ -66,6 +66,7 @@
     color: var(--clr-light-100) !important;
     border: none;
 }
+.btn-active a:hover,
 .btn-active:hover {
 	background: var(--clr-primary-500);
 }

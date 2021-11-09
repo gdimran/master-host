@@ -2255,6 +2255,7 @@ template {
   border: none;
 }
 
+.btn-active a:hover,
 .btn-active:hover {
   background: var(--clr-primary-500);
 }
