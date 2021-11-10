@@ -73,26 +73,6 @@ if (customSelectEl) {
 }
 
 
-// =============================counter el js------------------
-//not solved yet
-
-if (document.getElementById("inc")) {
-    var i = 0;
-    function buttonClickins() {
-        i++;
-        document.getElementById('inc').value = i;
-    }
-    buttonClickins();
-    function buttonClickdes() {
-        i--;
-        document.getElementById('inc').value = i;
-    }
-    buttonClickdes();
-}
-
-
-
-
 
 
 
@@ -436,9 +416,21 @@ function forgotPass_validatetion() {
 
 
 
+// =============================counter el js------------------
+//not solved yet
 
 
-
+var i = 0;
+function buttonClickins() {
+    i++;
+    document.getElementById('inc').value = i;
+}
+// buttonClickins();
+function buttonClickdes() {
+    i--;
+    document.getElementById('inc').value = i;
+}
+//buttonClickdes();
 
 
 

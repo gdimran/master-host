@@ -31,3 +31,5 @@ https://codepen.io/rakibjewel/pen/VwYXbbb
 
 modal issue
 https://www.youtube.com/watch?v=Ifx85VUGQIY
+
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
