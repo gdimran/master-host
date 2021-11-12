@@ -10,22 +10,99 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 767.98px) { 
-    
+ 
     
  }
 
 
 // // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) {
-    
-    
+      .container {
+            width: 95%;
+      }
+     .search-sec {
+            display: inline-flex;
+            justify-content: flex-start;
+            align-items: center;
+       } 
+       .searchButton {
+            background: transparent;
+            left: 25px;
+            top: 5px;
+        }
+        
+
+      .card-toggle_next_iconmenu:focus .card-toggle_next_iconmenu_menufloatmain {
+            left: -136px;
+            top: 50px;
+      }
+      .searchTerm {
+            width: 25vw;
+            font-size: 1rem;
+      }
+      .searchButton {
+            left: 32px;
+      }
+      .inline-form {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            margin: 20px 0;
+            align-content: center;
+            align-items: self-start;
+            position: relative;
+            gap: 15px;
+      }
+    .tab-nav {
+      gap: 30px;
+      }
+
+      .custom-select-trigger {
+            padding: 0 50px 0 22px;
+            font-size: 0.8rem;
+      }
+       .custom-option {
+            font-size: 0.8rem;
+      }
     
 }
 
 // // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199.98px) {
-    
-    
+    .container {
+            width: 95%;
+      }
+    .card-toggle_next_iconmenu:focus .card-toggle_next_iconmenu_menufloatmain {
+            left: -136px;
+            top: 50px;
+      }
+      .searchTerm {
+            width: 25vw;
+            font-size: 1rem;
+      }
+      .searchButton {
+            left: 32px;
+      }
+      .inline-form {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            margin: 20px 0;
+            align-content: center;
+            align-items: self-start;
+            position: relative;
+            gap: 15px;
+      }
+    .tab-nav {
+            gap: 30px;
+      }
+      .custom-select-trigger {
+            padding: 0 50px 0 22px;
+            font-size: 0.8rem;
+      }
+       .custom-option {
+            font-size: 0.8rem;
+      }
     
 }
 

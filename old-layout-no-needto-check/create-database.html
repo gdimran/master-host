@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/css/main.css" />
+    <link rel="stylesheet" href="icons-fonts/css/imran_iconfont.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Side bar start -->
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                <i id="sidebarCollapse" class="demo-icon icon-menu"></i>
+                <a class="logo-section" href="/"><img class="logo-icon" src="images/master-l.svg" alt="" /><img
+                        class="logo-text" src="images/masterHost.svg" alt="" /></a>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="nav-section-title">
+                    <a class="section-dev" href="">Projects <i class="demo-icon icon-up-open-mini"></i></a>
+                    <ul class="submenue list-unstyled" id="projectSub">
+                        <li>
+                            <a href="#"><i class="menu-icon icon-user circle-icon highlight-user"></i>
+                                <span class="menu-text">Kristopher</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-user circle-icon highlight-user"></i>
+                                <span class="menu-text">Abu Rayhan</span></a>
+                        </li>
+                        <li>
+                            <a class="focuse" href="#"><i class="menu-icon icon-plus"></i><span class="menu-text">New
+                                    Project</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-section-title">
+                    <a class="section-dev" href="">
+                        Manage<i class="demo-icon icon-up-open-mini"></i></a>
+                    <ul class="submenue list-unstyled" id="mangeSub">
+                        <li>
+                            <a class="active" href="#"><i class="menu-icon icon-app-launch"></i>
+                                <span class="menu-text">Apps</span></a>
+                        </li>
+                        <li>
+                            <a href="domains.html"><i class="menu-icon icon-domain"></i>
+                                <span class="menu-text">Domain</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-email"></i>
+                                <span class="menu-text">Emais</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-database"></i>
+                                <span class="menu-text">Databases</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-file-manager"></i>
+                                <span class="menu-text">File Manager</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-networking"></i>
+                                <span class="menu-text">Networking</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-monitoring"></i>
+                                <span class="menu-text">Monitoring</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-section-title">
+                    <ul class="submenue list-unstyled">
+                        <li>
+                            <a href="#"><i class="menu-icon icon-settings"></i>
+                                <span class="menu-text">Settings</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-bill"></i>
+                                <span class="menu-text">Billing</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-api"></i>
+                                <span class="menu-text">API</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-section-title">
+                    <ul class="submenue list-unstyled">
+                        <li>
+                            <a href="#"><i class="menu-icon icon-documents"></i>
+                                <span class="menu-text">Documentation</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-live-support"></i>
+                                <span class="menu-text">Support</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- Side bar end -->
+
+        <div id="content">
+            <!-- dashboard header start -->
+            <div class="dasboard-header">
+                <div class="search-sec left">
+                    <button type="submit" class="searchButton">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <input type="text" class="searchTerm" placeholder="What are you looking for?" />
+                </div>
+
+                <div class="navbar right">
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            Create
+                            <i class="fa fa-angle-down"></i>
+                            <div class="dropdown-content">
+                                <div class="dropdown-menu-item">
+                                    <div class="single-icon-menu">
+                                        <a href="launch-app-step-0.html">
+                                            <i class="menu-icon icon-app-launch"></i>
+                                            <div class="menu-text-content">
+                                                <span class="menu-title-text">Apps</span>
+                                                <span class="menu-desc-text">Launch Your App</span>
+                                            </div>
+                                            <div class="menu-tag">
+                                                <span class="tag-btn">New</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu-item">
+                                    <div class="single-icon-menu">
+                                        <a href="#">
+                                            <i class="menu-icon icon-domain"></i>
+                                            <div class="menu-text-content">
+                                                <span class="menu-title-text">Doamin/DNS</span>
+                                                <span class="menu-desc-text">Route Your Existing Domain</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu-item">
+                                    <div class="single-icon-menu">
+                                        <a href="#">
+                                            <i class="menu-icon icon-email"></i>
+                                            <div class="menu-text-content">
+                                                <span class="menu-title-text">Emails</span>
+                                                <span class="menu-desc-text">Create Your Email</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu-item">
+                                    <div class="single-icon-menu">
+                                        <a href="#">
+                                            <i class="menu-icon icon-database"></i>
+                                            <div class="menu-text-content">
+                                                <span class="menu-title-text">Databases</span>
+                                                <span class="menu-desc-text">Create Database</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu-item">
+                                    <div class="single-icon-menu">
+                                        <a href="#">
+                                            <i class="menu-icon icon-file-manager"></i>
+                                            <div class="menu-text-content">
+                                                <span class="menu-title-text">File Manager</span>
+                                                <span class="menu-desc-text">Enter into your file manager</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu-item">
+                                    <div class="single-icon-menu">
+                                        <a href="#">
+                                            <i class="menu-icon icon-networking"></i>
+                                            <div class="menu-text-content">
+                                                <span class="menu-title-text">Networking</span>
+                                                <span class="menu-desc-text">Manage your network</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+
+                    </div>
+
+                    <button class="card-toggle_next_iconmenu card-paper-list_target_menu">
+                        <i class="fa fa-envelope"></i>
+                        <div class="card-toggle_next_iconmenu_menufloatmain notification-card">
+                            <ul>
+                                <li><a class="entry-paper-list" href="#">
+                                        <i class="fas fa-credit-card"></i> Membership</a>
+                                </li>
+                                <li><a class="entry-paper-list" href="#"><i class="fas fa-power-off"></i> Sign out</a>
+                                </li>
+                                <li><a class="entry-paper-list" href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                                <li><a class="entry-paper-list" href="#"><i class="icon-language-1"></i> Language:
+                                        English <i class="fa fa-angle-down"></i></a></li>
+                                <li><a class="entry-paper-list" href="#"><i class="far fa-question-circle"></i> Help
+                                    </a></li>
+
+                            </ul>
+                        </div>
+                    </button>
+                    <button class="card-toggle_next_iconmenu card-paper-list_target_menu">
+                        <i class="fa fa-bell"></i>
+                        <div class="card-toggle_next_iconmenu_menufloatmain notification-card">
+                            <ul>
+                                <li><a class="entry-paper-list" href="#">
+                                        <i class="fas fa-credit-card"></i> Membership</a>
+                                </li>
+                                <li><a class="entry-paper-list" href="#"><i class="fas fa-power-off"></i> Sign out</a>
+                                </li>
+                                <li><a class="entry-paper-list" href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                                <li><a class="entry-paper-list" href="#"><i class="icon-language-1"></i> Language:
+                                        English <i class="fa fa-angle-down"></i></a></li>
+                                <li><a class="entry-paper-list" href="#"><i class="far fa-question-circle"></i> Help
+                                    </a></li>
+
+                            </ul>
+                        </div>
+                    </button>
+                    <button class="card-toggle_next_iconmenu card-paper-list_target_menu">
+                        <i class="fa fa-user-circle-o"></i> Imran Hossain
+                        <i class="fa fa-angle-down"></i>
+                        <div class="card-toggle_next_iconmenu_menufloatmain user-card">
+                            <div class="toggle-card-header">
+                                <div class="header-with-left-pic">
+                                    <div class="user-profile-pic"> <img src="images/imran.jpg" alt=""></div>
+
+                                    <div class="user-info">
+                                        <div class="user-name">Imran Hossain</div>
+                                        <div class="user-email">gdimran@gmail.com</div>
+                                        <a href="" class="account-detail-link">Manage
+                                            your Account</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul>
+                                <li><a class="entry-paper-list" href="#">
+                                        <i class="fas fa-credit-card"></i> Membership</a>
+                                </li>
+                                <li><a class="entry-paper-list" href="#"><i class="fas fa-power-off"></i> Sign out</a>
+                                </li>
+                                <li><a class="entry-paper-list" href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                                <li><a class="entry-paper-list" href="#"><i class="icon-language-1"></i> Language:
+                                        English <i class="fa fa-angle-down"></i></a></li>
+                                <li><a class="entry-paper-list" href="#"><i class="far fa-question-circle"></i> Help
+                                    </a></li>
+
+                            </ul>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <!-- dashboard header End -->
+            <div class="container mt-5 mb-3">
+                <div class="page-title mb-2 title-border-btm">
+                    Create a database
+                </div>
+
+                <form action="#" class="database-form">
+                    <div class="lable">Choose a database engine</div>
+                    <div class="desc-text text-dark-400 mb-1">A database engine that powers one or more individual
+                        databases
+                    </div>
+                    <div class="database-option">
+                        <div class="middle">
+                            <label>
+                                <input type="radio" name="radio" checked />
+                                <div class="front-end box">
+                                    <div class="database-brand">
+                                        <p class="icon text-center">
+                                            <img class="active-icon" src="images/mysql-h.png" alt="">
+                                            <img class="hidden-icon" src="images/mysql-n.png" alt="">
+                                        </p>
+                                        <p>mySQL</p>
+                                    </div>
+                                    <p class="version">version 4.4</p>
+                                </div>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="radio" />
+                                <div class="back-end box">
+                                    <div class="database-brand">
+                                        <p class="icon text-center">
+                                            <img class="active-icon" src="images/mongoDB-h.png" alt="">
+                                            <img class="hidden-icon" src="images/mongoDB-n.png" alt="">
+                                        </p>
+                                        <p>MongoDB</p>
+                                    </div>
+
+                                    <p class="version">version 8</p>
+                                </div>
+                            </label>
+                            <label>
+                                <input type="radio" name="radio" />
+                                <div class="back-end box">
+                                    <div class="database-brand">
+                                        <p class="icon text-center">
+                                            <img class="active-icon" src="images/postr-h.png" alt="">
+                                            <img class="hidden-icon" src="images/postr-n.png" alt="">
+                                        </p>
+                                        <p>PostgreSQL</p>
+                                    </div>
+                                    <p class="version">version 8</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="field-group mt-3">
+                        <div class="lable">Create a unique database name</div>
+                        <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
+                        </div> -->
+                        <div class="form-with-right-tooltip mt-1">
+                            <input type="text" name="db-user" id="db-username" class="text-field required"
+                                placeholder="Enter environment variable">
+                            <div class="tooltip-sec">
+                                <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                    <span class="tooltiptext">
+                                        <span class="tooltip-head">Heads up</span>
+                                        <span class="tooltip-body">This is the name of databse
+                                            required to connect to databse
+                                            with your application</span>
+                                        <span class="tooltip-footer">Ok <a class="text-light-100" href="http://">Learn
+                                                more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field-group mt-3">
+                        <div class="lable">Create a strong databse password</div>
+                        <!-- <div class="validate-info require text-primary-400"><i class="fas fa-star-of-life"></i>
+                        </div> -->
+                        <div class="form-with-right-tooltip mt-1">
+                            <div class="password-content">
+                                <input class="password" type="password" name="password" id="password"
+                                    placeholder="password" onkeyup="return passwordChanged();"
+                                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                                    autocomplete="off">
+                                <label class="pass custom-checkbox">
+                                    <input type="checkbox" onclick="showPassword()" />
+                                    <i class="far fa-eye checked"></i>
+                                    <i class="far fa-eye-slash unchecked"></i>
+                                </label>
+                            </div>
+
+                            <div class="pass-gen-content">
+                                <div class="pass-content-inner">
+                                    <div id="btn-pass-generate" class="btn-outline text-primary-400"
+                                        onclick="getPassword();">
+                                        Generate
+                                        Password</div>
+
+                                    <div class="copyTooltip">
+                                        <i class="far fa-copy copy-btn" onclick="copyPassword()"
+                                            onmouseout="outFunc()"></i>
+                                        <span class="copyTooltiptext" id="myTooltip">Copy to clipboard</span>
+
+                                    </div>
+                                </div>
+
+                                <span id="strength">Type Password</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-group mt-3">
+                        <div class="lable">Select project</div>
+                        <div class="desc-text text-dark-400 mb-1">Select an existing project for this database to bleng
+                            to.
+                        </div>
+                        <div class="field-group mt-1" id="domain-list">
+                            <div class="custom-select">
+                                <select>
+                                    <option value="0">Select Domain:</option>
+                                    <option value="masteracademy.org" selected>masteracademy.org</option>
+                                    <option value="mateors.com">mateors.com</option>
+                                    <option value="imran.com">imran.com</option>
+                                    <option value="binaryhost.io">binaryhost.io</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-active mt-3" type="submit">Next</button>
+                </form>
+
+
+
+            </div>
+
+
+            <!-- Dashboard footer start -->
+            <div class="dashboard-footer">
+                <div class="container">
+                    <ul class="footer-nav">
+                        <li>
+                            <a href="">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="">Terms</a>
+                        </li>
+                        <li>
+                            <a href="">Privacy</a>
+                        </li>
+                        <li>
+                            <a href="">Status</a>
+                        </li>
+                        <li>
+                            <a href="">Docs</a>
+                        </li>
+                        <li>
+                            <a href="">Tutorials</a>
+                        </li>
+                        <li>
+                            <a href="">Support</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Dashboard footer END -->
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/allscript.js"></script>
+    <!-- <script src="js/script.js"></script>
+    <script src="js/customElements.js"></script> -->
+</body>
+
+</html>

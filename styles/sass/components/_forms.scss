@@ -11,9 +11,12 @@
     align-items: end;
     position: relative;
 }
-input:focus {
-    border: 0px solid var(--clr-primary-400) !important;
-    font-weight:600 !important;
+input:visited, input:focus-within, input:focus-visible, input:focus {
+    border: 0.5px solid var(--clr-primary-400);
+    font-weight: 600 !important;
+}
+input[type=submit] {
+    border: none !important;
 }
 input {
     border: 1px solid var(--clr-secondary-500);

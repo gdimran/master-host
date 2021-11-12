@@ -16,46 +16,53 @@
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row center-xs center-sm center-lg middle-xs middle-sm
-                middle-md middle-lg login-content">
+            middle-md middle-lg login-content">
                 <div class="user-login-content p-2">
                     <div class="logo-section-userAuth my-1">
                         <a class="logo-section" href="/"><img class="logo-icon" src="images/master-l.svg" alt="" /><img
                                 class="logo-text" src="images/masterHost.svg" alt="" /></a>
                     </div>
-                    <div class="form-subtitle">Let’s get started</div>
+
+                    <div class="form-subtitle">continue to Launch your application</div>
                     <div class="form-area my-3">
-                        <form action="" method="post" onsubmit="return user_validatetion();">
-                            <input type="email" name="email" id="user_email" placeholder="Email" autocomplete="off">
+                        <form action="" method="post" onsubmit="return validatetion();">
+                            <input type="text" name="name" id="name" placeholder="Name" autocomplete="off">
+                            <div class="error" id="name_error"></div>
+                            <input type="email" name="email" id="email" placeholder="Email" autocomplete="off">
                             <div class="error" id="email_error"></div>
                             <div class="password-group">
-                                <input type="password" name="password" id="user_password" placeholder="password"
+                                <input type="password" name="password" id="password" placeholder="password"
                                     autocomplete="off">
                                 <div class="error" id="password_error"></div>
                                 <label class="custom-checkbox">
-                                    <input type="checkbox" onclick="showPasswordUser()" />
+                                    <input type="checkbox" onclick="showPassword()" />
                                     <i class="far fa-eye checked"></i>
                                     <i class="far fa-eye-slash unchecked"></i>
                                 </label>
                             </div>
+                            <div class="password-group">
+                                <input type="password" name="confirm_password" id="confirm_password"
+                                    placeholder="Confirm password" autocomplete="off">
+                                <div class="error" id="confirm_password_error"></div>
+                            </div>
 
                             <div class="conditions my-1">
-                                <p>Please Note: By continuing and signing in, you agree to Master-Academy's
-                                    <a href="">Terms & Conditions</a> and
-                                    <a href="Privacy Policy"></a>.
+                                <p>Please Note: By continuing and signing in, you agree to Master-Host's
+                                    <a href="#">Terms & Conditions</a> and
+                                    <a href="#">Privacy Policy</a>.
                                 </p>
                             </div>
-                            <input type="submit" name="submit" value="Login" class="signup-btn
+                            <input type="submit" name="submit" value="Sign up" class="signup-btn
                             my-1" autocomplete="off">
+
                         </form>
                     </div>
                     <p class="signup-redirect">
-                        <a href="forgotpass.html" class="forgot-pass text-primary-500 text-primary-400">Forgot
-                            Password?</a> | Don’t
-                        have an account? <a class="text-warning-500" href="signup.html">Register now</a>
+                        Already have an account? <a class="text-warning-500" href="login.html">Login</a>
                     </p>
                 </div>
-
             </div>
+
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

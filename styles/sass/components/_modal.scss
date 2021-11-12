@@ -43,6 +43,7 @@
 .modal.is-visible {
   visibility: visible;
   opacity: 1;
+  z-index:1500;
 }
 
 .modal-dialog {

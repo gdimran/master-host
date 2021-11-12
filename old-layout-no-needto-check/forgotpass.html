@@ -28,8 +28,8 @@
         <div class="row forgot-content">
             <div class="user-login-content p-2">
 
-                <div id="forgot-form" class="form-area">
-                    <form action="" method="post" onsubmit="forgotPassSuccess(); return false;">
+                <div class="form-area">
+                    <form action="" method="post" onsubmit="return forgotPass_validatetion();">
                         <div class="form-title text-left mb-1">Forgot password?</div>
                         <div class="description text-left">Enter the email address associated with your account and
                             we will
@@ -43,44 +43,6 @@
                             my-1" autocomplete="off">
                     </form>
                 </div>
-
-                <div id="login-f-form" class="after-forgot-content" style="display:none;">
-                    <div class="forgot-msg">We have emailed you a link to reset your password</div>
-                    <div class="section-title mt-2">
-                        <h3> Sign in to your account</h3>
-                    </div>
-                    <div class="form-area my-3">
-                        <form action="" method="post" onsubmit="return user_validatetion();">
-                            <input type="email" name="email" id="user_email" placeholder="Email" autocomplete="off">
-                            <div class="error" id="email_error"></div>
-                            <div class="password-group">
-                                <input type="password" name="password" id="user_password" placeholder="password"
-                                    autocomplete="off">
-                                <div class="error" id="password_error"></div>
-                                <label class="custom-checkbox">
-                                    <input type="checkbox" onclick="showPasswordUser()" />
-                                    <i class="far fa-eye checked"></i>
-                                    <i class="far fa-eye-slash unchecked"></i>
-                                </label>
-                            </div>
-
-                            <div class="conditions my-1">
-                                <p>Please Note: By continuing and signing in, you agree to Master-Academy's
-                                    <a href="">Terms & Conditions</a> and
-                                    <a href="Privacy Policy"></a>.
-                                </p>
-                            </div>
-                            <input type="submit" name="submit" value="Login" class="signup-btn
-                            my-1" autocomplete="off">
-                        </form>
-                    </div>
-                    <p class="signup-redirect">
-                        <a href="forgotpass.html" class="forgot-pass text-primary-500 text-primary-400">Forgot
-                            Password?</a> | Don’t
-                        have an account? <a class="text-warning-500" href="signup.html">Register now</a>
-                    </p>
-                </div>
-
             </div>
             <div class="banner-content-fg"><img src="images/banner-content.svg" alt="" srcset=""></div>
 
@@ -89,6 +51,8 @@
     <!-- </div> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/allscript.js"></script>
+    <!-- <script src="js/script.js"></script>
+    <script src="js/customElements.js"></script> -->
 </body>
 
 </html>

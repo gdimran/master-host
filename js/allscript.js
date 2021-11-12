@@ -2,6 +2,33 @@
 
 $(document).ready(function () { $('#sidebarCollapse').on('click', function () { $('#sidebar').toggleClass('active'); }); });
 
+//====================sidbar-toggle
+let sidebar = document.querySelector(".sidebar");
+let closeBtn = document.querySelector("#btn");
+let searchBtn = document.querySelector(".sidebar-search");
+
+closeBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+});
+
+searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+});
+
+// following are the code to change sidebar button(optional)
+function menuBtnChange() {
+    if (sidebar.classList.contains("open")) {
+        closeBtn.classList.replace("icon-menu", "fa-long-arrow-alt-left");//replacing the iocns class
+    } else {
+        closeBtn.classList.replace("fa-long-arrow-alt-left", "icon-menu");//replacing the iocns class
+    }
+}
+
+
+
+
 
 // Tabs navigation
 
@@ -138,92 +165,6 @@ if (upload) {
     });
 }
 
-
-//=================password section==========================
-
-//SHOW PASSWORD
-//var pass = document.getElementById("password");
-
-function showPassword() {
-    var x = document.getElementById("password");
-    if (x.type === "password") {
-        x.type = "text";
-    } else {
-        x.type = "password";
-    }
-}
-
-function showPasswordUser() {
-    var x = document.getElementById("user_password");
-    if (x.type === "user_password") {
-        x.type = "text";
-    } else {
-        x.type = "user_password";
-    }
-}
-
-//generate password
-function getPassword() {
-    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyx0123456789!@#$%^&*()?/;:~_+><{}[]";
-    var passwordLength = 16;
-    var password = "";
-
-    for (var i = 0; i < passwordLength; i++) {
-        var randomNumber = Math.floor(Math.random() * chars.length);
-        password += chars.substring(randomNumber, randomNumber + 1);
-    }
-    document.getElementById("password").value = password;
-
-    var modatooltip = document.getElementById("modal-Tooltip");
-    modatooltip.innerHTML = password;
-
-}
-getPassword();
-//copy password
-function copyPassword() {
-    var copyText = document.getElementById("password");
-    copyText.select();
-    copyText.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(copyText.value);
-
-    var tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = "Copied: " + copyText.value;
-
-    var modatooltip = document.getElementById("copy-info");
-    modatooltip.innerHTML = "Copied: " + copyText.value;
-
-}
-copyPassword();
-
-function outFunc() {
-    var tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = "Copy to clipboard";
-
-    var modatooltip = document.getElementById("modal-Tooltip");
-    modatooltip.innerHTML = "Copy to clipboard";
-}
-outFunc();
-//strong pass section======================
-function passwordChanged() {
-    var strength = document.getElementById('strength');
-    var strongRegex = new RegExp("^(?=.{14,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
-    var mediumRegex = new RegExp("^(?=.{10,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
-    var enoughRegex = new RegExp("(?=.{8,}).*", "g");
-    var pwd = document.getElementById("password");
-    if (pwd.value.length == 0) {
-        strength.innerHTML = 'Type Password';
-    } else if (false == enoughRegex.test(pwd.value)) {
-        strength.innerHTML = 'More Characters';
-    } else if (strongRegex.test(pwd.value)) {
-        strength.innerHTML = '<span class="dashed-active"></span> <span class="dashed-active"></span> <span class="dashed-active"> </span> <span class="dashed-active"></span> <span class="dashed-active"></span>';
-    } else if (mediumRegex.test(pwd.value)) {
-        strength.innerHTML = '<span class="dashed-active"></span> <span class="dashed-active"></span> <span class="dashed-active"> </span> <span class="dashed"></span> <span class="dashed"></span>';
-    } else {
-        strength.innerHTML = '<span class="dashed-active"> </span> <span class="dashed"></span> <span class="dashed"></span> <span class="dashed"></span> <span class="dashed"></span>';
-    }
-}
-
-passwordChanged();
 
 
 
@@ -408,12 +349,23 @@ function forgotPass_validatetion() {
         return false;
     }
     else {
-
         alert("You form is ready to submit.");
         return true;
     }
 }
 
+
+function fFomMsg() {
+    var forgotForm = document.getElementById('forgot-form');
+    var loginForm = document.getElementById('login-f-form');
+    forgotForm.style.display = "none";
+    loginForm.style.display = "block";
+}
+
+function forgotPassSuccess() {
+    forgotPass_validatetion();
+    fFomMsg();
+}
 
 
 // =============================counter el js------------------
@@ -450,3 +402,102 @@ function ShowHideDomainlist() {
     domainHint.style.display = noDomian.checked ? "block" : "none";
 }
 
+
+
+//=================password section==========================
+
+//SHOW PASSWORD
+//var pass = document.getElementById("password");
+
+function showPassword() {
+    var x = document.getElementById("password");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+
+function showPasswordUser() {
+    var x = document.getElementById("user_password");
+    if (x.type === "user_password") {
+        x.type = "text";
+    } else {
+        x.type = "user_password";
+    }
+}
+
+//generate password
+
+function getPassword() {
+    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyx0123456789!@#$%^&*()?/;:~_+><{}[]";
+    var passwordLength = 16;
+    var password = "";
+
+    for (var i = 0; i < passwordLength; i++) {
+        var randomNumber = Math.floor(Math.random() * chars.length);
+        password += chars.substring(randomNumber, randomNumber + 1);
+    }
+    document.getElementById("password").value = password;
+
+    var modatooltip = document.getElementById("modal-Tooltip");
+    modatooltip.innerHTML = password;
+
+}
+
+
+getPassword();
+//copy password
+function copyPassword() {
+    var copyText = document.getElementById("password");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+
+    // var tooltip = document.getElementById("myTooltip");
+    // tooltip.innerHTML = "Copied: " + copyText.value;
+
+    var modatooltip = document.getElementById("copy-info");
+    modatooltip.innerHTML = "Copied: " + copyText.value;
+
+}
+copyPassword();
+
+function outFunc() {
+    var copied = document.getElementById("copied-msg");
+    copied.style.display = "block"
+    // var tooltip = document.getElementById("myTooltip");
+    // tooltip.innerHTML = "Copy to clipboard";
+
+    // var modatooltip = document.getElementById("modal-Tooltip");
+    // modatooltip.innerHTML = "Copy to clipboard";
+}
+outFunc();
+
+function cPass() {
+    outFunc();
+    copyPassword();
+
+}
+
+//strong pass section======================
+function passwordChanged() {
+    var strength = document.getElementById('strength');
+    var strongRegex = new RegExp("^(?=.{14,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+    var mediumRegex = new RegExp("^(?=.{10,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+    var enoughRegex = new RegExp("(?=.{8,}).*", "g");
+    var pwd = document.getElementById("password");
+    if (pwd.value.length == 0) {
+        strength.innerHTML = 'Type Password';
+    } else if (false == enoughRegex.test(pwd.value)) {
+        strength.innerHTML = 'More Characters';
+    } else if (strongRegex.test(pwd.value)) {
+        strength.innerHTML = '<span class="dashed-active"></span> <span class="dashed-active"></span> <span class="dashed-active"> </span> <span class="dashed-active"></span> <span class="dashed-active"></span>';
+    } else if (mediumRegex.test(pwd.value)) {
+        strength.innerHTML = '<span class="dashed-active"></span> <span class="dashed-active"></span> <span class="dashed-active"> </span> <span class="dashed"></span> <span class="dashed"></span>';
+    } else {
+        strength.innerHTML = '<span class="dashed-active"> </span> <span class="dashed"></span> <span class="dashed"></span> <span class="dashed"></span> <span class="dashed"></span>';
+    }
+}
+
+passwordChanged();

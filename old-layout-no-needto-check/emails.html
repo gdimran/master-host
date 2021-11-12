@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/css/main.css" />
+    <link rel="stylesheet" href="icons-fonts/css/imran_iconfont.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Side bar start -->
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                <i id="sidebarCollapse" class="demo-icon icon-menu"></i>
+                <a class="logo-section" href="/"><img class="logo-icon" src="images/master-l.svg" alt="" /><img
+                        class="logo-text" src="images/masterHost.svg" alt="" /></a>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="nav-section-title">
+                    <a class="section-dev" href="">Projects <i class="demo-icon icon-up-open-mini"></i></a>
+                    <ul class="submenue list-unstyled" id="projectSub">
+                        <li>
+                            <a href="#"><i class="menu-icon icon-user circle-icon highlight-user"></i>
+                                <span class="menu-text">Kristopher</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-user circle-icon highlight-user"></i>
+                                <span class="menu-text">Abu Rayhan</span></a>
+                        </li>
+                        <li>
+                            <a class="focuse" href="#"><i class="menu-icon icon-plus"></i><span class="menu-text">New
+                                    Project</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-section-title">
+                    <a class="section-dev" href="">
+                        Manage<i class="demo-icon icon-up-open-mini"></i></a>
+                    <ul class="submenue list-unstyled" id="mangeSub">
+                        <li>
+                            <a class="active" href="#"><i class="menu-icon icon-app-launch"></i>
+                                <span class="menu-text">Apps</span></a>
+                        </li>
+                        <li>
+                            <a href="domains.html"><i class="menu-icon icon-domain"></i>
+                                <span class="menu-text">Domain</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-email"></i>
+                                <span class="menu-text">Emais</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-database"></i>
+                                <span class="menu-text">Databases</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-file-manager"></i>
+                                <span class="menu-text">File Manager</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-networking"></i>
+                                <span class="menu-text">Networking</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-monitoring"></i>
+                                <span class="menu-text">Monitoring</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-section-title">
+                    <ul class="submenue list-unstyled">
+                        <li>
+                            <a href="#"><i class="menu-icon icon-settings"></i>
+                                <span class="menu-text">Settings</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-bill"></i>
+                                <span class="menu-text">Billing</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-api"></i>
+                                <span class="menu-text">API</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-section-title">
+                    <ul class="submenue list-unstyled">
+                        <li>
+                            <a href="#"><i class="menu-icon icon-documents"></i>
+                                <span class="menu-text">Documentation</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="menu-icon icon-live-support"></i>
+                                <span class="menu-text">Support</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- Side bar end -->
+
+        <div id="content">
+            <!-- dashboard header start -->
+            <div class="dasboard-header">
+                <div class="search-sec left">
+                    <button type="submit" class="searchButton">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <input type="text" class="searchTerm" placeholder="What are you looking for?" />
+                </div>
+
+                <div class="navbar right">
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            Create
+                            <i class="fa fa-angle-down"></i>
+                            <div class="dropdown-content">
+                                <div class="dropdown-menu-item">
+                                    <div class="single-icon-menu">
+                                        <a href="launch-app-step-0.html">
+                                            <i class="menu-icon icon-app-launch"></i>
+                                            <div class="menu-text-content">
+                                                <span class="menu-title-text">Apps</span>
+                                                <span class="menu-desc-text">Launch Your App</span>
+                                            </div>
+                                            <div class="menu-tag">
+                                                <span class="tag-btn">New</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu-item">
+                                    <div class="single-icon-menu">
+                                        <a href="#">
+                                            <i class="menu-icon icon-domain"></i>
+                                            <div class="menu-text-content">
+                                                <span class="menu-title-text">Doamin/DNS</span>
+                                                <span class="menu-desc-text">Route Your Existing Domain</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu-item">
+                                    <div class="single-icon-menu">
+                                        <a href="#">
+                                            <i class="menu-icon icon-email"></i>
+                                            <div class="menu-text-content">
+                                                <span class="menu-title-text">Emails</span>
+                                                <span class="menu-desc-text">Create Your Email</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu-item">
+                                    <div class="single-icon-menu">
+                                        <a href="#">
+                                            <i class="menu-icon icon-database"></i>
+                                            <div class="menu-text-content">
+                                                <span class="menu-title-text">Databases</span>
+                                                <span class="menu-desc-text">Create Database</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu-item">
+                                    <div class="single-icon-menu">
+                                        <a href="#">
+                                            <i class="menu-icon icon-file-manager"></i>
+                                            <div class="menu-text-content">
+                                                <span class="menu-title-text">File Manager</span>
+                                                <span class="menu-desc-text">Enter into your file manager</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="dropdown-menu-item">
+                                    <div class="single-icon-menu">
+                                        <a href="#">
+                                            <i class="menu-icon icon-networking"></i>
+                                            <div class="menu-text-content">
+                                                <span class="menu-title-text">Networking</span>
+                                                <span class="menu-desc-text">Manage your network</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+
+                    </div>
+
+                    <button class="card-toggle_next_iconmenu card-paper-list_target_menu">
+                        <i class="fa fa-envelope"></i>
+                        <div class="card-toggle_next_iconmenu_menufloatmain notification-card">
+                            <ul>
+                                <li><a class="entry-paper-list" href="#">
+                                        <i class="fas fa-credit-card"></i> Membership</a>
+                                </li>
+                                <li><a class="entry-paper-list" href="#"><i class="fas fa-power-off"></i> Sign out</a>
+                                </li>
+                                <li><a class="entry-paper-list" href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                                <li><a class="entry-paper-list" href="#"><i class="icon-language-1"></i> Language:
+                                        English <i class="fa fa-angle-down"></i></a></li>
+                                <li><a class="entry-paper-list" href="#"><i class="far fa-question-circle"></i> Help
+                                    </a></li>
+
+                            </ul>
+                        </div>
+                    </button>
+                    <button class="card-toggle_next_iconmenu card-paper-list_target_menu">
+                        <i class="fa fa-bell"></i>
+                        <div class="card-toggle_next_iconmenu_menufloatmain notification-card">
+                            <ul>
+                                <li><a class="entry-paper-list" href="#">
+                                        <i class="fas fa-credit-card"></i> Membership</a>
+                                </li>
+                                <li><a class="entry-paper-list" href="#"><i class="fas fa-power-off"></i> Sign out</a>
+                                </li>
+                                <li><a class="entry-paper-list" href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                                <li><a class="entry-paper-list" href="#"><i class="icon-language-1"></i> Language:
+                                        English <i class="fa fa-angle-down"></i></a></li>
+                                <li><a class="entry-paper-list" href="#"><i class="far fa-question-circle"></i> Help
+                                    </a></li>
+
+                            </ul>
+                        </div>
+                    </button>
+                    <button class="card-toggle_next_iconmenu card-paper-list_target_menu">
+                        <i class="fa fa-user-circle-o"></i> Imran Hossain
+                        <i class="fa fa-angle-down"></i>
+                        <div class="card-toggle_next_iconmenu_menufloatmain user-card">
+                            <div class="toggle-card-header">
+                                <div class="header-with-left-pic">
+                                    <div class="user-profile-pic"> <img src="images/imran.jpg" alt=""></div>
+
+                                    <div class="user-info">
+                                        <div class="user-name">Imran Hossain</div>
+                                        <div class="user-email">gdimran@gmail.com</div>
+                                        <a href="" class="account-detail-link">Manage
+                                            your Account</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul>
+                                <li><a class="entry-paper-list" href="#">
+                                        <i class="fas fa-credit-card"></i> Membership</a>
+                                </li>
+                                <li><a class="entry-paper-list" href="#"><i class="fas fa-power-off"></i> Sign out</a>
+                                </li>
+                                <li><a class="entry-paper-list" href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                                <li><a class="entry-paper-list" href="#"><i class="icon-language-1"></i> Language:
+                                        English <i class="fa fa-angle-down"></i></a></li>
+                                <li><a class="entry-paper-list" href="#"><i class="far fa-question-circle"></i> Help
+                                    </a></li>
+
+                            </ul>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <!-- dashboard header End -->
+            <div class="container mt-5 mb-3">
+                <div class="page-title mb-2">
+                    Emails
+                    <div class="desc-text text-dark-400">This features lets you create and manage email accounts. Want
+                        to learn more? Read our <a class="active" href="http://">documentation</a>
+                    </div>
+                </div>
+                <div class="form-with-btn my-1">
+                    <form class="search-form" action="">
+                        <input type="text" name="search" id="domain" class="search-field"
+                            placeholder="Please enter your search criteria">
+
+                        <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                    <div class="create-email"><button class="open-modal btn-active" data-open="addEmail"> <i
+                                class=" icon-add-new-email mr-1"></i>
+                            Create an email</button>
+                    </div>
+                </div>
+
+                <div class="tab-wrapper mt-3">
+                    <div class="tab-navigation">
+                        <ul class="tab-nav">
+                            <li class="tab-nav-item active-tab" data-id="emails">Emails</li>
+                            <li class="tab-nav-item" data-id="restricted">Restricted</li>
+                            <li class="tab-nav-item" data-id="system">System Account</li>
+                            <li class="tab-nav-item" data-id="exceeded">Exceeded Storage</li>
+
+                        </ul>
+                    </div>
+
+                    <div class="tab-content active-content" id="emails">
+                        <div class="table-title">
+                            <h4>Emails(7)</h4>
+                        </div>
+                        <div class="table-content">
+                            <table class="list-table">
+                                <tbody>
+                                    <tr class="bg-dark-100">
+                                        <th class="text-primary-400">Account <i class="fas fa-caret-down"></i></th>
+                                        <th>Restrictions</th>
+                                        <th>Storage: Used / Allocated</th>
+                                        <th style="width:7%; text-align:center">Action</th>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="#">user@example.com</a></td>
+                                        <td>Unrestricted</td>
+                                        <td>3.96 MB / 500 MB</td>
+                                        <td class="text-primary-400" style="width:7%; text-align:center">
+                                            <button
+                                                class="card-toggle_next_iconmenu card-paper-list_target_menu text-primary-400">
+                                                More <i class=" fas fa-angle-down"></i>
+                                                <div class="card-toggle_next_iconmenu_menufloatmain">
+                                                    <ul>
+                                                        <li><a class="entry-paper-list" href="#">
+                                                                <i class="fas fa-exclamation-circle"></i>Check Email</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-power-off"></i> Manage Email</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Password</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Limit</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-trash-alt"></i> Delete</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="#">user@example.com</a></td>
+                                        <td>Unrestricted</td>
+                                        <td>3.96 MB / 500 MB</td>
+                                        <td class="text-primary-400" style="width:7%; text-align:center">
+                                            <button
+                                                class="card-toggle_next_iconmenu card-paper-list_target_menu text-primary-400">
+                                                More <i class=" fas fa-angle-down"></i>
+                                                <div class="card-toggle_next_iconmenu_menufloatmain">
+                                                    <ul>
+                                                        <li><a class="entry-paper-list" href="#">
+                                                                <i class="fas fa-exclamation-circle"></i>Check Email</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-power-off"></i> Manage Email</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Password</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Limit</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-trash-alt"></i> Delete</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="#">user@example.com</a></td>
+                                        <td>Unrestricted</td>
+                                        <td>3.96 MB / 500 MB</td>
+                                        <td class="text-primary-400" style="width:7%; text-align:center">
+                                            <button
+                                                class="card-toggle_next_iconmenu card-paper-list_target_menu text-primary-400">
+                                                More <i class=" fas fa-angle-down"></i>
+                                                <div class="card-toggle_next_iconmenu_menufloatmain">
+                                                    <ul>
+                                                        <li><a class="entry-paper-list" href="#">
+                                                                <i class="fas fa-exclamation-circle"></i>Check Email</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-power-off"></i> Manage Email</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Password</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Limit</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-trash-alt"></i> Delete</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="#">user@example.com</a></td>
+                                        <td>Unrestricted</td>
+                                        <td>3.96 MB / 500 MB</td>
+                                        <td class="text-primary-400" style="width:7%; text-align:center">
+                                            <button
+                                                class="card-toggle_next_iconmenu card-paper-list_target_menu text-primary-400">
+                                                More <i class=" fas fa-angle-down"></i>
+                                                <div class="card-toggle_next_iconmenu_menufloatmain">
+                                                    <ul>
+                                                        <li><a class="entry-paper-list" href="#">
+                                                                <i class="fas fa-exclamation-circle"></i>Check Email</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-power-off"></i> Manage Email</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Password</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Limit</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-trash-alt"></i> Delete</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="#">user@example.com</a></td>
+                                        <td>Unrestricted</td>
+                                        <td>3.96 MB / 500 MB</td>
+                                        <td class="text-primary-400" style="width:7%; text-align:center">
+                                            <button
+                                                class="card-toggle_next_iconmenu card-paper-list_target_menu text-primary-400">
+                                                More <i class=" fas fa-angle-down"></i>
+                                                <div class="card-toggle_next_iconmenu_menufloatmain">
+                                                    <ul>
+                                                        <li><a class="entry-paper-list" href="#">
+                                                                <i class="fas fa-exclamation-circle"></i>Check Email</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-power-off"></i> Manage Email</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Password</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Limit</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-trash-alt"></i> Delete</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="#">user@example.com</a></td>
+                                        <td>Unrestricted</td>
+                                        <td>3.96 MB / 500 MB</td>
+                                        <td class="text-primary-400" style="width:7%; text-align:center">
+                                            <button
+                                                class="card-toggle_next_iconmenu card-paper-list_target_menu text-primary-400">
+                                                More <i class=" fas fa-angle-down"></i>
+                                                <div class="card-toggle_next_iconmenu_menufloatmain">
+                                                    <ul>
+                                                        <li><a class="entry-paper-list" href="#">
+                                                                <i class="fas fa-exclamation-circle"></i>Check Email</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-power-off"></i> Manage Email</a></li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Password</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-sync-alt"></i> Change Limit</a>
+                                                        </li>
+                                                        <li><a class="entry-paper-list" href="#"><i
+                                                                    class="fas fa-trash-alt"></i> Delete</a></li>
+
+                                                    </ul>
+                                                </div>
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class="tab-content" id="restricted">
+                        <div class="table-title">
+                            <h4>Floation Ip</h4>
+                        </div>
+                        <div class="table-content">
+                            <table class="list-table">
+                                <tbody>
+                                    <tr>
+                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
+                                        <td>14400/CNAME/example.com</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="mateors.com">mateors.com</a></td>
+                                        <td>14400/CNAME/example.com</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
+                                        <td>3600/A/103.48.119.50</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="binaryhosting.com">binaryhosting.com</a></td>
+                                        <td>3600/A/103.48.119.50</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td> <a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
+                                        <td>14400/CNAME/example.com</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class="tab-content" id="system">
+                        <div class="table-title">
+                            <h4>Load blancers</h4>
+                        </div>
+                        <div class="table-content">
+                            <table class="list-table">
+                                <tbody>
+                                    <tr>
+                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
+                                        <td>14400/CNAME/example.com</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="mateors.com">mateors.com</a></td>
+                                        <td>14400/CNAME/example.com</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
+                                        <td>3600/A/103.48.119.50</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="binaryhosting.com">binaryhosting.com</a></td>
+                                        <td>3600/A/103.48.119.50</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td> <a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
+                                        <td>14400/CNAME/example.com</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class="tab-content" id="exceeded">
+                        <div class="table-title">
+                            <h4>VPC</h4>
+                        </div>
+                        <div class="table-content">
+                            <table class="list-table">
+                                <tbody>
+                                    <tr>
+                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
+                                        <td>14400/CNAME/example.com</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="mateors.com">mateors.com</a></td>
+                                        <td>14400/CNAME/example.com</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
+                                        <td>3600/A/103.48.119.50</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a class="highlight" href="binaryhosting.com">binaryhosting.com</a></td>
+                                        <td>3600/A/103.48.119.50</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td> <a class="highlight" href="masteracademy.org">masteracademy.org</a> </td>
+                                        <td>14400/CNAME/example.com</td>
+                                        <td style="width:5%; text-align:center"><i class="fa fa-ellipsis-h"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Dashboard footer start -->
+            <div class="dashboard-footer">
+                <div class="container">
+                    <ul class="footer-nav">
+                        <li>
+                            <a href="">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="">Terms</a>
+                        </li>
+                        <li>
+                            <a href="">Privacy</a>
+                        </li>
+                        <li>
+                            <a href="">Status</a>
+                        </li>
+                        <li>
+                            <a href="">Docs</a>
+                        </li>
+                        <li>
+                            <a href="">Tutorials</a>
+                        </li>
+                        <li>
+                            <a href="">Support</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Dashboard footer END -->
+
+        </div>
+    </div>
+
+    <!-- Modal content start -->
+
+    <div class="modal" id="addEmail" data-animation="slideInOutLeft">
+        <div class="modal-dialog">
+            <header class="modal-header mt-2">
+                <div class="header-content">
+                    <i class="title-icon icon-add-new-email"></i>
+                    <div class="modal-h-text">
+                        <div class="modal-title-txt text-primary-400">Create an email account</div>
+                        <div class="desc-text text-dark-400">Create new emails for you</div>
+                    </div>
+                </div>
+                <button class="close-modal" aria-label="close modal" data-close>
+                    <i class="far fa-times-circle"></i>
+                </button>
+            </header>
+            <section class="modal-content">
+                <form action="" method="post">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mt-2">
+                                <div class="field-group">
+                                    <div class="form-lable-with-right-tooltip">
+                                        <div class="lable">Username</div>
+                                        <div class="tooltip-sec">
+                                            <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                                <span class="tooltiptext">
+                                                    <span class="tooltip-head">Heads up</span>
+                                                    <span class="tooltip-body">This is the name of databse
+                                                        required to connect to databse
+                                                        with your application</span>
+                                                    <span class="tooltip-footer">Ok <a class="text-light-100"
+                                                            href="http://">Learn
+                                                            more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="text" name="Email username" id="emailusername"
+                                        class="text-field required" placeholder="Email username">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mt-2">
+                                <div class="field-group">
+                                    <div class="form-lable-with-right-tooltip">
+                                        <div class="lable">Select Domain</div>
+                                        <div class="tooltip-sec">
+                                            <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                                <span class="tooltiptext">
+                                                    <span class="tooltip-head">Heads up</span>
+                                                    <span class="tooltip-body">This is the name of databse
+                                                        required to connect to databse
+                                                        with your application</span>
+                                                    <span class="tooltip-footer">Ok <a class="text-light-100"
+                                                            href="http://">Learn
+                                                            more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field-group" id="domain-list">
+                                        <div class="custom-select">
+                                            <select>
+                                                <option value="0">Select Domain:</option>
+                                                <option value="masteracademy.org" selected>masteracademy.org</option>
+                                                <option value="mateors.com">mateors.com</option>
+                                                <option value="imran.com">imran.com</option>
+                                                <option value="binaryhost.io">binaryhost.io</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mt-2">
+                                <div class="field-group">
+                                    <div class="form-lable-with-right-tooltip">
+                                        <div class="lable">Create password</div>
+                                        <div class="tooltip-sec">
+                                            <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                                <span class="tooltiptext">
+                                                    <span class="tooltip-head">Heads up</span>
+                                                    <span class="tooltip-body">This is the name of databse
+                                                        required to connect to databse
+                                                        with your application</span>
+                                                    <span class="tooltip-footer">Ok <a class="text-light-100"
+                                                            href="http://">Learn
+                                                            more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="password-content modal-pass-content">
+                                        <input class="modal-password" type="password" name="password" id="password"
+                                            placeholder="password" onkeyup="return passwordChanged();"
+                                            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                                            autocomplete="off">
+                                        <label class="pass custom-checkbox">
+                                            <input type="checkbox" onclick="showPassword()" />
+                                            <i class="far fa-eye checked"></i>
+                                            <i class="far fa-eye-slash unchecked"></i>
+                                        </label>
+                                    </div>
+
+                                    <div class="modal-pass-gen-content mt-1">
+                                        <div class="modal-pass-content-inner">
+                                            <div id="btn-pass-generate" class="btn-outline text-primary-400"
+                                                onclick="getPassword();">
+                                                Generate
+                                                Password</div>
+
+                                            <div class="modal-copyTooltip" onclick="copyPassword()"
+                                                onmouseout="outFunc()">
+                                                <span class="copyTooltiptext" id="modal-Tooltip">Copy to
+                                                    clipboard</span>
+
+                                                <!-- <i class="far fa-copy copy-btn" onclick="copyPassword()"
+                                                    onmouseout="outFunc()"></i> -->
+
+                                            </div>
+                                        </div>
+
+                                        <div class="pass-info-content">
+                                            <span id="strength">Type Password</span>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mt-2">
+                                <div class="field-group">
+                                    <div class="form-lable-with-right-tooltip">
+                                        <div class="lable">Email Quota (MB)</div>
+                                        <div class="tooltip-sec">
+                                            <div class="tooltip-btn"><i class="icon icon-question-circle-o"></i>
+                                                <span class="tooltiptext">
+                                                    <span class="tooltip-head">Heads up</span>
+                                                    <span class="tooltip-body">This is the name of databse
+                                                        required to connect to databse
+                                                        with your application</span>
+                                                    <span class="tooltip-footer">Ok <a class="text-light-100"
+                                                            href="http://">Learn
+                                                            more <i class="fas fa-long-arrow-alt-right"></i></a> </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="text" name="Email username" id="emailusername"
+                                        class="text-field required" placeholder="Email username">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-center mt-2"><button class="btn-active full-btn" type="submit"
+                                aria-label="close modal" data-close>Create new Email</button>
+                        </p>
+                    </div>
+
+
+                </form>
+
+
+            </section>
+            <footer class="modal-footer">
+
+            </footer>
+        </div>
+    </div>
+
+
+    <!-- Modal content end -->
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/allscript.js"></script>
+    <!-- <script src="js/script.js"></script>
+    <script src="js/customElements.js"></script> -->
+</body>
+
+</html>
