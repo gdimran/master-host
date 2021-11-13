@@ -1,7 +1,26 @@
-meeting 24-10-21
 
-1. existing domain na thaklay first domain add domain 
+1. copy to clipboard update
 
-masterTube
+2. profile like google
 
-2. monitizetation: 
+3. search option remove form side panel
+
+4. js file
+
+5. tooltip on password page
+
+6. domaina modal
+
+7. notification message value
+
+8. all page recheck and info should be as it is.
+
+9. Create new project
+
+10. push right side pro 
+
+11. camera with modal like popup
+
+12. more popup width small
+
+13. Domain step create

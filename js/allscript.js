@@ -12,10 +12,10 @@ closeBtn.addEventListener("click", () => {
     menuBtnChange();//calling the function(optional)
 });
 
-searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
-    sidebar.classList.toggle("open");
-    menuBtnChange(); //calling the function(optional)
-});
+// searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
+//     sidebar.classList.toggle("open");
+//     menuBtnChange(); //calling the function(optional)
+// });
 
 // following are the code to change sidebar button(optional)
 function menuBtnChange() {
@@ -28,7 +28,19 @@ function menuBtnChange() {
 
 
 
+function changePic() {
+    const info = document.querySelector(".help-info");
+    const changeContent = document.querySelector(".photo-upload-options");
+    const changeBtn = document.querySelector(".change");
+    changeBtn.addEventListener("click", () => {
+        info.style.display = "none";
+        changeContent.style.display = "block";
+    });
 
+
+}
+
+changePic();
 
 // Tabs navigation
 
@@ -501,3 +513,6 @@ function passwordChanged() {
 }
 
 passwordChanged();
+
+
+

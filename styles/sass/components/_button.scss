@@ -111,10 +111,17 @@
 	height: 35px;
 	font-weight: 400;
 }
-
+.btn-long {
+	min-width: 220px;
+}
 .btn-plan-active{
     border:none;
     background:transparent;
     font-weight:600;
     color: var(--clr-primary-400);
+}
+.modal-action-btns {
+	width: 100%;
+	justify-content: space-between;
+	display: flex;
 }

@@ -262,8 +262,8 @@
 	top: 34px !important;
 }
 .user-card {
-  width:230px !important;
-	left: -62px !important;
+  width:220px !important;
+	left: -48px !important;
 	top: 34px !important;
 }
 .card-paper-list_target_menu:focus .card-paper-list_target_menu_menupaper {
@@ -394,4 +394,49 @@ input.modal-password {
 .pass-info-content{
   display:flex;
   justify-content: space-between;
+}
+
+
+/*----------------------user-pohot modal------------------------------*/
+.modal-dialog.user-pic {
+	width: 30%;
+}
+.profile-pic-big{
+  text-align:center;
+}
+
+.profile-pic-big img {
+	width: 250px;
+	height: auto;
+	border: 1px solid var(--clr-dark-200);
+	border-radius: 50%;
+}
+.help-info {
+  display:block;
+	text-align: center;
+}
+.info-title {
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+}
+.circle-icon-btn {
+	width: 60px;
+	height: 60px;
+	display: block;
+	text-align: center;
+	line-height: 60px;
+	border: 1px solid var(--clr-dark-300);
+	border-radius: 50%;
+	font-size: 25px;
+}
+.take-pic,
+.upload-pic {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	border-bottom: 1px solid var(--clr-dark-300);
+	padding: 10px 0;
+}
+.photo-upload-options{
+  display:none;
 }

@@ -168,7 +168,10 @@
 .header-with-left-pic {
     display: flex;
     gap: 15px;
-    padding: 15px;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position:relative;
 }
 
 .user-profile-pic img {
@@ -176,8 +179,8 @@
 }
 
 .user-profile-pic {
-    width: 40px !important;
-    height: 40px !important;
+    width: 80px !important;
+    height: 80px !important;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
@@ -185,7 +188,20 @@
     align-items: center;
     border: 1px solid var(--clr-dark-100);
 }
-
+.change-pic {
+	position: absolute;
+	background: var(--clr-light-100);
+	border-radius: 50%;
+	padding: 3px;
+	top: 53px;
+	right: 31%;
+	z-index: 10;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+.change-pic:hover{
+    cursor:pointer;
+    color:var(--clr-primary-400);
+}
 .user-name {
     font-size: 1.1rem;
     font-weight: 500;
@@ -201,9 +217,16 @@
 .account-detail-link {
     font-size: 0.8rem;
     line-height: 1rem;
-    color: var(--clr-primary-400);
+    border: 1px solid var(--clr-dark-200);
+    padding: 6px 25px;
+    border-radius: 30px;
+    font-weight: 500;
 }
-
+.account-detail-link:hover{
+    background:var(--clr-primary-100);
+    border: 1px solid var(--clr-primary-400);
+    color:var(--clr-primary-400);
+}
 .header-brand {
     display: inline-flex;
     align-items: center;
@@ -213,4 +236,50 @@
     height: 70px;
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.15);
     padding: 0 65px;
+}
+
+
+/*------------------notification----------------*/
+.notification-list {
+	display: flex;
+	flex-flow: column;
+	text-align: left;
+	padding: 5px 15px;
+}
+.message-list:hover,
+.notification-list:hover{
+    background:var(--clr-primary-100);
+    color:var(--clr-primary-400);
+}
+.notification-title {
+	font-size: 0.85rem;
+	font-weight: 500;
+}
+.notification-time {
+	font-size: 0.7rem;
+	color: var(--clr-dark-400);
+}
+.card-toggle_next_iconmenu_menufloatmain.message-card {
+	width: 250px !important;
+	left: -210px !important;
+}
+.message-list {
+	display: flex;
+	flex-flow: row;
+	padding: 10px 10px;
+	justify-content: flex-start;
+	align-items: center;
+	min-height: 70px;
+	border-bottom: 1px solid var(--clr-dark-200);
+}
+
+.msg-content {
+	display: flex;
+	flex-flow: column;
+	text-align: left;
+    margin-left:15px;
+}
+.close-icon {
+	position: absolute;
+	right: 10px;
 }
