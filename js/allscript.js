@@ -20,27 +20,30 @@ closeBtn.addEventListener("click", () => {
 // following are the code to change sidebar button(optional)
 function menuBtnChange() {
     if (sidebar.classList.contains("open")) {
-        closeBtn.classList.replace("icon-menu", "fa-long-arrow-alt-left");//replacing the iocns class
+        closeBtn.classList.replace("icon-menu", "icon-cancel");//replacing the iocns class
     } else {
-        closeBtn.classList.replace("fa-long-arrow-alt-left", "icon-menu");//replacing the iocns class
+        closeBtn.classList.replace("icon-cancel", "icon-menu");//replacing the iocns class
     }
 }
 
-
-
-function changePic() {
-    const info = document.querySelector(".help-info");
-    const changeContent = document.querySelector(".photo-upload-options");
-    const changeBtn = document.querySelector(".change");
-    changeBtn.addEventListener("click", () => {
-        info.style.display = "none";
-        changeContent.style.display = "block";
-    });
-
-
+const changeAvailable = document.querySelector(".change");
+if (changeAvailable) {
+    function changePic() {
+        const info = document.querySelector(".help-info");
+        const changeContent = document.querySelector(".photo-upload-options");
+        const changeBtn = document.querySelector(".change");
+        const uploadAction = document.querySelector(".photo-upload-action");
+        changeBtn.addEventListener("click", () => {
+            info.style.display = "none";
+            uploadAction.style.display = "none";
+            changeContent.style.display = "block";
+        });
+    }
+    changePic();
 }
 
-changePic();
+
+
 
 // Tabs navigation
 

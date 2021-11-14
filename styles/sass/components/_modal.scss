@@ -401,6 +401,10 @@ input.modal-password {
 .modal-dialog.user-pic {
 	width: 30%;
 }
+.user-pic-upload{
+width: 85%;
+height:100%;
+}
 .profile-pic-big{
   text-align:center;
 }
@@ -435,7 +439,12 @@ input.modal-password {
 	align-items: center;
 	gap: 15px;
 	border-bottom: 1px solid var(--clr-dark-300);
-	padding: 10px 0;
+	padding: 10px;
+}
+.take-pic:hover,
+.upload-pic:hover{
+  background:var(--clr-primary-100);
+  cursor:pointer;
 }
 .photo-upload-options{
   display:none;

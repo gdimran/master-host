@@ -17,7 +17,7 @@
         <div class="logo-details">
             <img class="logo-icon" src="images/master-l.svg" alt="" />
             <div class="logo_name"><img class="logo-text" src="images/masterHost.svg" alt="" /></div>
-            <i class='fas icon-menu' id="btn"></i>
+            <i class='icon-menu' id="btn"></i>
         </div>
         <ul class="nav-list">
             <li class="nav-section-title">
@@ -579,7 +579,7 @@
                     <h4>Create something new</h4>
                 </div>
                 <div class="row">
-                    <div class="single-feature-menu col-xs-12 col-sm-6 col-md-3 col-lg-3 my-2">
+                    <div class="single-feature-menu col-xs-12 col-sm-6 col-md-6 col-lg-3 my-2">
                         <a href="#">
                             <i class="menu-icon icon-lunching-app"></i>
                             <div class="menu-text-content">
@@ -588,7 +588,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="single-feature-menu col-xs-12 col-sm-6 col-md-3 col-lg-3 my-2">
+                    <div class="single-feature-menu col-xs-12 col-sm-6 col-md-6 col-lg-3 my-2">
                         <a href="#">
                             <i class="menu-icon icon-add-database"></i>
                             <div class="menu-text-content">
@@ -597,7 +597,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="single-feature-menu col-xs-12 col-sm-6 col-md-3 col-lg-3 my-2">
+                    <div class="single-feature-menu col-xs-12 col-sm-6 col-md-6 col-lg-3 my-2">
                         <a href="#">
                             <i class="menu-icon icon-add-new-email"></i>
                             <div class="menu-text-content">
@@ -606,7 +606,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="single-feature-menu col-xs-12 col-sm-6 col-md-3 col-lg-3 my-2">
+                    <div class="single-feature-menu col-xs-12 col-sm-6 col-md-6 col-lg-3 my-2">
                         <a href="#">
                             <i class="menu-icon icon-dns"></i>
                             <div class="menu-text-content">
@@ -626,7 +626,7 @@
                     <h4>Learn more</h4>
                 </div>
                 <div class="row">
-                    <div class="single-feature-menu col-xs-12 col-sm-6 col-md-3 col-lg-3 my-2">
+                    <div class="single-feature-menu col-xs-12 col-sm-6 col-md-6 col-lg-3 my-2">
                         <a href="#">
                             <i class="menu-icon icon-documents"></i>
                             <div class="menu-text-content">
@@ -636,7 +636,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="single-feature-menu col-xs-12 col-sm-6 col-md-3 col-lg-3 my-2">
+                    <div class="single-feature-menu col-xs-12 col-sm-6 col-md-6 col-lg-3 my-2">
                         <a href="#">
                             <i class="menu-icon icon-video-tutorial"></i>
                             <div class="menu-text-content">
@@ -645,7 +645,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="single-feature-menu col-xs-12 col-sm-6 col-md-3 col-lg-3 my-2">
+                    <div class="single-feature-menu col-xs-12 col-sm-6 col-md-6 col-lg-3 my-2">
                         <a href="#">
                             <i class="menu-icon icon-api"></i>
                             <div class="menu-text-content">
@@ -654,7 +654,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="single-feature-menu col-xs-12 col-sm-6 col-md-3 col-lg-3 my-2">
+                    <div class="single-feature-menu col-xs-12 col-sm-6 col-md-6 col-lg-3 my-2">
                         <a href="#">
                             <i class="menu-icon icon-faq-i"></i>
                             <div class="menu-text-content">
@@ -703,7 +703,7 @@
         <div class="modal-dialog user-pic">
             <header class="modal-header text-right">
                 <button class="close-modal" aria-label="close modal" data-close>
-                    <i class="far fa-times-circle"></i>
+                    <i class="icon-cancel"></i>
                 </button>
             </header>
             <section class="modal-content">
@@ -719,17 +719,66 @@
                 </div>
                 <div class="photo-upload-options">
                     <div class="info-title text-center">Choose a photo or take a new one</div>
-                    <div class="upload-pic"><span class="circle-icon-btn"><i class="fas fa-upload"></i></span> Upload
+                    <div class="upload-pic open-modal" data-open="uploadModal"><span class="circle-icon-btn"><i
+                                class="fas fa-upload"></i></span> Upload
                     </div>
                     <div class="take-pic"><span class="circle-icon-btn"><i class="icon-camera"></i></span> Camera</div>
                 </div>
 
             </section>
             <footer class="modal-footer">
-                <div class="modal-action-btns">
+                <div class="modal-action-btns  photo-upload-action">
                     <button class="remove btn-long btn-outline"><i class="icon-trash-empty"></i> Remove</button>
                     <button class="change btn-long btn-active"><i class="icon-pencil"></i> Change</button>
                 </div>
+            </footer>
+        </div>
+    </div>
+
+    <div class="modal" id="uploadModal" data-animation="zoomInOut">
+        <div class="modal-dialog user-pic-upload">
+            <header class="modal-header text-right">
+                <button class="close-modal" aria-label="close modal" data-close>
+                    <i class="icon-cancel"></i>
+                </button>
+                <div class="modal-header-text">Change profile picture</div>
+            </header>
+            <section class="modal-content">
+
+                <div class="tab-wrapper">
+                    <div class="tab-navigation  mt-5">
+                        <ul class="tab-nav">
+                            <li class="tab-nav-item active-tab" data-id="upload">Upload</li>
+                            <li class="tab-nav-item" data-id="camera">Camera</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content active-content" id="upload">
+                        <div class="pic-upload-section my-3">
+                            <p class="text-primary-400">Or you can upload you zip file here.</p>
+                            <form action="#">
+                                <div class="input-file-container">
+                                    <input class="input-file" id="my-file" type="file">
+                                    <label tabindex="0" for="my-file" class="input-file-trigger">Select a
+                                        file...</label>
+                                </div>
+                                <p class="file-return"></p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="camera">
+                        <div class="table-title">
+                            <h4>Activity</h4>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </section>
+            <footer class="modal-footer">
+
             </footer>
         </div>
     </div>

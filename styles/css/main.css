@@ -471,18 +471,19 @@ a.highlight {
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-right: -1.5rem;
-  margin-left: -1.5rem;
+  margin-right: 0;
+  margin-left: 0;
+  width: 100%;
 }
 
-/*
+/* 
   .row div:first-child{
     padding-left: 0 !important;
   }
   .row div:last-child{
     padding-right:0!important;
   }
-  */
+*/
 .row.reverse {
   flex-direction: row-reverse;
 }
@@ -506,8 +507,8 @@ a.highlight {
 .col-xs-12 {
   box-sizing: border-box;
   flex: 0 0 auto;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .col-xs {
@@ -808,7 +809,7 @@ a.highlight {
 
 @media only screen and (min-width: 62em) {
   .container {
-    width: 70%;
+    width: 80%;
   }
   .col-md,
   .col-md-1,
@@ -825,8 +826,8 @@ a.highlight {
   .col-md-12 {
     box-sizing: border-box;
     flex: 0 0 auto;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+    padding-right: 15px;
+    padding-left: 15px;
   }
   .col-md {
     flex-grow: 1;
@@ -951,7 +952,7 @@ a.highlight {
 
 @media only screen and (min-width: 75em) {
   .container {
-    width: 70%;
+    width: 80%;
   }
   .col-lg,
   .col-lg-1,
@@ -968,8 +969,8 @@ a.highlight {
   .col-lg-12 {
     box-sizing: border-box;
     flex: 0 0 auto;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+    padding-right: 15px;
+    padding-left: 15px;
   }
   .col-lg {
     flex-grow: 1;
@@ -2342,8 +2343,11 @@ template {
   position: relative;
 }
 
+textarea:visited, textarea:focus-within, textarea:focus-visible, textarea:focus,
+select:visited, select:focus-within, select:focus-visible, select:focus,
 input:visited, input:focus-within, input:focus-visible, input:focus {
-  border: 0.5px solid var(--clr-primary-400);
+  outline: none;
+  border: 1px solid var(--clr-primary-400) !important;
   font-weight: 600 !important;
 }
 
@@ -2836,6 +2840,7 @@ tr:hover {
   padding-bottom: 10px;
   color: #2d4059;
   border-bottom: 2px solid var(--clr-primary-400);
+  cursor: pointer;
 }
 
 .tab-content {
@@ -3259,6 +3264,11 @@ input.modal-password {
   width: 30%;
 }
 
+.user-pic-upload {
+  width: 85%;
+  height: 100%;
+}
+
 .profile-pic-big {
   text-align: center;
 }
@@ -3297,7 +3307,13 @@ input.modal-password {
   align-items: center;
   gap: 15px;
   border-bottom: 1px solid var(--clr-dark-300);
-  padding: 10px 0;
+  padding: 10px;
+}
+
+.take-pic:hover,
+.upload-pic:hover {
+  background: var(--clr-primary-100);
+  cursor: pointer;
 }
 
 .photo-upload-options {

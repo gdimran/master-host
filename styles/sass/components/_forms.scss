@@ -11,8 +11,11 @@
     align-items: end;
     position: relative;
 }
+textarea:visited, textarea:focus-within, textarea:focus-visible, textarea:focus,
+select:visited, select:focus-within, select:focus-visible, select:focus,
 input:visited, input:focus-within, input:focus-visible, input:focus {
-    border: 0.5px solid var(--clr-primary-400);
+    outline: none;
+    border: 1px solid var(--clr-primary-400) !important;
     font-weight: 600 !important;
 }
 input[type=submit] {
