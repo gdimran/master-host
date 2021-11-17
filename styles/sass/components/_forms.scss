@@ -291,10 +291,14 @@ input {
     border-style: solid;
     border-color: transparent var(--clr-primary-400) transparent transparent;
 }
+.tooltip-btn:hover{
+    cursor:pointer;
+}
 
 .tooltip-btn:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+    cursor:pointer;
 }
 
 .tooltip-head {

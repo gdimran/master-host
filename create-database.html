@@ -17,9 +17,9 @@
     <!-- Side bar start -->
     <div class="sidebar">
         <div class="logo-details">
-            <img class="logo-icon icon" src="images/master-l.svg" alt="" />
+            <img class="logo-icon" src="images/master-l.svg" alt="" />
             <div class="logo_name"><img class="logo-text" src="images/masterHost.svg" alt="" /></div>
-            <i class='fas icon-menu' id="btn"></i>
+            <i class='icon-menu' id="btn"></i>
         </div>
         <ul class="nav-list">
             <li class="nav-section-title">
@@ -41,11 +41,10 @@
                     </li>
                 </ul>
             </li>
-            <li>
+            <!-- <li>
                 <i class='fa fa-search sidebar-search'></i>
                 <input type="text" placeholder="Search...">
-                <!-- <span class="sidebar-tooltip">Search</span> -->
-            </li>
+            </li> -->
             <li class="nav-section-title">
                 <a class="section-dev" href="#">
                     Manage<i class="demo-icon links_name icon-up-open-mini"></i></a>
@@ -61,12 +60,12 @@
                 <!-- <span class="sidebar-tooltip">Domain</span> -->
             </li>
             <li>
-                <a href="#"><i class="menu-icon icon-email" title="Emails"></i>
+                <a href="emails.html"><i class="menu-icon icon-email" title="Emails"></i>
                     <span class="menu-text  links_name">Emails</span></a>
                 <!-- <span class="sidebar-tooltip">Emails</span> -->
             </li>
             <li>
-                <a href="#"><i class="menu-icon icon-database" title="Database"></i>
+                <a href="create-database.html"><i class="menu-icon icon-database" title="Database"></i>
                     <span class="menu-text  links_name">Databases</span></a>
                 <!-- <span class="sidebar-tooltip">Databases</span> -->
             </li>
@@ -125,8 +124,6 @@
         </ul>
 
     </div>
-    <!-- Side bar end -->
-
     <section class="main-content">
         <!-- dashboard header start -->
         <div class="dasboard-header">
@@ -219,18 +216,56 @@
 
                 <button class="card-toggle_next_iconmenu card-paper-list_target_menu">
                     <i class="fa fa-envelope"></i>
-                    <div class="card-toggle_next_iconmenu_menufloatmain notification-card">
+                    <div class="card-toggle_next_iconmenu_menufloatmain message-card">
                         <ul>
-                            <li><a class="entry-paper-list" href="#">
-                                    <i class="fas fa-credit-card"></i> Membership</a>
+                            <li>
+                                <a class="message-list" href="#">
+                                    <div class="user-icon"><i class="fas fa-user-circle"></i></div>
+                                    <div class="msg-content">
+                                        <span class="desc-sub-text">Your billing info avaiable</span>
+                                        <span class="notification-time">Thu, 3 July, 9:05AM</span>
+                                    </div>
+                                    <div class="close-icon text-success-500"><i class="icon-cancel"></i></div>
+
+                                </a>
                             </li>
-                            <li><a class="entry-paper-list" href="#"><i class="fas fa-power-off"></i> Sign out</a>
+                            <li>
+                                <a class="message-list" href="#">
+                                    <div class="user-icon"><i class="fas fa-user-circle"></i></div>
+                                    <div class="msg-content">
+                                        <span class="desc-sub-text">Your billing info avaiable</span>
+                                        <span class="notification-time">Thu, 3 July, 9:05AM</span>
+                                    </div>
+                                    <div class="close-icon text-success-500"><i class="icon-cancel"></i></div>
+
+                                </a>
                             </li>
-                            <li><a class="entry-paper-list" href="#"><i class="fas fa-cog"></i> Settings</a></li>
-                            <li><a class="entry-paper-list" href="#"><i class="icon-language-1"></i> Language:
-                                    English <i class="fa fa-angle-down"></i></a></li>
-                            <li><a class="entry-paper-list" href="#"><i class="far fa-question-circle"></i> Help
-                                </a></li>
+
+                            <li>
+                                <a class="message-list" href="#">
+                                    <div class="user-icon"><i class="fas fa-user-circle"></i></div>
+                                    <div class="msg-content">
+                                        <span class="desc-sub-text">Your billing info avaiable</span>
+                                        <span class="notification-time">Thu, 3 July, 9:05AM</span>
+                                    </div>
+                                    <div class="close-icon text-success-500"><i class="icon-cancel"></i></div>
+
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="message-list" href="#">
+                                    <div class="user-icon"><i class="fas fa-user-circle"></i></div>
+                                    <div class="msg-content">
+                                        <span class="desc-sub-text">Your billing info avaiable</span>
+                                        <span class="notification-time">Thu, 3 July, 9:05AM</span>
+                                    </div>
+                                    <div class="close-icon text-success-500"><i class="icon-cancel"></i></div>
+
+                                </a>
+                            </li>
+
+
 
                         </ul>
                     </div>
@@ -239,16 +274,29 @@
                     <i class="fa fa-bell"></i>
                     <div class="card-toggle_next_iconmenu_menufloatmain notification-card">
                         <ul>
-                            <li><a class="entry-paper-list" href="#">
-                                    <i class="fas fa-credit-card"></i> Membership</a>
+                            <li><a class="notification-list" href="#">
+                                    <span class="notification-title">3 apps Updates avaiable</span>
+                                    <span class="notification-time">Thu, 3 July, 9:05AM</span>
+                                </a>
                             </li>
-                            <li><a class="entry-paper-list" href="#"><i class="fas fa-power-off"></i> Sign out</a>
+                            <li>
+                                <a class="notification-list" href="#">
+                                    <span class="notification-title">Updated PHP version</span>
+                                    <span class="notification-time">Thu, 3 July, 11:30AM</span>
+                                </a>
                             </li>
-                            <li><a class="entry-paper-list" href="#"><i class="fas fa-cog"></i> Settings</a></li>
-                            <li><a class="entry-paper-list" href="#"><i class="icon-language-1"></i> Language:
-                                    English <i class="fa fa-angle-down"></i></a></li>
-                            <li><a class="entry-paper-list" href="#"><i class="far fa-question-circle"></i> Help
-                                </a></li>
+                            <li><a class="notification-list" href="#">
+                                    <span class="notification-title">3 apps Updates avaiable</span>
+                                    <span class="notification-time">Thu, 3 July, 9:05AM</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="notification-list" href="#">
+                                    <span class="notification-title">Updated PHP version</span>
+                                    <span class="notification-time">Thu, 3 July, 11:30AM</span>
+                                </a>
+                            </li>
+
 
                         </ul>
                     </div>
@@ -259,7 +307,11 @@
                     <div class="card-toggle_next_iconmenu_menufloatmain user-card">
                         <div class="toggle-card-header">
                             <div class="header-with-left-pic">
-                                <div class="user-profile-pic"> <img src="images/imran.jpg" alt=""></div>
+                                <div class="user-profile-pic">
+                                    <img src="images/imran.jpg" alt="">
+                                    <div class="change-pic open-modal" data-open="changePic"><i class="icon-camera"></i>
+                                    </div>
+                                </div>
 
                                 <div class="user-info">
                                     <div class="user-name">Imran Hossain</div>
@@ -456,6 +508,93 @@
         </div>
     </section>
 
+    <!-- Modal content start -->
+
+    <div class="modal" id="changePic" data-animation="slideInOutLeft">
+        <div class="modal-dialog user-pic">
+            <header class="modal-header text-right">
+                <button class="close-modal" aria-label="close modal" data-close>
+                    <i class="icon-cancel"></i>
+                </button>
+            </header>
+            <section class="modal-content">
+                <div class="profile-pic-big">
+                    <img src="images/imran.jpg" alt="">
+                </div>
+                <div class="help-info my-2">
+                    <div class="info-title">
+                        Profile picture
+                    </div>
+                    <div class="info-desc">A picture helps people recognize you and lets you know when you’re signed in
+                        to your account</div>
+                </div>
+                <div class="photo-upload-options">
+                    <div class="info-title text-center">Choose a photo or take a new one</div>
+                    <div class="upload-pic open-modal" data-open="uploadModal"><span class="circle-icon-btn"><i
+                                class="fas fa-upload"></i></span> Upload
+                    </div>
+                    <div class="take-pic"><span class="circle-icon-btn"><i class="icon-camera"></i></span> Camera</div>
+                </div>
+
+            </section>
+            <footer class="modal-footer">
+                <div class="modal-action-btns  photo-upload-action">
+                    <button class="remove btn-long btn-outline"><i class="icon-trash-empty"></i> Remove</button>
+                    <button class="change btn-long btn-active"><i class="icon-pencil"></i> Change</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <div class="modal" id="uploadModal" data-animation="zoomInOut">
+        <div class="modal-dialog user-pic-upload">
+            <header class="modal-header text-right">
+                <div class="modal-header-text">Change profile picture</div>
+                <button class="close-modal" aria-label="close modal" data-close>
+                    <i class="icon-cancel"></i>
+                </button>
+            </header>
+            <section class="modal-content">
+
+                <div class="tab-wrapper">
+                    <div class="tab-navigation">
+                        <ul class="tab-nav">
+                            <li class="tab-nav-item active-tab" data-id="upload">Upload</li>
+                            <li class="tab-nav-item" data-id="camera">Camera</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content active-content" id="upload">
+                        <div class="pic-upload-section my-3">
+                            <p class="text-primary-400">Or you can upload you zip file here.</p>
+                            <form class="upload-pic-form" action="#">
+                                <div class="input-file-container">
+                                    <input class="input-file" id="my-file" type="file">
+                                    <label tabindex="0" for="my-file" class="input-file-trigger">Select a
+                                        file...</label>
+                                </div>
+                                <p class="file-return"></p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="camera">
+                        <div class="table-title">
+                            <h4>Activity</h4>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </section>
+            <footer class="modal-footer">
+
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal content end -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/allscript.js"></script>

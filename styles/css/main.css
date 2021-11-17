@@ -443,8 +443,8 @@ a.highlight {
 
 .container-fluid {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  /* padding-right: 15px;
+    padding-left: 15px;*/
   margin-right: auto;
   margin-left: auto;
   display: flex;
@@ -455,8 +455,8 @@ a.highlight {
 
 .container {
   width: 70%;
-  padding-right: 15px;
-  padding-left: 15px;
+  /*padding-right: 15px;
+    padding-left: 15px;*/
   margin-right: auto;
   margin-left: auto;
   display: flex;
@@ -471,8 +471,8 @@ a.highlight {
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-right: 0;
-  margin-left: 0;
+  margin-right: -15px;
+  margin-left: -15px;
   width: 100%;
 }
 
@@ -2621,9 +2621,14 @@ input {
   border-color: transparent var(--clr-primary-400) transparent transparent;
 }
 
+.tooltip-btn:hover {
+  cursor: pointer;
+}
+
 .tooltip-btn:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+  cursor: pointer;
 }
 
 .tooltip-head {
@@ -3041,8 +3046,8 @@ tr:hover {
 
 .card-toggle_next_iconmenu:focus .card-toggle_next_iconmenu_menufloatmain {
   background: #fff;
-  width: 200px;
-  left: -106px;
+  width: 180px;
+  left: -88px;
   top: 30px;
   position: absolute;
   transform: scale(1.2);
@@ -3273,6 +3278,25 @@ input.modal-password {
   text-align: center;
 }
 
+.pic-upload-section {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  top: 80px;
+}
+
+.upload-pic-form {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50px;
+}
+
 .profile-pic-big img {
   width: 250px;
   height: auto;
@@ -3320,49 +3344,90 @@ input.modal-password {
   display: none;
 }
 
+.modal-video {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .warning-msg {
   position: absolute;
   left: 20%;
   transform: translatex(-20%);
-  background-color: var(--clr-danger-100);
+  background-color: var(--clr-light-100);
   border-radius: 0.2rem;
   overflow: hidden;
   display: none;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  border-left: 3px solid var(--clr-danger-300);
+  min-height: 50px;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  padding: 10px 5px;
 }
 
 .success-msg {
   position: absolute;
   left: 30%;
   transform: translatex(-30%);
-  background-color: var(--clr-success-200);
+  background-color: var(--clr-light-100);
   border-radius: 0.2rem;
   overflow: hidden;
   display: none;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  border-left: 3px solid var(--clr-success-400);
+  min-height: 50px;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  padding: 10px 5px;
 }
 
 .info-msg {
   position: absolute;
   left: 50%;
   transform: translatex(-50%);
-  background-color: var(--clr-primary-100);
+  background-color: var(--clr-light-100);
   border-radius: 0.2rem;
   overflow: hidden;
   display: none;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  border-left: 3px solid var(--clr-primary-400);
+  min-height: 50px;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  padding: 10px 5px;
 }
 
 .notification__warning {
   width: 1.5rem;
   margin-left: 1rem;
   color: var(--clr-danger-300);
+}
+
+.notification__success {
+  width: 1.5rem;
+  margin-left: 1rem;
+  color: var(--clr-success-400);
+}
+
+.notification__info {
+  width: 1.5rem;
+  margin-left: 1rem;
+  color: var(--clr-primary-400);
 }
 
 .notification__close {
@@ -3392,6 +3457,10 @@ input.modal-password {
     opacity: 1;
     top: 4rem;
   }
+}
+
+.msg-header {
+  font-weight: 600;
 }
 
 /*the container must be positioned relative:*/
@@ -3869,7 +3938,7 @@ input.counter-input {
   height: 40px;
   margin-top: 10px;
   border: none;
-  padding-left: 25px;
+  padding-left: 35px;
   color: #828282;
   font-size: 1.2rem;
 }
@@ -3878,7 +3947,7 @@ input.counter-input {
   background: transparent;
   border: none;
   position: relative;
-  left: 25px;
+  left: 35px;
   color: var(--clr-dark-500);
 }
 

@@ -2,45 +2,67 @@
             position: absolute;
             left: 20%;
             transform: translatex(-20%);
-            background-color: var(--clr-danger-100);
+            background-color: var(--clr-light-100);
             border-radius: 0.2rem;
             overflow: hidden;
             display: none;
             justify-content: center;
             align-items: center;
             gap: 1rem;
+            border-left: 3px solid var(--clr-danger-300);
+            min-height: 50px;
+            box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+            padding:10px 5px;
         }
 
         .success-msg {
             position: absolute;
             left: 30%;
             transform: translatex(-30%);
-            background-color: var(--clr-success-200);
+            background-color: var(--clr-light-100);
             border-radius: 0.2rem;
             overflow: hidden;
             display: none;
             justify-content: center;
             align-items: center;
             gap: 1rem;
+            border-left: 3px solid var(--clr-success-400);
+            min-height: 50px;
+            box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+            padding:10px 5px;
         }
 
         .info-msg {
             position: absolute;
             left: 50%;
             transform: translatex(-50%);
-            background-color: var(--clr-primary-100);
+            background-color: var(--clr-light-100);
             border-radius: 0.2rem;
             overflow: hidden;
             display: none;
             justify-content: center;
             align-items: center;
             gap: 1rem;
+            border-left: 3px solid var(--clr-primary-400);
+            min-height: 50px;
+            box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+            padding:10px 5px;
         }
 
         .notification__warning {
             width: 1.5rem;
             margin-left: 1rem;
             color: var(--clr-danger-300);
+        }
+        .notification__success {
+            width: 1.5rem;
+            margin-left: 1rem;
+            color: var(--clr-success-400);
+        }
+        .notification__info {
+            width: 1.5rem;
+            margin-left: 1rem;
+            color: var(--clr-primary-400);
         }
 
         .notification__close {
@@ -72,4 +94,8 @@
                 opacity: 1;
                 top: 4rem;
             }
+        }
+
+        .msg-header{
+            font-weight:600;
         }

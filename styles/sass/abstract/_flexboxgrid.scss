@@ -1,8 +1,8 @@
 
 .container-fluid {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+   /* padding-right: 15px;
+    padding-left: 15px;*/
     margin-right: auto;
     margin-left: auto;
     display: -webkit-box;
@@ -20,8 +20,8 @@
 
 .container {
     width: 70%;
-    padding-right: 15px;
-    padding-left: 15px;
+    /*padding-right: 15px;
+    padding-left: 15px;*/
     margin-right: auto;
     margin-left: auto;
     display: -webkit-box;
@@ -53,8 +53,8 @@
     flex-direction: row;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: 0;
-    margin-left: 0;
+    margin-right: -15px;
+    margin-left: -15px;
     width:100%;
   }
  
