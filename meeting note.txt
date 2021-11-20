@@ -1,26 +1,26 @@
 
 1. copy to clipboard update
 
-2. profile like google
+2. profile like google(done)
 
-3. search option remove form side panel
+3. search option remove form side panel(done)
 
 4. js file
 
 5. tooltip on password page
 
-6. domaina modal
+6. domaina modal (done)
 
-7. notification message value
+7. notification message value (done)
 
 8. all page recheck and info should be as it is.
 
 9. Create new project
 
-10. push right side pro 
+10. push right side pro  (done)
 
-11. camera with modal like popup
+11. camera with modal like popup (done)
 
-12. more popup width small
+12. more popup width small (done)
 
 13. Domain step create

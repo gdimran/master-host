@@ -52,6 +52,7 @@
     background: var(--clr-success-500);
     color: var(--clr-light-100);
 }
+.btn-inactive a,
 .btn-inactive {
     @extend %btn;
     background: var(--clr-dark-300);
@@ -101,9 +102,15 @@
     color: var(--clr-light-100);
     border: none;
 }
-
+.full-btn a,
 .full-btn {
     width: 100%;
+}
+.full-btn a:hover,
+.full-btn:hover{
+    background: var(--clr-primary-400);
+    color: var(--clr-light-100);
+    border: none;
 }
 .btn-small{
 	text-align: center;

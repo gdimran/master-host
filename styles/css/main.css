@@ -2217,7 +2217,8 @@ template {
 }
 
 */
-.btn-primary, .btn-success, .btn-inactive, .btn-active a,
+.btn-primary, .btn-success, .btn-inactive a,
+.btn-inactive, .btn-active a,
 .btn-active, .btn-outline, .btn-action, .signup-btn,
 .logn-btn {
   display: inline-flex;
@@ -2231,9 +2232,11 @@ template {
   justify-content: center;
 }
 
-.btn-primary:focus, .btn-success:focus, .btn-inactive:focus, .btn-active a:focus,
+.btn-primary:focus, .btn-success:focus, .btn-inactive a:focus,
+.btn-inactive:focus, .btn-active a:focus,
 .btn-active:focus, .btn-outline:focus, .btn-action:focus, .signup-btn:focus,
-.logn-btn:focus, .btn-primary:hover, .btn-success:hover, .btn-inactive:hover, .btn-active a:hover,
+.logn-btn:focus, .btn-primary:hover, .btn-success:hover, .btn-inactive a:hover,
+.btn-inactive:hover, .btn-active a:hover,
 .btn-active:hover, .btn-outline:hover, .btn-action:hover, .signup-btn:hover,
 .logn-btn:hover {
   background: var(--clr-primary-400);
@@ -2254,6 +2257,7 @@ template {
   color: var(--clr-light-100);
 }
 
+.btn-inactive a,
 .btn-inactive {
   background: var(--clr-dark-300);
   color: var(--clr-dark-400);
@@ -2301,8 +2305,16 @@ template {
   border: none;
 }
 
+.full-btn a,
 .full-btn {
   width: 100%;
+}
+
+.full-btn a:hover,
+.full-btn:hover {
+  background: var(--clr-primary-400);
+  color: var(--clr-light-100);
+  border: none;
 }
 
 .btn-small {
@@ -5118,6 +5130,14 @@ ul.cloud-source li a {
 .banner-content-fg {
   width: 40%;
   text-align: center;
+}
+
+.project-form {
+  width: 40%;
+  margin: 30px auto;
+  border: 1px solid var(--clr-dark-200);
+  padding: 15px;
+  border-radius: 4px;
 }
 
 .login-content {
