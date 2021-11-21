@@ -458,7 +458,11 @@ input.password {
 	align-items: center;
     width: 100%;
 }
-
+textarea{
+    width:100%;
+    border-radius: 3px;
+    padding: 10px;
+}
 
 
 /*--------------------------form validation------------------------------------*/

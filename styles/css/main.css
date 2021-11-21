@@ -2798,6 +2798,12 @@ input.password {
   width: 100%;
 }
 
+textarea {
+  width: 100%;
+  border-radius: 3px;
+  padding: 10px;
+}
+
 /*--------------------------form validation------------------------------------*/
 .error {
   color: var(--clr-danger-400);
@@ -2871,6 +2877,11 @@ tr:hover {
 
 .tab-content.active-content {
   display: block;
+}
+
+.create-tabnave {
+  width: 40%;
+  margin: 0 auto;
 }
 
 /* MODAL
@@ -5136,8 +5147,15 @@ ul.cloud-source li a {
   width: 40%;
   margin: 30px auto;
   border: 1px solid var(--clr-dark-200);
-  padding: 15px;
+  padding: 30px;
   border-radius: 4px;
+}
+
+a.cancle-btn {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  font-weight: 600;
 }
 
 .login-content {

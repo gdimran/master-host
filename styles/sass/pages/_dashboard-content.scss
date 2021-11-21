@@ -140,6 +140,12 @@ ul.cloud-source li a {
     width: 40%;
     margin: 30px auto;
     border: 1px solid var(--clr-dark-200);
-    padding: 15px;
+    padding: 30px;
     border-radius: 4px;
+}
+a.cancle-btn {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    font-weight: 600;
 }

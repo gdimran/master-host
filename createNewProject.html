@@ -340,7 +340,7 @@
         <div class="container mt-5 mb-3">
 
             <div class="tab-wrapper">
-                <div class="tab-navigation  mt-5">
+                <div class="tab-navigation create-tabnave  mt-3">
                     <ul class="tab-nav text-center">
                         <li class="tab-nav-item active-tab" data-id="createProject">Create Project</li>
                         <li class="tab-nav-item" data-id="move-resources">Move Resources</li>
@@ -399,12 +399,37 @@
 
 
                             <button class="btn-inactive mt-3 full-btn" type="submit"> <a
-                                    href="launch-app-step-1.html">Next</a></button>
+                                    href="launch-app-step-1.html">Create Project</a></button>
                         </form>
                     </div>
+
+                    <a href="dashboard-home.html" class="cancle-btn text-center text-primary-400">Cancle</a>
                 </div>
                 <div class="tab-content" id="move-resources">
-                    Move resources
+                    <div class="project-form">
+                        <div class="page-title mb-2 text-center">
+                            Move resources into Project name
+                        </div>
+                        <div class="desc-text text-dark-400 mb-1">Moving existing Resources to new project.
+                        </div>
+
+                        <form action="#">
+                            <div class="field-group">
+
+                                <div class="form-with-right-tooltip mt-1">
+                                    <textarea placeholder="Start typing to find and select existing" id="move-resorce"
+                                        name="resorse-move" rows="6" cols="100"></textarea>
+
+                                </div>
+                            </div>
+
+
+                            <button class="btn-inactive mt-3 full-btn" type="submit"> <a
+                                    href="launch-app-step-1.html">Move Resources</a></button>
+                        </form>
+                    </div>
+
+                    <a href="dashboard-home.html" class="cancle-btn text-center text-primary-400">Skip for now</a>
                 </div>
 
             </div>
